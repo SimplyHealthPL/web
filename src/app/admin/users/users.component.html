@@ -1,0 +1,17 @@
+
+      <p-dataList [value]="users" [paginator]="true" [rows]="8">
+        <p-header>
+          Posty
+        </p-header>
+        <ng-template let-user pTemplate="item">
+          <div class="ui-g ui-fluid post-item">
+            <div class="ui-g-12 ui-md-12">
+              <div class="ui-g">
+                <div class="ui-g-6 ui-sm-12">Tytuł: {{user.email}}</div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-dataList>
+
+  <p-growl [value]="msgs"></p-growl>

@@ -14,18 +14,12 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.items = [{
-      label: 'Menu',
       items: [
-          {label: 'Użytkownicy',  routerLink: '/admin/users'},
-          {label: 'Event',  routerLink: '/admin/events'},
-          {label: 'Terminarze',  routerLink: '/admin/schedules'},
-          {label: 'Wydarzenia',  routerLink: '/admin/happenings'},
-          {label: 'Hotele',  routerLink: '/admin/hotels'},
-          {label: 'Sale',  routerLink: '/admin/rooms'},
-          {label: 'Autokary',  routerLink: '/admin/buses'},
-          {label: 'Podróże',  routerLink: '/admin/travels'},
-          {label: 'Import',  routerLink: '/admin/import'},
-          {label: 'Ustawienia',  routerLink: '/admin/options'}
+          {label: 'Pacjenci',  routerLink: '/admin/users', icon: 'icon users'},
+          {label: 'Diety',  routerLink: '/admin/diets', icon: 'icon diets'},
+          {label: 'Dania',  routerLink: '/admin/dishs', icon: 'icon dishs'},
+          {label: 'Składniki',  routerLink: '/admin/products', icon: 'icon products'},
+          {label: 'Kalendarz',  routerLink: '/admin/calendar', icon: 'icon calendar'}
       ]
   }];
   }

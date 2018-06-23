@@ -11,7 +11,7 @@ export class AdministrationGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (!this.auth.isSignedIn()) {
+    if (this.auth.isSignedIn()) {
       this.router.navigate(['/login']);
       return false;
     }

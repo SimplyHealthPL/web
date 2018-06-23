@@ -18,15 +18,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import {OrderListModule} from 'primeng/orderlist';
 import { DataServiceProvider } from '../../providers/data-service/data-service';
 import { UsersComponent } from './users/users.component';
-import { EventsComponent } from './events/events.component';
-import { SchedulesComponent } from './schedules/schedules.component';
-import { HappeningsComponent } from './happenings/happenings.component';
-import { HotelsComponent } from './hotels/hotels.component';
-import { RoomsComponent } from './rooms/rooms.component';
-import { BusesComponent } from './buses/buses.component';
-import { TravelsComponent } from './travels/travels.component';
-import { ImportComponent } from './import/import.component';
-import { OptionsComponent } from './options/options.component';
+import { DietsComponent } from './diets/diets.component';
+import { DishsComponent } from './dishs/dishs.component';
+import { ProductsComponent } from './products/products.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import {TableModule} from 'primeng/table';
+import {DropdownModule} from 'primeng/dropdown';
+import { PipesModule } from '../pipes/pipes.module';
+import {DialogModule} from 'primeng/dialog';
+import { Footer } from 'primeng/components/common/shared';
 
 @NgModule({
   imports: [
@@ -44,12 +44,16 @@ import { OptionsComponent } from './options/options.component';
     CalendarModule,
     BrowserAnimationsModule,
     BrowserModule,
-    OrderListModule
+    OrderListModule,
+    TableModule,
+    DropdownModule,
+    DialogModule,
+    PipesModule.forRoot(),
+    TabViewModule,
+    BrowserAnimationsModule,
+    BrowserModule
   ],
-  declarations: [AdminComponent, UsersComponent, EventsComponent,
-    SchedulesComponent, HappeningsComponent, HotelsComponent,
-    RoomsComponent, BusesComponent, TravelsComponent, ImportComponent,
-    OptionsComponent],
+  declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent],
   providers: [DataServiceProvider, AdministrationGuard]
 })
 export class AdminModule { }

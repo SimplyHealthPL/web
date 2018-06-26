@@ -36,11 +36,10 @@
     </ng-template>
 </p-table>
 
-<p-dialog [modal]="true" [draggable]="false" [(visible)]="addUser" header="Title">
+<p-dialog [(visible)]="addUser" header="Dodaj pacjenta" [responsive]="true" [width]="700" [minWidth]="320" [minY]="70" [baseZIndex]="10000">
     Content
     <p-footer>
-        <button type="button" pButton icon="pi pi-check" (click)="addUser=false" label="Yes"></button>
-        <button type="button" pButton icon="pi pi-close" (click)="addUser=false" label="No"></button>
+        <button class="btn" (click)="addUser=false">Dodaj pacjenta</button>
     </p-footer>
 </p-dialog>
 

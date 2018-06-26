@@ -109,8 +109,10 @@ input{
     width: 100% !important;
 }
 
-.fa-close:before {
+.pi-close:before {
     content: '\F00D';
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
 }
 
 .ui-widget-overlay{
@@ -244,6 +246,9 @@ input{
         &.ui-state-highlight{
             background: #0ab6a2;
         }
+    }
+    .ui-paginator-bottom{
+        padding-bottom: 10px;
     }
 }
 

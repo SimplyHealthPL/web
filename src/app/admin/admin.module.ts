@@ -26,7 +26,7 @@ import {TableModule} from 'primeng/table';
 import {DropdownModule} from 'primeng/dropdown';
 import { PipesModule } from '../pipes/pipes.module';
 import {DialogModule} from 'primeng/dialog';
-import { Footer } from 'primeng/components/common/shared';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -49,9 +49,7 @@ import { Footer } from 'primeng/components/common/shared';
     DropdownModule,
     DialogModule,
     PipesModule.forRoot(),
-    TabViewModule,
-    BrowserAnimationsModule,
-    BrowserModule
+    ReactiveFormsModule
   ],
   declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent],
   providers: [DataServiceProvider, AdministrationGuard]

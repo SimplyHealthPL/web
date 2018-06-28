@@ -56,8 +56,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     try {
       const result = await this.afAuth.auth.signInWithEmailAndPassword(username, password);
       if (result) {
-        this.subscription = this.data.getUser(username).subscribe(data => {
-          console.log(data);
+        this.subscription = this.data.getUser(result.user.uid).subscribe(data => {
           if (data[0].roles.admin === true) {
             this.auth.doSignIn(
               data[0].email,

@@ -8,10 +8,15 @@ import 'moment/locale/pl';
 export class DaysBetweenPipe implements PipeTransform {
 
   transform(date: any, args?: any): any {
-    const a = moment();
-    const b = moment(date, 'DD.MM.YYYY');
-    const diff = a.diff(b, 'days');
-    return args - diff;
+    if (date) {
+      const a = moment();
+      const b = moment(date, 'DD.MM.YYYY');
+      const diff = a.diff(b, 'days');
+      return args - diff;
+    } else {
+      return 0;
+    }
+
   }
 
 }

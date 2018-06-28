@@ -27,6 +27,10 @@ import {DropdownModule} from 'primeng/dropdown';
 import { PipesModule } from '../pipes/pipes.module';
 import {DialogModule} from 'primeng/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {ChipsModule} from 'primeng/chips';
+import {TooltipModule} from 'primeng/tooltip';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 
 @NgModule({
   imports: [
@@ -49,7 +53,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     DropdownModule,
     DialogModule,
     PipesModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AutoCompleteModule,
+    ChipsModule,
+    TooltipModule,
+    ScrollPanelModule
   ],
   declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent],
   providers: [DataServiceProvider, AdministrationGuard]

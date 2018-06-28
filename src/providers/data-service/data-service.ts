@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { User } from '../../shared/user';
 /*
   Generated class for the DataServiceProvider provider.
 
@@ -17,26 +18,46 @@ export class DataServiceProvider {
   getGala(galaId): Observable<any> {
     return  this.afDB.list('galas', ref => ref.orderByChild('id').equalTo(galaId)).valueChanges();
   }
-  getUser(email): Observable<any> {
-    return  this.afDB.list('users', ref => ref.orderByChild('email').equalTo(email)).valueChanges();
+  getDiets(): Observable<any> {
+    return this.afDB.list('diets').snapshotChanges();
   }
+
+  // Users API
+
   getUsers(): Observable<any> {
-    return  this.afDB.list('users').valueChanges();
+    return  this.afDB.list('users').snapshotChanges();
   }
-  getContact(): Observable<any> {
-    return  this.afDB.list('contacts').valueChanges();
+
+  getUser(userId): Observable<any> {
+    return  this.afDB.list('users', ref => ref.orderByChild('id').equalTo(userId)).valueChanges();
   }
-  getHotel(hotelId): Observable<any> {
-    return this.afDB.list('hotels', ref => ref.orderByChild('id').equalTo(hotelId)).valueChanges();
+
+  addUser(user: User): PromiseLike<any> {
+    return this.afDB.list('users').push(user).then(() => {
+      return true;
+    }, (e) => {
+      console.log(e);
+      return false;
+    });
   }
-  getHappenings(eventId): Observable<any> {
-      return this.afDB.list('happenings/' + eventId + '/days', ref => ref.orderByChild('date')).valueChanges();
+
+  updateUser(user: User, key: string): PromiseLike<any> {
+    return this.afDB.list('users').update(key, user).then(() => {
+      return true;
+    }, (e) => {
+      console.log(e);
+      return false;
+    });
   }
-  getTravel(): Observable<any> {
-    return this.afDB.list('travels').valueChanges();
+
+  deleteUser(key: string): PromiseLike<any> {
+    return this.afDB.list('users').remove(key).then(() => {
+      return true;
+    }, (e) => {
+      console.log(e);
+      return false;
+    });
   }
-  getEvent(): Observable<any> {
-    return this.afDB.object('event').valueChanges();
-  }
+
 
 }

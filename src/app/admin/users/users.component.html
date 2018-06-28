@@ -1,46 +1,152 @@
 <div class="container toolbar">
   <div class="row">
     <div class="col">
-        <button class="btn" (click)="addUser=true">Dodaj pacjenta</button>
-        <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
-        <i class="fa fa-search"></i>
+      <button class="btn" (click)="addUser=true">Dodaj pacjenta</button>
+      <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
+      <i class="fa fa-search"></i>
     </div>
   </div>
 </div>
 
 <p-table #dt [value]="users" [columns]="cols" [paginator]="true" [rows]="8">
-    <ng-template pTemplate="header" let-columns>
-        <tr>
-            <th *ngFor="let col of columns">
-                {{col.header}}
-          <!--     <p-sortIcon [field]="col.field"></p-sortIcon> -->
-            </th>
-        </tr>
-  <!--      <tr>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+        <!--     <p-sortIcon [field]="col.field"></p-sortIcon> -->
+      </th>
+    </tr>
+    <!--      <tr>
             <th *ngFor="let col of columns" [ngSwitch]="col.field">
                 <input *ngSwitchCase="'email'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
                 <p-dropdown *ngSwitchCase="'diet'" [options]="diets" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
             </th>
         </tr> -->
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr [pSelectableRow]="rowData">
-            <td *ngFor="let col of columns" [ngSwitch]="col.field">
-                <span *ngSwitchCase="'name'">{{rowData['name']}} {{rowData['surename']}}</span>
-                <span *ngSwitchCase="'dietTime'">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>
-                <span *ngSwitchCase="'diet'">{{rowData['diet']}}</span>
-                <span *ngSwitchCase="'consultation'">{{rowData['calendar'] | consultation}}</span>
-                <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['id']]">Zarządzaj</button>
-            </td>
-        </tr>
-    </ng-template>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns" [ngSwitch]="col.field">
+        <span *ngSwitchCase="'name'">{{rowData['name']}} {{rowData['surename']}}</span>
+        <span *ngSwitchCase="'dietTime'">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>
+        <span *ngSwitchCase="'diet'">{{diets[rowData['dietId']]?.label}}</span>
+        <span *ngSwitchCase="'consultation'">{{rowData['calendar'] | consultation}}</span>
+        <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['email']]">Zarządzaj</button>
+      </td>
+    </tr>
+  </ng-template>
 </p-table>
 
-<p-dialog [(visible)]="addUser" header="Dodaj pacjenta" [responsive]="true" [width]="700" [minWidth]="320" [minY]="70" [baseZIndex]="10000">
-    Content
-    <p-footer>
-        <button class="btn" (click)="addUser=false">Dodaj pacjenta</button>
-    </p-footer>
+<p-dialog [(visible)]="addUser" class="addDialog" header="Dodaj pacjenta" [responsive]="true" [width]="700" [minWidth]="320"
+  [minY]="70" [baseZIndex]="100">
+  <form [formGroup]="addUserForm">
+
+    <!-- name input -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <input type="text" formControlName="name" placeholder="Imię" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="surename" placeholder="Nazwisko" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="email" formControlName="email" placeholder="Email" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="age" placeholder="Wiek" pInputText>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <input type="text" formControlName="height" placeholder="Wzrost" pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="weight" placeholder="Waga" pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="weightPurpose" placeholder="Waga docelowa" pInputText>
+        </div>
+        <div class="col-3">
+          <p-dropdown [options]="lifestyle" placeholder="Styl życia" formControlName="lifestyle"></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <!-- name validation message 
+        <div
+          class="input-errors"
+          *ngIf="(addUserForm.get('name').invalid && addUserForm.get('name').touched) || showInputErrors"
+        >
+          <div *ngIf="addUserForm.get('name').hasError('required')">
+            Wprowadź nazwę użytkownika
+          </div>
+        </div>
+-->
+    <!-- Sign-in error message -->
+    <div class="sign-in-error" *ngIf="hasFailed">
+      Złe hasło i nazwa użytkownika.
+    </div>
+
+  </form>
+
+  <div class="container-fluid chipsContainer">
+    <div class="row">
+      <div class="col-4">
+        <h3>Nie lubi</h3>
+        <input type="text" #unl (keydown)="addItem($event, 'unlike', unl)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of unlike; let i = index">{{el}}
+              <i (click)="removeItem(i, 'unlike')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+      <div class="col-4">
+        <h3>Alergie</h3>
+        <input type="text" #al (keydown)="addItem($event, 'alergies', al)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of alergies; let i = index">{{el}}
+              <i (click)="removeItem(i, 'alergies')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+      <div class="col-4">
+        <h3>Przeciwskazania</h3>
+        <input type="text" #re (keydown)="addItem($event, 'restricted', re)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of restricted; let i = index">{{el}}
+              <i (click)="removeItem(i, 'restricted')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+    </div>
+  </div>
+
+  <p-footer>
+    <p-dropdown [options]="diets" [(ngModel)]="diet" filter="true" placeholder="Szukaj diety...">
+      <ng-template let-item pTemplate="selectedItem">
+        <span style="vertical-align:middle">{{item.label}}</span>
+      </ng-template>
+      <ng-template let-dietChosse pTemplate="item">
+        <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+          <div style="font-size:14px;float:right;margin-top:4px">{{dietChosse.label}}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+    <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
+      <ng-template [ngIf]="!isBusy">Dodaj pacjenta</ng-template>
+      <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
+    </button>
+  </p-footer>
+
 </p-dialog>
 
 <p-growl [value]="msgs"></p-growl>

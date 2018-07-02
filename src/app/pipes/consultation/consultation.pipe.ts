@@ -20,7 +20,7 @@ export class ConsultationPipe implements PipeTransform {
       });
       return consultation;
     } else {
-      return 0;
+      return '-';
     }
   }
 

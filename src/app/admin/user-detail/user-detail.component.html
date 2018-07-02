@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h3>Karta pacjenta: {{ user?.name }} {{ user?.surename }}</h3>
+      <h4>Dieta {{ diets? (diets | diet: user?.dietId : true) : '-'}}</h4>
+      <i class="icon pen"></i>
+      <div class="desc">
+        <ul>
+          <li>Waga przy rozpoczęciu: {{ user?.weight? user.weight[0].value + 'kg' : '-'}}</li>
+          <li>Waga docelowa: {{ user?.weightPurpose? user.weightPurpose + 'kg' : '-' }}</li>
+          <li>Wiek: {{ user?.age? user.age + 'lat' : '-' }}</li>
+          <li>Wzrost: {{ user?.height? user.height + 'cm' : '-' }}</li>
+          <li>Tryb życia: {{ lifestyle[user?.lifestyle]?.label }}</li>
+          <li class="empty"></li>
+          <p-accordion expandIcon="" collapseIcon="">
+            <p-accordionTab header="Nie lubi">
+              <ul class="tag">
+                <li *ngFor="let el of user?.unlike">{{el}}</li>
+              </ul>
+            </p-accordionTab>
+            <p-accordionTab header="Alergia">
+              <ul class="tag">
+                <li *ngFor="let el of user?.alergies">{{el}}</li>
+              </ul>
+            </p-accordionTab>
+            <p-accordionTab header="Przeciwskazania">
+              <ul class="tag">
+                <li *ngFor="let el of user?.restricted">{{el}}</li>
+              </ul>
+            </p-accordionTab>
+          </p-accordion>
+          <li class="empty"></li>
+          <li class="empty"></li>
+          <li>Liczba wizyt w poradni: {{ user?.calendar | consultation}}</li>
+          <li>Email: {{ user?.email }}</li>
+        </ul>
+        <p>Notatki</p>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row justify-content-end">
+        <div class="col-12"></div>
+        <div class="col-12">
+            <canvas #chart class="chart" id="chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

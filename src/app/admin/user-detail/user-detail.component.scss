@@ -1,0 +1,89 @@
+.container{
+    margin-top: 30px;
+    height: calc( 100vh - 100px);
+    .row{
+        height: 100%;
+        .col-4{
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+            h3{
+                font-weight: 300;
+                font-size: 21px;
+                margin-top: 20px;
+            }
+            h4{
+                font-weight: 300;
+                font-size: 21px;
+                color: #e67e22;
+                float: left;
+            }
+            .icon{
+                &.pen{
+                    display: block;
+                    position: static;
+                    float: left;
+                    margin-left: 10px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+            }
+            .desc{
+                clear: left;
+                ul{
+                    border: 1px solid #0ab6a2;
+                    list-style: none;
+                    padding: 10px 0px;
+                    padding-bottom: 30px;
+                    li{
+                        border-bottom: 1px solid #ebebeb;
+                        margin: 6px 12px;
+                        padding-left: 2px;
+                        color: #5c5c5c;
+                        line-height: 21px;
+                        &.empty{
+                            height: 22px;
+                        }
+                    }
+                    &.tag{
+                        border: none;
+                        list-style: none;
+                        padding: 6px 12px;
+                        margin: 0px 12px;
+                        border-bottom: 1px solid #f26c4f;
+                        li{
+                            display: inline-block;
+                            border-bottom: none;
+                            margin: 0px;
+                            &::after{
+                                content: ",";
+                            }
+                            &:last-of-type{
+                                &::after{
+                                    content: "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            p{
+                text-align: right;
+            }
+        }
+        .col-8{
+            .row{
+                padding-left: 20px;
+                .col-12{
+                    margin-bottom: 10px;
+                    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+                    &:last-of-type{
+                        margin-bottom: 0px;
+                        margin-top: 10px;
+                    }
+                    canvas{
+
+                    }
+                }
+            }
+        }
+    }
+}

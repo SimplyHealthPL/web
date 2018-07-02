@@ -426,12 +426,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pipes/pipes.module */ "./src/app/pipes/pipes.module.ts");
 /* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! primeng/dialog */ "./node_modules/primeng/dialog.js");
 /* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(primeng_dialog__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! primeng/autocomplete */ "./node_modules/primeng/autocomplete.js");
+/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! primeng/chips */ "./node_modules/primeng/chips.js");
+/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(primeng_chips__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! primeng/tooltip */ "./node_modules/primeng/tooltip.js");
+/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! primeng/scrollpanel */ "./node_modules/primeng/scrollpanel.js");
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/inputtextarea.js");
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! primeng/confirmdialog */ "./node_modules/primeng/confirmdialog.js");
+/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_34__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
 
 
 
@@ -486,10 +507,16 @@ var AdminModule = /** @class */ (function () {
                 primeng_dropdown__WEBPACK_IMPORTED_MODULE_25__["DropdownModule"],
                 primeng_dialog__WEBPACK_IMPORTED_MODULE_27__["DialogModule"],
                 _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_26__["PipesModule"].forRoot(),
-                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
+                primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__["AutoCompleteModule"],
+                primeng_chips__WEBPACK_IMPORTED_MODULE_29__["ChipsModule"],
+                primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__["TooltipModule"],
+                primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__["ScrollPanelModule"],
+                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__["InputTextareaModule"],
+                primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__["ConfirmDialogModule"]
             ],
             declarations: [_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"], _users_users_component__WEBPACK_IMPORTED_MODULE_19__["UsersComponent"], _diets_diets_component__WEBPACK_IMPORTED_MODULE_20__["DietsComponent"], _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_21__["DishsComponent"], _products_products_component__WEBPACK_IMPORTED_MODULE_22__["ProductsComponent"], _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_23__["CalendarComponent"]],
-            providers: [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_18__["DataServiceProvider"], _administration_guard__WEBPACK_IMPORTED_MODULE_6__["AdministrationGuard"]]
+            providers: [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_18__["DataServiceProvider"], _administration_guard__WEBPACK_IMPORTED_MODULE_6__["AdministrationGuard"], primeng_api__WEBPACK_IMPORTED_MODULE_34__["ConfirmationService"]]
         })
     ], AdminModule);
     return AdminModule;
@@ -638,7 +665,7 @@ var CalendarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  diets works!\n</p>\n"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addDiet=true\">Dodaj dietę</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDiets.length>0? 'Usuń ( ' + selectedDiets.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"diets\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDiets\" [rows]=\"8\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n        <th style=\"width: 2.25em\">\n            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n        </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n        <td>\n            <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n        </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n        <span *ngSwitchCase=\"'long'\">{{ rowData['long'] }}</span>\n        <span *ngSwitchCase=\"'dishs'\">{{ rowData['dishs'].length }}</span>\n        <span *ngSwitchCase=\"'clients'\">{{ clientOnDiet[rowData['key']] || '-' }}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addDiet\" class=\"addDialog\" header=\"Dodaj dietę\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addDietForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <input type=\"text\" formControlName=\"long\" placeholder=\"Długość diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-tabView>\n    <p-tabPanel header=\"Dania\">\n      <div class=\"container-fluid tableContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #dd [options]=\"dishs\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-dish pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{dish.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th>Typ dania</th>\n                  <th>Wartość kaloryczna</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of dishsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>{{ el.type[0] }}</td>\n                  <td>{{ elements[el.key] | values: 'calories' }}</td>\n                  <td>\n                    <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Opis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Opis diety</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n              <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n  </p-tabView>\n\n  <p-footer>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>"
 
 /***/ }),
 
@@ -664,6 +691,18 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DietsComponent", function() { return DietsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -673,11 +712,224 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var DietsComponent = /** @class */ (function () {
-    function DietsComponent() {
+    function DietsComponent(data, fb, confirmationService) {
+        this.data = data;
+        this.fb = fb;
+        this.confirmationService = confirmationService;
+        this.addDiet = false;
+        this.msgs = [];
+        this.dishs = [];
+        this.dishsChoose = [];
+        this.diets = [];
+        this.isBusy = false;
+        this.error = '';
+        this.clientOnDiet = {};
+        this.desc = '';
+        this.selectedDiets = [];
+        this.elements = {};
+        this.cols = [
+            { field: 'name', header: 'Dieta' },
+            { field: 'long', header: 'Długość diety' },
+            { field: 'dishs', header: 'Ilość dodanych posiłków' },
+            { field: 'clients', header: 'Ilość pacjentów na diecie' },
+            { field: 'button', header: '' }
+        ];
+        this.addDietForm = fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            long: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
     }
     DietsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscriptionDiets = this.data.getDiets().subscribe(function (data) {
+            _this.diets = [];
+            data.forEach(function (el) {
+                _this.diets.push(__assign({ key: el.payload.key }, el.payload.val()));
+            });
+        });
+        this.subscriptionDishs = this.data.getDishs().subscribe(function (data) {
+            _this.dishs = [];
+            data.forEach(function (el) {
+                var dish = __assign({ key: el.payload.key }, el.payload.val());
+                _this.elements[dish.key] = [];
+                dish.elements.forEach(function (ele) {
+                    _this.getItem(ele, dish.key);
+                });
+                _this.dishs.push({ label: el.payload.val().name, value: dish });
+            });
+        });
+        this.subscriptionUsers = this.data.getUsers().subscribe(function (data) {
+            _this.clientOnDiet = {};
+            data.forEach(function (el) {
+                var dId = el.payload.val().dietId;
+                if (_this.clientOnDiet.hasOwnProperty(dId)) {
+                    _this.clientOnDiet[dId]++;
+                }
+                else {
+                    _this.clientOnDiet[dId] = 1;
+                }
+            });
+        });
+    };
+    DietsComponent.prototype.ngOnDestroy = function () {
+        if (this.subscriptionDiets) {
+            this.subscriptionDiets.unsubscribe();
+        }
+        if (this.subscriptionUsers) {
+            this.subscriptionUsers.unsubscribe();
+        }
+        if (this.subscriptionDishs) {
+            this.subscriptionDishs.unsubscribe();
+        }
+    };
+    DietsComponent.prototype.doSignUp = function () {
+        var _this = this;
+        // Make sure form values are valid
+        if (this.addDietForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        var formModel = this.addDietForm.value;
+        // Grab values from form
+        var name = formModel.name;
+        var long = formModel.long;
+        var desc = this.desc;
+        var dishs = this.dishsChoose.map(function (el) { return ({ dishId: el.key }); }) || [];
+        this.newDiet = {
+            name: name,
+            long: long,
+            desc: desc,
+            dishs: dishs
+        };
+        this.data.addDiet(this.newDiet).then(function (res) {
+            if (res === true) {
+                _this.isBusy = false;
+                _this.addDietForm.reset();
+                _this.desc = '';
+                _this.dishsChoose = [];
+                _this.msgs.push({ severity: 'info', summary: 'Dieta dodana', detail: '' });
+            }
+            else {
+                _this.isBusy = false;
+                _this.error = 'Nieoczekiwany błąd.';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
+    DietsComponent.prototype.addItem = function (event, dd) {
+        var repeat = this.dishsChoose.find(function (el) {
+            return el.name === event.value.name;
+        });
+        if (!repeat) {
+            this.dishsChoose.push(event.value);
+        }
+        dd.resetFilter();
+    };
+    DietsComponent.prototype.removeItem = function (i) {
+        this.dishsChoose.splice(i, 1);
+    };
+    DietsComponent.prototype.remove = function () {
+        var _this = this;
+        if (this.selectedDiets.length > 0) {
+            this.confirmationService.confirm({
+                message: 'Na pewno chcesz usunąć te elementy?',
+                header: 'Potwierdź usunięcie',
+                accept: function () {
+                    var promises = [];
+                    _this.selectedDiets.forEach(function (el) {
+                        promises.push(_this.data.deleteDiet(el.key));
+                    });
+                    Promise.all(promises).then(function () {
+                        _this.selectedDiets = [];
+                        _this.msgs.push({ severity: 'info', summary: 'Diety usunięte', detail: '' });
+                    }).catch(function (e) {
+                        console.log(e);
+                        _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                    });
+                },
+                reject: function () {
+                    _this.msgs = [{ severity: 'info', summary: 'Anulowano usunięcie', detail: '' }];
+                },
+                acceptLabel: 'Potwierdź',
+                rejectLabel: 'Anuluj'
+            });
+        }
+    };
+    DietsComponent.prototype.getItem = function (el, key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var item, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        item = { element: {}, unit: {}, amount: 0 };
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 4, , 5]);
+                        return [4 /*yield*/, this.data.getElement(el.elementId).subscribe(function (element) {
+                                item.element = element;
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.data.getUnit(el.unitId).subscribe(function (unit) {
+                                item.unit = unit;
+                            })];
+                    case 3:
+                        _a.sent();
+                        item.amount = el.amount;
+                        this.elements[key].push(item);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
     };
     DietsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -685,7 +937,7 @@ var DietsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./diets.component.html */ "./src/app/admin/diets/diets.component.html"),
             styles: [__webpack_require__(/*! ./diets.component.scss */ "./src/app/admin/diets/diets.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"]])
     ], DietsComponent);
     return DietsComponent;
 }());
@@ -701,7 +953,7 @@ var DietsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dishs works!\n</p>\n"
+module.exports = "<div class=\"container toolbar\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <button class=\"btn\" (click)=\"addDish=true\">Dodaj danie</button>\n        <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>\n        <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n        <i class=\"fa fa-search\"></i>\n      </div>\n    </div>\n  </div>\n  \n  <p-table #dt [value]=\"dishs\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDishs\" [rows]=\"8\">\n    <ng-template pTemplate=\"header\" let-columns>\n      <tr>\n          <th style=\"width: 2.25em\">\n              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n          </th>\n        <th *ngFor=\"let col of columns\">\n          {{col.header}}\n        </th>\n      </tr>\n  \n    </ng-template>\n    <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n      <tr [pSelectableRow]=\"rowData\">\n          <td>\n              <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n          </td>\n        <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n          <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n          <span *ngSwitchCase=\"'type'\">{{ rowData['type'][0] }}</span>\n          <span *ngSwitchCase=\"'diets'\">{{ rowData['key'] }}</span>\n          <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n        </td>\n      </tr>\n    </ng-template>\n  </p-table>\n  \n  <p-dialog [(visible)]=\"addDish\" class=\"addDialog\" header=\"Dodaj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n    [minY]=\"70\" [baseZIndex]=\"100\">\n    <form [formGroup]=\"addDishForm\">\n  \n      <!-- name input -->\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n              pInputText>\n          </div>\n          <div class=\"col-4\">\n              <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n          </div>\n        </div>\n      </div>\n  \n    </form>\n    <p-tabView>\n      <p-tabPanel header=\"Lista zakupów\">\n        <div class=\"container-fluid tableContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-dropdown #dd [options]=\"dishs\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n                <ng-template let-item pTemplate=\"selectedItem\">\n                  <span style=\"vertical-align:middle\">{{item.label}}</span>\n                </ng-template>\n                <ng-template let-dish pTemplate=\"item\">\n                  <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                    <div style=\"font-size:14px;float:right;margin-top:4px\">{{dish.label}}</div>\n                  </div>\n                </ng-template>\n              </p-dropdown>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n                <table>\n                  <tr>\n                    <th>Nazwa</th>\n                    <th>Typ dania</th>\n                    <th>Wartość kaloryczna</th>\n                    <th> </th>\n                  </tr>\n                  <tr *ngFor=\"let el of dishsChoose; let i = index\">\n                    <td>{{ el.name }}</td>\n                    <td>{{ el.type[0] }}</td>\n                    <td>{{ elements[el.key] | values: 'calories' }}</td>\n                    <td>\n                      <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                    </td>\n                  </tr>\n                </table>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Diety\">\n        <div class=\"container-fluid descContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <h2 class=\"text-center\">Opis diety</h2>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Przepis\">\n          <div class=\"container-fluid descContainer\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h2 class=\"text-center\">Opis diety</h2>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                  <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n                </p-scrollPanel>\n              </div>\n            </div>\n          </div>\n        </p-tabPanel>\n    </p-tabView>\n  \n    <p-footer>\n      <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n        <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n        <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n      </button>\n    </p-footer>\n  \n  </p-dialog>\n  \n  <p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n  <p-confirmDialog></p-confirmDialog>"
 
 /***/ }),
 
@@ -727,6 +979,18 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DishsComponent", function() { return DishsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -736,11 +1000,220 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var DishsComponent = /** @class */ (function () {
-    function DishsComponent() {
+    function DishsComponent(data, fb, confirmationService) {
+        this.data = data;
+        this.fb = fb;
+        this.confirmationService = confirmationService;
+        this.addDish = false;
+        this.msgs = [];
+        this.dishs = [];
+        this.dishsChoose = [];
+        this.diets = [];
+        this.isBusy = false;
+        this.error = '';
+        this.clientOnDish = {};
+        this.desc = '';
+        this.selectedDishs = [];
+        this.elements = {};
+        this.cols = [
+            { field: 'name', header: 'Nazwa dania' },
+            { field: 'type', header: 'Typ posiłku' },
+            { field: 'diets', header: 'Dieta' },
+            { field: 'shoplist', header: 'Lista zakupów' },
+            { field: 'button', header: '' }
+        ];
+        this.addDishForm = fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            image: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            type: ['']
+        });
+        this.types = [
+            { label: '-', value: null },
+            { label: 'Śniadanie', value: '0' },
+            { label: 'Drugie śniadanie', value: '1' },
+            { label: 'Lunch', value: '2' },
+            { label: 'Obiad', value: '3' },
+            { label: 'Kolacja', value: '4' }
+        ];
     }
     DishsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscriptionDiets = this.data.getDiets().subscribe(function (data) {
+            _this.diets = [];
+            data.forEach(function (el) {
+                _this.diets.push(__assign({ key: el.payload.key }, el.payload.val()));
+            });
+        });
+        this.subscriptionDishs = this.data.getDishs().subscribe(function (data) {
+            _this.dishs = [];
+            data.forEach(function (el) {
+                var dish = __assign({ key: el.payload.key }, el.payload.val());
+                _this.elements[dish.key] = [];
+                dish.elements.forEach(function (ele) {
+                    _this.getItem(ele, dish.key);
+                });
+                _this.dishs.push(dish);
+            });
+        });
+    };
+    DishsComponent.prototype.ngOnDestroy = function () {
+        if (this.subscriptionDiets) {
+            this.subscriptionDiets.unsubscribe();
+        }
+        if (this.subscriptionDishs) {
+            this.subscriptionDishs.unsubscribe();
+        }
+    };
+    DishsComponent.prototype.doSignUp = function () {
+        var _this = this;
+        // Make sure form values are valid
+        if (this.addDishForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        var formModel = this.addDishForm.value;
+        // Grab values from form
+        var name = formModel.name;
+        var image = formModel.image;
+        var elements = this.elements;
+        var recipe = this.recipe || [];
+        var type = formModel.type || [];
+        this.newDish = {
+            name: name,
+            image: image,
+            elements: elements,
+            recipe: recipe,
+            type: type
+        };
+        this.data.addDish(this.newDish).then(function (res) {
+            if (res === true) {
+                _this.isBusy = false;
+                _this.addDishForm.reset();
+                _this.desc = '';
+                _this.dishsChoose = [];
+                _this.msgs.push({ severity: 'info', summary: 'Disha dodana', detail: '' });
+            }
+            else {
+                _this.isBusy = false;
+                _this.error = 'Nieoczekiwany błąd.';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
+    DishsComponent.prototype.addItem = function (event, dd) {
+        var repeat = this.dishsChoose.find(function (el) {
+            return el.name === event.value.name;
+        });
+        if (!repeat) {
+            this.dishsChoose.push(event.value);
+        }
+        dd.resetFilter();
+    };
+    DishsComponent.prototype.removeItem = function (i) {
+        this.dishsChoose.splice(i, 1);
+    };
+    DishsComponent.prototype.remove = function () {
+        var _this = this;
+        if (this.selectedDishs.length > 0) {
+            this.confirmationService.confirm({
+                message: 'Na pewno chcesz usunąć te elementy?',
+                header: 'Potwierdź usunięcie',
+                accept: function () {
+                    var promises = [];
+                    _this.selectedDishs.forEach(function (el) {
+                        promises.push(_this.data.deleteDish(el.key));
+                    });
+                    Promise.all(promises).then(function () {
+                        _this.selectedDishs = [];
+                        _this.msgs.push({ severity: 'info', summary: 'Diety usunięte', detail: '' });
+                    }).catch(function (e) {
+                        console.log(e);
+                        _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                    });
+                },
+                reject: function () {
+                    _this.msgs = [{ severity: 'info', summary: 'Anulowano usunięcie', detail: '' }];
+                },
+                acceptLabel: 'Potwierdź',
+                rejectLabel: 'Anuluj'
+            });
+        }
+    };
+    DishsComponent.prototype.getItem = function (el, key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var item, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        item = { element: {}, unit: {}, amount: 0 };
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 4, , 5]);
+                        return [4 /*yield*/, this.data.getElement(el.elementId).subscribe(function (element) {
+                                item.element = element;
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.data.getUnit(el.unitId).subscribe(function (unit) {
+                                item.unit = unit;
+                            })];
+                    case 3:
+                        _a.sent();
+                        item.amount = el.amount;
+                        this.elements[key].push(item);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
     };
     DishsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -748,7 +1221,7 @@ var DishsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dishs.component.html */ "./src/app/admin/dishs/dishs.component.html"),
             styles: [__webpack_require__(/*! ./dishs.component.scss */ "./src/app/admin/dishs/dishs.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"]])
     ], DishsComponent);
     return DishsComponent;
 }());
@@ -764,7 +1237,7 @@ var DishsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  products works!\n</p>\n"
+module.exports = "<div class=\"container toolbar\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <button class=\"btn\" (click)=\"addElement=true\">Dodaj danie</button>\n        <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedElements.length>0? 'Usuń ( ' + selectedElements.length + ' )': 'Usuń'}}</button>\n        <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n        <i class=\"fa fa-search\"></i>\n      </div>\n    </div>\n  </div>\n  \n  <p-table #dt [value]=\"elements\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedElements\" [rows]=\"8\">\n    <ng-template pTemplate=\"header\" let-columns>\n      <tr>\n          <th style=\"width: 2.25em\">\n              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n          </th>\n        <th *ngFor=\"let col of columns\">\n          {{col.header}}\n        </th>\n      </tr>\n  \n    </ng-template>\n    <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n      <tr [pSelectableRow]=\"rowData\">\n          <td>\n              <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n          </td>\n        <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n          <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n          <span *ngSwitchCase=\"'group'\">{{ rowData['group'] }}</span>\n          <span *ngSwitchCase=\"'values'\">{{ rowData['key'] }}</span>\n          <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n        </td>\n      </tr>\n    </ng-template>\n  </p-table>\n  \n  <p-dialog [(visible)]=\"addElement\" class=\"addDialog\" header=\"Dodaj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n    [minY]=\"70\" [baseZIndex]=\"100\">\n    <form [formGroup]=\"addElementForm\">\n  \n      <!-- name input -->\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n              pInputText>\n          </div>\n          <div class=\"col-4\">\n              <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n          </div>\n        </div>\n      </div>\n  \n    </form>\n    <p-tabView>\n      <p-tabPanel header=\"Lista zakupów\">\n        <div class=\"container-fluid tableContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-dropdown #dd [options]=\"elements\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n                <ng-template let-item pTemplate=\"selectedItem\">\n                  <span style=\"vertical-align:middle\">{{item.label}}</span>\n                </ng-template>\n                <ng-template let-element pTemplate=\"item\">\n                  <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                    <div style=\"font-size:14px;float:right;margin-top:4px\">{{element.label}}</div>\n                  </div>\n                </ng-template>\n              </p-dropdown>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n                <table>\n                  <tr>\n                    <th>Nazwa</th>\n                    <th>Typ dania</th>\n                    <th>Wartość kaloryczna</th>\n                    <th> </th>\n                  </tr>\n                  <tr *ngFor=\"let el of elementsChoose; let i = index\">\n                    <td>{{ el.name }}</td>\n                    <td>{{ el.type[0] }}</td>\n                    <td>{{ elements[el.key] | values: 'calories' }}</td>\n                    <td>\n                      <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                    </td>\n                  </tr>\n                </table>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Diety\">\n        <div class=\"container-fluid descContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <h2 class=\"text-center\">Opis diety</h2>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                <textarea pInputTextarea [(ngModel)]=\"recipe\"></textarea>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Przepis\">\n          <div class=\"container-fluid descContainer\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h2 class=\"text-center\">Opis diety</h2>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                  <textarea pInputTextarea [(ngModel)]=\"recipe\"></textarea>\n                </p-scrollPanel>\n              </div>\n            </div>\n          </div>\n        </p-tabPanel>\n    </p-tabView>\n  \n    <p-footer>\n      <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n        <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n        <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n      </button>\n    </p-footer>\n  \n  </p-dialog>\n  \n  <p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n  <p-confirmDialog></p-confirmDialog>"
 
 /***/ }),
 
@@ -790,6 +1263,18 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductsComponent", function() { return ProductsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -799,11 +1284,201 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var ProductsComponent = /** @class */ (function () {
-    function ProductsComponent() {
+    function ProductsComponent(data, fb, confirmationService) {
+        this.data = data;
+        this.fb = fb;
+        this.confirmationService = confirmationService;
+        this.addElement = false;
+        this.msgs = [];
+        this.elements = [];
+        this.elementsChoose = [];
+        this.diets = [];
+        this.isBusy = false;
+        this.error = '';
+        this.selectedElements = [];
+        this.cols = [
+            { field: 'name', header: 'Nazwa składnika' },
+            { field: 'group', header: 'Typ składniku' },
+            { field: 'values', header: 'Wartości odżywcze' },
+            { field: 'button', header: '' }
+        ];
+        this.addElementForm = fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            image: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            type: ['']
+        });
+        this.types = [
+            { label: '-', value: null },
+            { label: 'Śniadanie', value: '0' },
+            { label: 'Drugie śniadanie', value: '1' },
+            { label: 'Lunch', value: '2' },
+            { label: 'Obiad', value: '3' },
+            { label: 'Kolacja', value: '4' }
+        ];
     }
     ProductsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscriptionElements = this.data.getElements().subscribe(function (data) {
+            _this.elements = [];
+            data.forEach(function (el) {
+                _this.elements.push(__assign({ key: el.payload.key }, el.payload.val()));
+            });
+        });
+    };
+    ProductsComponent.prototype.ngOnDestroy = function () {
+        if (this.subscriptionElements) {
+            this.subscriptionElements.unsubscribe();
+        }
+    };
+    ProductsComponent.prototype.doSignUp = function () {
+        var _this = this;
+        // Make sure form values are valid
+        if (this.addElementForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        var formModel = this.addElementForm.value;
+        // Grab values from form
+        var name = formModel.name;
+        var group = formModel.group;
+        var allergen = this.allergen;
+        var promotion = formModel.promotion;
+        var values = formModel.values;
+        this.newElement = {
+            allergen: allergen,
+            group: group,
+            name: name,
+            promotion: promotion,
+            values: values
+        };
+        this.data.addElement(this.newElement).then(function (res) {
+            if (res === true) {
+                _this.isBusy = false;
+                _this.addElementForm.reset();
+                _this.elementsChoose = [];
+                _this.msgs.push({ severity: 'info', summary: 'Składnik dodany', detail: '' });
+            }
+            else {
+                _this.isBusy = false;
+                _this.error = 'Nieoczekiwany błąd.';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
+    ProductsComponent.prototype.addItem = function (event, dd) {
+        var repeat = this.elementsChoose.find(function (el) {
+            return el.name === event.value.name;
+        });
+        if (!repeat) {
+            this.elementsChoose.push(event.value);
+        }
+        dd.resetFilter();
+    };
+    ProductsComponent.prototype.removeItem = function (i) {
+        this.elementsChoose.splice(i, 1);
+    };
+    ProductsComponent.prototype.remove = function () {
+        var _this = this;
+        if (this.selectedElements.length > 0) {
+            this.confirmationService.confirm({
+                message: 'Na pewno chcesz usunąć te elementy?',
+                header: 'Potwierdź usunięcie',
+                accept: function () {
+                    var promises = [];
+                    _this.selectedElements.forEach(function (el) {
+                        promises.push(_this.data.deleteElement(el.key));
+                    });
+                    Promise.all(promises).then(function () {
+                        _this.selectedElements = [];
+                        _this.msgs.push({ severity: 'info', summary: 'Diety usunięte', detail: '' });
+                    }).catch(function (e) {
+                        console.log(e);
+                        _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                    });
+                },
+                reject: function () {
+                    _this.msgs = [{ severity: 'info', summary: 'Anulowano usunięcie', detail: '' }];
+                },
+                acceptLabel: 'Potwierdź',
+                rejectLabel: 'Anuluj'
+            });
+        }
+    };
+    ProductsComponent.prototype.getItem = function (el, key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var item, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        item = { element: {}, unit: {}, amount: 0 };
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 4, , 5]);
+                        return [4 /*yield*/, this.data.getElement(el.elementId).subscribe(function (element) {
+                                item.element = element;
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.data.getUnit(el.unitId).subscribe(function (unit) {
+                                item.unit = unit;
+                            })];
+                    case 3:
+                        _a.sent();
+                        item.amount = el.amount;
+                        this.elements[key].push(item);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
     };
     ProductsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -811,7 +1486,7 @@ var ProductsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./products.component.html */ "./src/app/admin/products/products.component.html"),
             styles: [__webpack_require__(/*! ./products.component.scss */ "./src/app/admin/products/products.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"]])
     ], ProductsComponent);
     return ProductsComponent;
 }());
@@ -827,7 +1502,7 @@ var ProductsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n        <button class=\"btn\" (click)=\"addUser=true\">Dodaj pacjenta</button>\n        <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n        <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"users\" [columns]=\"cols\" [paginator]=\"true\" [rows]=\"8\">\n    <ng-template pTemplate=\"header\" let-columns>\n        <tr>\n            <th *ngFor=\"let col of columns\">\n                {{col.header}}\n          <!--     <p-sortIcon [field]=\"col.field\"></p-sortIcon> -->\n            </th>\n        </tr>\n  <!--      <tr>\n            <th *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n                <input *ngSwitchCase=\"'email'\" pInputText type=\"text\" (input)=\"dt.filter($event.target.value, col.field, col.filterMatchMode)\">\n                <p-dropdown *ngSwitchCase=\"'diet'\" [options]=\"diets\" [style]=\"{'width':'100%'}\" (onChange)=\"dt.filter($event.value, col.field, 'equals')\"></p-dropdown>\n            </th>\n        </tr> -->\n    </ng-template>\n    <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n        <tr [pSelectableRow]=\"rowData\">\n            <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n                <span *ngSwitchCase=\"'name'\">{{rowData['name']}} {{rowData['surename']}}</span>\n                <span *ngSwitchCase=\"'dietTime'\">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>\n                <span *ngSwitchCase=\"'diet'\">{{rowData['diet']}}</span>\n                <span *ngSwitchCase=\"'consultation'\">{{rowData['calendar'] | consultation}}</span>\n                <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['id']]\">Zarządzaj</button>\n            </td>\n        </tr>\n    </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addUser\" header=\"Dodaj pacjenta\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\" [minY]=\"70\" [baseZIndex]=\"10000\">\n    Content\n    <p-footer>\n        <button class=\"btn\" (click)=\"addUser=false\">Dodaj pacjenta</button>\n    </p-footer>\n</p-dialog>\n\n<p-growl [value]=\"msgs\"></p-growl>\n"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addUser=true\">Dodaj pacjenta</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedUsers.length>0? 'Usuń ( ' + selectedUsers.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"users\" [columns]=\"cols\" [paginator]=\"true\" [rows]=\"8\" [(selection)]=\"selectedUsers\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{rowData['name']}} {{rowData['surename']}}</span>\n        <span *ngSwitchCase=\"'dietTime'\">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>\n        <span *ngSwitchCase=\"'diet'\">{{diets[rowData['dietId']]?.label}}</span>\n        <span *ngSwitchCase=\"'consultation'\">{{rowData['calendar'] | consultation}}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addUser\" class=\"addDialog\" header=\"Dodaj pacjenta\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addUserForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Imię\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"surename\" placeholder=\"Nazwisko\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"email\" formControlName=\"email\" placeholder=\"Email\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"age\" placeholder=\"Wiek\" pInputText>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"height\" placeholder=\"Wzrost\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weight\" placeholder=\"Waga\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weightPurpose\" placeholder=\"Waga docelowa\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <p-dropdown [options]=\"lifestyle\" placeholder=\"Styl życia\" formControlName=\"lifestyle\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n\n  <div class=\"container-fluid chipsContainer\">\n    <div class=\"row\">\n      <div class=\"col-4\">\n        <h3>Nie lubi</h3>\n        <input type=\"text\" #unl (keydown)=\"addItem($event, 'unlike', unl)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of unlike; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'unlike')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Alergie</h3>\n        <input type=\"text\" #al (keydown)=\"addItem($event, 'alergies', al)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of alergies; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'alergies')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Przeciwskazania</h3>\n        <input type=\"text\" #re (keydown)=\"addItem($event, 'restricted', re)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of restricted; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'restricted')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n    </div>\n  </div>\n\n  <p-footer>\n    <p-dropdown [options]=\"diets\" [(ngModel)]=\"diet\" filter=\"true\" placeholder=\"Szukaj diety...\">\n      <ng-template let-item pTemplate=\"selectedItem\">\n        <span style=\"vertical-align:middle\">{{item.label}}</span>\n      </ng-template>\n      <ng-template let-dietChosse pTemplate=\"item\">\n        <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n          <div style=\"font-size:14px;float:right;margin-top:4px\">{{dietChosse.label}}</div>\n        </div>\n      </ng-template>\n    </p-dropdown>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj pacjenta</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>"
 
 /***/ }),
 
@@ -838,7 +1513,7 @@ module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".toolbar .row .col {\n  display: flex; }\n  .toolbar .row .col button {\n    border-radius: 20px;\n    margin: 21px 20px;\n    padding: 10px 35px;\n    display: inline;\n    font-size: 24px;\n    position: relative; }\n  .toolbar .row .col input {\n    height: 30px;\n    width: auto;\n    margin: 35px 10px 35px auto;\n    border: 0px;\n    border-bottom: 2px solid #0ab6a2;\n    border-radius: 0px;\n    padding-bottom: 0px; }\n  .toolbar .row .col i {\n    margin: 37px 20px 0px -10px;\n    color: #0ab6a2;\n    border-bottom: 2px solid #0ab6a2;\n    height: 28px;\n    font-size: 21px;\n    padding-right: 5px; }\n"
+module.exports = ""
 
 /***/ }),
 
@@ -853,7 +1528,18 @@ module.exports = ".toolbar .row .col {\n  display: flex; }\n  .toolbar .row .col
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersComponent", function() { return UsersComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -865,17 +1551,23 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var UsersComponent = /** @class */ (function () {
-    function UsersComponent(data) {
+    function UsersComponent(data, fb, confirmationService) {
         this.data = data;
+        this.fb = fb;
+        this.confirmationService = confirmationService;
         this.addUser = false;
         this.users = [];
-    }
-    UsersComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.data.getUsers().subscribe(function (data) {
-            _this.users = data;
-        });
+        this.msgs = [];
+        this.diets = [];
+        this.isBusy = false;
+        this.unlike = [];
+        this.alergies = [];
+        this.restricted = [];
+        this.error = '';
+        this.selectedUsers = [];
         this.cols = [
             { field: 'name', header: 'Imie i nazwisko' },
             { field: 'dietTime', header: 'Pozostałe dni na diecie' },
@@ -883,10 +1575,162 @@ var UsersComponent = /** @class */ (function () {
             { field: 'consultation', header: 'Ilość odbytych konsultacji' },
             { field: 'button', header: '' }
         ];
-        this.diets = [
-            { label: 'Wszystkie', value: null },
-            { label: 'Dieta 1000 kalorii', value: 'Dieta 1000 kalorii' }
+        this.lifestyle = [
+            { label: '-', value: null },
+            { label: 'Siedzący', value: '0' },
+            { label: 'Normalny', value: '1' },
+            { label: 'Aktywny', value: '2' }
         ];
+        this.addUserForm = fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            surename: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]],
+            age: [''],
+            height: [''],
+            weight: [''],
+            weightPurpose: [''],
+            lifestyle: ['']
+        });
+    }
+    UsersComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscriptionUsers = this.data.getUsers().subscribe(function (data) {
+            _this.users = [];
+            data.forEach(function (el) {
+                _this.users.push(__assign({ key: el.payload.key }, el.payload.val()));
+            });
+        });
+        this.subscriptionDiets = this.data.getDiets().subscribe(function (data) {
+            _this.diets = [];
+            data.forEach(function (el) {
+                _this.diets.push({ label: el.payload.val().name, value: el.payload.key });
+            });
+        });
+    };
+    UsersComponent.prototype.ngOnDestroy = function () {
+        if (this.subscriptionUsers) {
+            this.subscriptionUsers.unsubscribe();
+        }
+        if (this.subscriptionDiets) {
+            this.subscriptionDiets.unsubscribe();
+        }
+    };
+    UsersComponent.prototype.doSignUp = function () {
+        var _this = this;
+        // Make sure form values are valid
+        if (this.addUserForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        var formModel = this.addUserForm.value;
+        // Grab values from form
+        var name = formModel.name;
+        var surename = formModel.surename;
+        var email = formModel.email;
+        var age = formModel.age;
+        var height = formModel.height;
+        var weight = formModel.weight;
+        var weightPurpose = formModel.weightPurpose;
+        var lifestyle = formModel.lifestyle;
+        var unlike = this.unlike;
+        var alergies = this.alergies;
+        var restricted = this.restricted;
+        var dietId = this.diet || 0;
+        this.newUser = {
+            name: name,
+            surename: surename,
+            email: email,
+            age: age,
+            height: height,
+            weight: weight,
+            weightPurpose: weightPurpose,
+            lifestyle: lifestyle,
+            unlike: unlike,
+            alergies: alergies,
+            restricted: restricted,
+            dietId: dietId,
+            id: ''
+        };
+        this.data.addUser(this.newUser).then(function (res) {
+            if (res === true) {
+                _this.isBusy = false;
+                _this.addUserForm.reset();
+                _this.msgs.push({ severity: 'info', summary: 'Użytkownik dodany', detail: '' });
+            }
+            else {
+                _this.isBusy = false;
+                _this.error = 'Podany email jest używany przez innego użytkownika.';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
+    UsersComponent.prototype.addItem = function (event, list, input) {
+        if (event.keyCode === 13 && input.value !== '') {
+            switch (list) {
+                case 'unlike': {
+                    this.unlike.push(input.value);
+                    input.value = '';
+                    break;
+                }
+                case 'alergies': {
+                    this.alergies.push(input.value);
+                    input.value = '';
+                    break;
+                }
+                case 'restricted': {
+                    this.restricted.push(input.value);
+                    input.value = '';
+                    break;
+                }
+            }
+        }
+    };
+    UsersComponent.prototype.removeItem = function (i, list) {
+        switch (list) {
+            case 'unlike': {
+                this.unlike.splice(i, 1);
+                break;
+            }
+            case 'alergies': {
+                this.alergies.splice(i, 1);
+                break;
+            }
+            case 'restricted': {
+                this.restricted.splice(i, 1);
+                break;
+            }
+        }
+    };
+    UsersComponent.prototype.remove = function () {
+        var _this = this;
+        if (this.selectedUsers.length > 0) {
+            this.confirmationService.confirm({
+                message: 'Na pewno chcesz usunąć użytkowników?',
+                header: 'Potwierdź usunięcie',
+                accept: function () {
+                    var promises = [];
+                    _this.selectedUsers.forEach(function (el) {
+                        promises.push(_this.data.deleteUser(el.key, el.id));
+                    });
+                    Promise.all(promises).then(function () {
+                        _this.selectedUsers = [];
+                        _this.msgs.push({ severity: 'info', summary: 'Użytkownicy usunięci', detail: '' });
+                    }).catch(function (e) {
+                        console.log(e);
+                        _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                    });
+                },
+                reject: function () {
+                    _this.msgs = [{ severity: 'info', summary: 'Anulowano usunięcie', detail: '' }];
+                },
+                acceptLabel: 'Potwierdź',
+                rejectLabel: 'Anuluj'
+            });
+        }
     };
     UsersComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -894,7 +1738,7 @@ var UsersComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./users.component.html */ "./src/app/admin/users/users.component.html"),
             styles: [__webpack_require__(/*! ./users.component.scss */ "./src/app/admin/users/users.component.scss")]
         }),
-        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_1__["DataServiceProvider"]])
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"]])
     ], UsersComponent);
     return UsersComponent;
 }());
@@ -1228,8 +2072,7 @@ var LoginComponent = /** @class */ (function () {
                     case 1:
                         result = _a.sent();
                         if (result) {
-                            this.subscription = this.data.getUser(username).subscribe(function (data) {
-                                console.log(data);
+                            this.subscription = this.data.getUser(result.user.uid).subscribe(function (data) {
                                 if (data[0].roles.admin === true) {
                                     _this.auth.doSignIn(data[0].email, data[0].roles.admin);
                                     _this.router.navigate(['admin']);
@@ -1407,16 +2250,21 @@ var ConsultationPipe = /** @class */ (function () {
     function ConsultationPipe() {
     }
     ConsultationPipe.prototype.transform = function (calendar, args) {
-        var a = moment__WEBPACK_IMPORTED_MODULE_1__();
-        var consultation = 0;
-        calendar.forEach(function (event) {
-            var b = moment__WEBPACK_IMPORTED_MODULE_1__(event.date, 'DD.MM.YYYY');
-            var diff = a.diff(b, 'days');
-            if (diff > 0 && event.type === 'wizyta') {
-                consultation++;
-            }
-        });
-        return consultation;
+        if (calendar) {
+            var a_1 = moment__WEBPACK_IMPORTED_MODULE_1__();
+            var consultation_1 = 0;
+            calendar.forEach(function (event) {
+                var b = moment__WEBPACK_IMPORTED_MODULE_1__(event.date, 'DD.MM.YYYY');
+                var diff = a_1.diff(b, 'days');
+                if (diff > 0 && event.type === 'wizyta') {
+                    consultation_1++;
+                }
+            });
+            return consultation_1;
+        }
+        else {
+            return '-';
+        }
     };
     ConsultationPipe = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
@@ -1458,10 +2306,15 @@ var DaysBetweenPipe = /** @class */ (function () {
     function DaysBetweenPipe() {
     }
     DaysBetweenPipe.prototype.transform = function (date, args) {
-        var a = moment__WEBPACK_IMPORTED_MODULE_1__();
-        var b = moment__WEBPACK_IMPORTED_MODULE_1__(date, 'DD.MM.YYYY');
-        var diff = a.diff(b, 'days');
-        return args - diff;
+        if (date) {
+            var a = moment__WEBPACK_IMPORTED_MODULE_1__();
+            var b = moment__WEBPACK_IMPORTED_MODULE_1__(date, 'DD.MM.YYYY');
+            var diff = a.diff(b, 'days');
+            return args - diff;
+        }
+        else {
+            return '-';
+        }
     };
     DaysBetweenPipe = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
@@ -1488,12 +2341,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./days-between/days-between.pipe */ "./src/app/pipes/days-between/days-between.pipe.ts");
 /* harmony import */ var _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consultation/consultation.pipe */ "./src/app/pipes/consultation/consultation.pipe.ts");
+/* harmony import */ var _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./values/values.pipe */ "./src/app/pipes/values/values.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1504,18 +2359,64 @@ var PipesModule = /** @class */ (function () {
     PipesModule.forRoot = function () {
         return {
             ngModule: PipesModule_1,
-            providers: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"]],
+            providers: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]],
         };
     };
     PipesModule = PipesModule_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"]],
+            declarations: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]],
             imports: [],
-            exports: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"]]
+            exports: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]]
         })
     ], PipesModule);
     return PipesModule;
     var PipesModule_1;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pipes/values/values.pipe.ts":
+/*!*********************************************!*\
+  !*** ./src/app/pipes/values/values.pipe.ts ***!
+  \*********************************************/
+/*! exports provided: ValuesPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValuesPipe", function() { return ValuesPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ValuesPipe = /** @class */ (function () {
+    function ValuesPipe() {
+    }
+    ValuesPipe.prototype.transform = function (elements, args) {
+        console.log(elements);
+        if (elements.length > 0) {
+            var values_1 = { carb: 0, fat: 0, protein: 0, calories: 0 };
+            elements.forEach(function (el) {
+                values_1.carb += el.element.values.carb * el.amount * el.unit.scale;
+                values_1.fat += el.element.values.fat * el.amount * el.unit.scale;
+                values_1.protein += el.element.values.protein * el.amount * el.unit.scale;
+                values_1.calories += el.element.values.calories * el.amount * el.unit.scale;
+            });
+            return values_1[args];
+        }
+    };
+    ValuesPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'values'
+        })
+    ], ValuesPipe);
+    return ValuesPipe;
 }());
 
 
@@ -1640,6 +2541,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataServiceProvider", function() { return DataServiceProvider; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var firebase_functions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! firebase/functions */ "./node_modules/firebase/functions/dist/index.esm.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1651,6 +2558,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
+
+
+
 /*
   Generated class for the DataServiceProvider provider.
 
@@ -1658,36 +2570,165 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
   and Angular DI.
 */
 var DataServiceProvider = /** @class */ (function () {
-    function DataServiceProvider(afDB) {
+    function DataServiceProvider(afDB, http, afAuth) {
         this.afDB = afDB;
+        this.http = http;
+        this.afAuth = afAuth;
     }
-    DataServiceProvider.prototype.getGala = function (galaId) {
-        return this.afDB.list('galas', function (ref) { return ref.orderByChild('id').equalTo(galaId); }).valueChanges();
+    // Diets API
+    DataServiceProvider.prototype.getDiets = function () {
+        return this.afDB.list('diets').snapshotChanges();
     };
-    DataServiceProvider.prototype.getUser = function (email) {
-        return this.afDB.list('users', function (ref) { return ref.orderByChild('email').equalTo(email); }).valueChanges();
+    // getDiet(dietId): Observable<any> {
+    // return  this.afDB.list('diets', ref => ref.orderByChild('id').equalTo(dietId)).valueChanges();
+    // }
+    DataServiceProvider.prototype.addDiet = function (diet) {
+        return this.afDB.list('diets').push(diet).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
     };
+    DataServiceProvider.prototype.updateDiet = function (diet, key) {
+        return this.afDB.list('diets').update(key, diet).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    DataServiceProvider.prototype.deleteDiet = function (key) {
+        return this.afDB.list('diets').remove(key).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    // Users API
     DataServiceProvider.prototype.getUsers = function () {
-        return this.afDB.list('users').valueChanges();
+        return this.afDB.list('users').snapshotChanges();
     };
-    DataServiceProvider.prototype.getContact = function () {
-        return this.afDB.list('contacts').valueChanges();
+    DataServiceProvider.prototype.getUser = function (userId) {
+        return this.afDB.list('users', function (ref) { return ref.orderByChild('id').equalTo(userId); }).valueChanges();
     };
-    DataServiceProvider.prototype.getHotel = function (hotelId) {
-        return this.afDB.list('hotels', function (ref) { return ref.orderByChild('id').equalTo(hotelId); }).valueChanges();
+    DataServiceProvider.prototype.addUser = function (user) {
+        var _this = this;
+        var addUser = firebase_app__WEBPACK_IMPORTED_MODULE_5__["functions"]().httpsCallable('addUser');
+        return addUser({ email: user.email })
+            .then(function (res) { return _this.addToBase(res.data.uid, user); })
+            .then(function () { return _this.sendEmail(user.email); })
+            .then(function () {
+            return true;
+        })
+            .catch(function (e) {
+            return e;
+        });
     };
-    DataServiceProvider.prototype.getHappenings = function (eventId) {
-        return this.afDB.list('happenings/' + eventId + '/days', function (ref) { return ref.orderByChild('date'); }).valueChanges();
+    DataServiceProvider.prototype.updateUser = function (user, key) {
+        return this.afDB.list('users').update(key, user).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
     };
-    DataServiceProvider.prototype.getTravel = function () {
-        return this.afDB.list('travels').valueChanges();
+    DataServiceProvider.prototype.deleteUser = function (key, id) {
+        var _this = this;
+        var deleteUser = firebase_app__WEBPACK_IMPORTED_MODULE_5__["functions"]().httpsCallable('deleteUser');
+        return deleteUser({ uid: id })
+            .then(function () { return _this.deleteFromBase(key); })
+            .then(function () {
+            return true;
+        })
+            .catch(function (e) {
+            return e;
+        });
     };
-    DataServiceProvider.prototype.getEvent = function () {
-        return this.afDB.object('event').valueChanges();
+    // Dishs API
+    DataServiceProvider.prototype.getDishs = function () {
+        return this.afDB.list('dishs').snapshotChanges();
+    };
+    // getDish(dishId): Observable<any> {
+    // return  this.afDB.list('dishs', ref => ref.orderByChild('id').equalTo(dishId)).valueChanges();
+    // }
+    DataServiceProvider.prototype.addDish = function (dish) {
+        return this.afDB.list('dishs').push(dish).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    DataServiceProvider.prototype.updateDish = function (dish, key) {
+        return this.afDB.list('dishs').update(key, dish).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    DataServiceProvider.prototype.deleteDish = function (key) {
+        return this.afDB.list('dishs').remove(key).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    // Elements API
+    DataServiceProvider.prototype.getElement = function (elementID) {
+        return this.afDB.object('elements/' + elementID).valueChanges();
+    };
+    DataServiceProvider.prototype.getElements = function () {
+        return this.afDB.list('elements').snapshotChanges();
+    };
+    // getElement(elementId): Observable<any> {
+    // return  this.afDB.list('elements', ref => ref.orderByChild('id').equalTo(elementId)).valueChanges();
+    // }
+    DataServiceProvider.prototype.addElement = function (element) {
+        return this.afDB.list('elements').push(element).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    DataServiceProvider.prototype.updateElement = function (element, key) {
+        return this.afDB.list('elements').update(key, element).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    DataServiceProvider.prototype.deleteElement = function (key) {
+        return this.afDB.list('elements').remove(key).then(function () {
+            return true;
+        }, function (e) {
+            console.log(e);
+            return false;
+        });
+    };
+    // Unit API
+    DataServiceProvider.prototype.getUnit = function (unitID) {
+        return this.afDB.object('units/' + unitID).valueChanges();
+    };
+    // Helper
+    DataServiceProvider.prototype.sendEmail = function (email) {
+        this.afAuth.auth.sendPasswordResetEmail(email);
+    };
+    DataServiceProvider.prototype.addToBase = function (uid, user) {
+        user.id = uid;
+        this.afDB.list('users').push(user);
+    };
+    DataServiceProvider.prototype.deleteFromBase = function (key) {
+        this.afDB.list('users').remove(key);
     };
     DataServiceProvider = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"], _angular_http__WEBPACK_IMPORTED_MODULE_2__["Http"], angularfire2_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"]])
     ], DataServiceProvider);
     return DataServiceProvider;
 }());

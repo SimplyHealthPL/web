@@ -31,6 +31,11 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import {ChipsModule} from 'primeng/chips';
 import {TooltipModule} from 'primeng/tooltip';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   imports: [
@@ -57,9 +62,12 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
     AutoCompleteModule,
     ChipsModule,
     TooltipModule,
-    ScrollPanelModule
+    ScrollPanelModule,
+    InputTextareaModule,
+    ConfirmDialogModule,
+    AccordionModule
   ],
-  declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent],
-  providers: [DataServiceProvider, AdministrationGuard]
+  declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent, UserDetailComponent],
+  providers: [DataServiceProvider, AdministrationGuard, ConfirmationService]
 })
 export class AdminModule { }

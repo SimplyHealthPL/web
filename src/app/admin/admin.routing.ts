@@ -7,6 +7,7 @@ import { DietsComponent } from './diets/diets.component';
 import { DishsComponent } from './dishs/dishs.component';
 import { ProductsComponent } from './products/products.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 // Utwórz moduł routingu projektu.
 @NgModule({
@@ -24,7 +25,8 @@ import { CalendarComponent } from './calendar/calendar.component';
               {path: 'diets', component: DietsComponent},
               {path: 'dishs', component: DishsComponent},
               {path: 'products', component: ProductsComponent},
-              {path: 'calendar', component: CalendarComponent}
+              {path: 'calendar', component: CalendarComponent},
+              {path: 'user/:id', component: UserDetailComponent}
             ]
         }
     ])

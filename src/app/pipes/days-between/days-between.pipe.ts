@@ -14,7 +14,7 @@ export class DaysBetweenPipe implements PipeTransform {
       const diff = a.diff(b, 'days');
       return args - diff;
     } else {
-      return 0;
+      return '-';
     }
 
   }

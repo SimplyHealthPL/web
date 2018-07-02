@@ -2,35 +2,36 @@
   <div class="row">
     <div class="col">
       <button class="btn" (click)="addUser=true">Dodaj pacjenta</button>
+      <button class="btn btn-danger" (click)="remove()">{{selectedUsers.length>0? 'Usuń ( ' + selectedUsers.length + ' )': 'Usuń'}}</button>
       <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
       <i class="fa fa-search"></i>
     </div>
   </div>
 </div>
 
-<p-table #dt [value]="users" [columns]="cols" [paginator]="true" [rows]="8">
+<p-table #dt [value]="users" [columns]="cols" [paginator]="true" [rows]="8" [(selection)]="selectedUsers">
   <ng-template pTemplate="header" let-columns>
     <tr>
+      <th style="width: 2.25em">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
       <th *ngFor="let col of columns">
         {{col.header}}
-        <!--     <p-sortIcon [field]="col.field"></p-sortIcon> -->
       </th>
     </tr>
-    <!--      <tr>
-            <th *ngFor="let col of columns" [ngSwitch]="col.field">
-                <input *ngSwitchCase="'email'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
-                <p-dropdown *ngSwitchCase="'diet'" [options]="diets" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
-            </th>
-        </tr> -->
+
   </ng-template>
   <ng-template pTemplate="body" let-rowData let-columns="columns">
     <tr [pSelectableRow]="rowData">
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
       <td *ngFor="let col of columns" [ngSwitch]="col.field">
         <span *ngSwitchCase="'name'">{{rowData['name']}} {{rowData['surename']}}</span>
-        <span *ngSwitchCase="'dietTime'">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>
-        <span *ngSwitchCase="'diet'">{{diets[rowData['dietId']]?.label}}</span>
+        <span *ngSwitchCase="'dietTime'">{{rowData['dietStart'] | daysBetween: (diets | diet: rowData['dietId'] : false) }}</span>
+        <span *ngSwitchCase="'diet'">{{ diets | diet: rowData['dietId'] : true }}</span>
         <span *ngSwitchCase="'consultation'">{{rowData['calendar'] | consultation}}</span>
-        <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['email']]">Zarządzaj</button>
+        <button class="btn" *ngSwitchCase="'button'" [routerLink]="['../user/', rowData['key']]">Zarządzaj</button>
       </td>
     </tr>
   </ng-template>
@@ -73,21 +74,6 @@
           <p-dropdown [options]="lifestyle" placeholder="Styl życia" formControlName="lifestyle"></p-dropdown>
         </div>
       </div>
-    </div>
-
-    <!-- name validation message 
-        <div
-          class="input-errors"
-          *ngIf="(addUserForm.get('name').invalid && addUserForm.get('name').touched) || showInputErrors"
-        >
-          <div *ngIf="addUserForm.get('name').hasError('required')">
-            Wprowadź nazwę użytkownika
-          </div>
-        </div>
--->
-    <!-- Sign-in error message -->
-    <div class="sign-in-error" *ngIf="hasFailed">
-      Złe hasło i nazwa użytkownika.
     </div>
 
   </form>
@@ -149,4 +135,5 @@
 
 </p-dialog>
 
-<p-growl [value]="msgs"></p-growl>
+<p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
+<p-confirmDialog></p-confirmDialog>

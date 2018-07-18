@@ -1,142 +1,138 @@
 <div class="container toolbar">
-    <div class="row">
-      <div class="col">
-        <button class="btn" (click)="addElement=true">Dodaj danie</button>
-        <button class="btn btn-danger" (click)="remove()">{{selectedElements.length>0? 'Usuń ( ' + selectedElements.length + ' )': 'Usuń'}}</button>
-        <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
-        <i class="fa fa-search"></i>
-      </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn" (click)="addElement=true">Dodaj składnik</button>
+      <button class="btn btn-danger" (click)="remove()">{{selectedElements.length>0? 'Usuń ( ' + selectedElements.length + ' )': 'Usuń'}}</button>
+      <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
+      <i class="fa fa-search"></i>
     </div>
   </div>
-  
-  <p-table #dt [value]="elements" [columns]="cols" [paginator]="true" [(selection)]="selectedElements" [rows]="8">
-    <ng-template pTemplate="header" let-columns>
-      <tr>
-          <th style="width: 2.25em">
-              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-          </th>
-        <th *ngFor="let col of columns">
-          {{col.header}}
-        </th>
-      </tr>
-  
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
-      <tr [pSelectableRow]="rowData">
-          <td>
-              <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
-          </td>
-        <td *ngFor="let col of columns" [ngSwitch]="col.field">
-          <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
-          <span *ngSwitchCase="'group'">{{ rowData['group'] }}</span>
-          <span *ngSwitchCase="'values'">{{ rowData['key'] }}</span>
-          <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['key']]">Zarządzaj</button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-  
-  <p-dialog [(visible)]="addElement" class="addDialog" header="Dodaj danie" [responsive]="true" [width]="700" [minWidth]="320"
-    [minY]="70" [baseZIndex]="100">
-    <form [formGroup]="addElementForm">
-  
-      <!-- name input -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-8">
-            <input type="text" formControlName="name" placeholder="Nazwa dania" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
-              pInputText>
-          </div>
-          <div class="col-4">
-              <p-dropdown [options]="types" placeholder="Typ posiłku" formControlName="type"></p-dropdown>
-          </div>
+</div>
+
+<p-table #dt [value]="elements" [columns]="cols" [paginator]="true" [(selection)]="selectedElements" [rows]="8">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th style="width: 2.25em">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+      </th>
+    </tr>
+
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td *ngFor="let col of columns" [ngSwitch]="col.field">
+        <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
+        <span *ngSwitchCase="'group'">{{ getType(rowData['group']) }}</span>
+        <span *ngSwitchCase="'values'">
+            <i class="icon products list dark" [pTooltip]="getValues(rowData['values'])"></i>
+          </span>
+        <button class="btn" *ngSwitchCase="'button'" (click)="editElementInit(rowData)">Zarządzaj</button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog [(visible)]="addElement" class="addDialog" [header]="editElement? 'Edytuj składnik' : 'Dodaj składnik'" [responsive]="true" [width]="700" [minWidth]="320"
+  [minY]="70" [baseZIndex]="100">
+  <form [formGroup]="addElementForm">
+
+    <!-- name input -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          <input type="text" formControlName="name" placeholder="Nazwa składnika" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-4">
+          <p-multiSelect [options]="types" defaultLabel="Typ składniku" selectedItemsLabel="Wybrano: {0}" formControlName="type" maxSelectedLabels="1"></p-multiSelect>
         </div>
       </div>
-  
-    </form>
-    <p-tabView>
-      <p-tabPanel header="Lista zakupów">
-        <div class="container-fluid tableContainer">
-          <div class="row">
-            <div class="col-12">
-              <p-dropdown #dd [options]="elements" filter="true" (onChange)="addItem($event, dd)" placeholder="Szukaj dania...">
-                <ng-template let-item pTemplate="selectedItem">
-                  <span style="vertical-align:middle">{{item.label}}</span>
-                </ng-template>
-                <ng-template let-element pTemplate="item">
-                  <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
-                    <div style="font-size:14px;float:right;margin-top:4px">{{element.label}}</div>
-                  </div>
-                </ng-template>
-              </p-dropdown>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p-scrollPanel [style]="{width: '100%', height: '220px'}">
-                <table>
-                  <tr>
-                    <th>Nazwa</th>
-                    <th>Typ dania</th>
-                    <th>Wartość kaloryczna</th>
-                    <th> </th>
-                  </tr>
-                  <tr *ngFor="let el of elementsChoose; let i = index">
-                    <td>{{ el.name }}</td>
-                    <td>{{ el.type[0] }}</td>
-                    <td>{{ elements[el.key] | values: 'calories' }}</td>
-                    <td>
-                      <i (click)="removeItem(i)" class="pi pi-close"></i>
-                    </td>
-                  </tr>
-                </table>
-              </p-scrollPanel>
-            </div>
-          </div>
-        </div>
-      </p-tabPanel>
-      <p-tabPanel header="Diety">
-        <div class="container-fluid descContainer">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="text-center">Opis diety</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p-scrollPanel [style]="{width: '100%', height: '230px'}">
-                <textarea pInputTextarea [(ngModel)]="recipe"></textarea>
-              </p-scrollPanel>
-            </div>
-          </div>
-        </div>
-      </p-tabPanel>
-      <p-tabPanel header="Przepis">
-          <div class="container-fluid descContainer">
+      <div class="row">
+        <div class="col-8">
+          <div class="container-fluid valuesContainer">
             <div class="row">
               <div class="col-12">
-                <h2 class="text-center">Opis diety</h2>
+                <h3>Wartość odżywcza / 100g</h3>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-6 col-form-label">Wartość energetyczna</label>
+                  <div class="col-sm-6">
+                    <div class="input-wrapper">
+                      <input type="text" class="form-control-plaintext" formControlName="energy" pTooltip="Wymagane" tooltipPosition="top"
+                        tooltipZIndex="10000" pKeyFilter="num" pInputText>
+                      <span class="unit">kcl</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-6 col-form-label">Węglowodany</label>
+                  <div class="col-sm-6">
+                    <div class="input-wrapper">
+                      <input type="text" class="form-control-plaintext" formControlName="sugar" pTooltip="Wymagane" tooltipPosition="top"
+                        tooltipZIndex="10000" pKeyFilter="num" pInputText>
+                      <span class="unit">g</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-6 col-form-label">Białko</label>
+                  <div class="col-sm-6">
+                    <div class="input-wrapper">
+                      <input type="text" class="form-control-plaintext" formControlName="protein" pTooltip="Wymagane" tooltipPosition="top"
+                        tooltipZIndex="10000" pKeyFilter="num" pInputText>
+                      <span class="unit">g</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-6 col-form-label">fat</label>
+                  <div class="col-sm-6">
+                    <div class="input-wrapper">
+                      <input type="text" class="form-control-plaintext" formControlName="fat" pTooltip="Wymagane" tooltipPosition="top"
+                        tooltipZIndex="10000" pKeyFilter="num" pInputText>
+                      <span class="unit">g</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluid chipsContainer allergen">
             <div class="row">
               <div class="col-12">
-                <p-scrollPanel [style]="{width: '100%', height: '230px'}">
-                  <textarea pInputTextarea [(ngModel)]="recipe"></textarea>
+                <h3>Alergeny</h3>
+                <input type="text" #unl (keydown)="addItem($event, 'allergen', unl)" placeholder="Pisz..." pInputText>
+                <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+                  <ul>
+                    <li *ngFor="let el of allergen; let i = index">{{el}}
+                      <i (click)="removeItem(i, 'allergen')" class="pi pi-close"></i>
+                    </li>
+                  </ul>
                 </p-scrollPanel>
               </div>
             </div>
           </div>
-        </p-tabPanel>
-    </p-tabView>
-  
-    <p-footer>
-      <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
-        <ng-template [ngIf]="!isBusy">Dodaj dietę</ng-template>
-        <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
-      </button>
-    </p-footer>
-  
-  </p-dialog>
-  
-  <p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
-  <p-confirmDialog></p-confirmDialog>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <p-footer>
+    <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
+      <ng-template [ngIf]="!isBusy && !editElement">Dodaj składnik</ng-template>
+      <ng-template [ngIf]="!isBusy && editElement">Edytuj składnik</ng-template>
+      <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
+    </button>
+  </p-footer>
+
+</p-dialog>
+
+<p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
+<p-confirmDialog></p-confirmDialog>

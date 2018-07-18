@@ -4,6 +4,8 @@ import { DataServiceProvider } from '../../../providers/data-service/data-servic
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../../shared/user';
 import * as moment from 'moment';
+import 'moment/locale/pl';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',

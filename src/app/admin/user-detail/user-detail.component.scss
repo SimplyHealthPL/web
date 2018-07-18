@@ -25,6 +25,21 @@
                     margin-bottom: 20px;
                     cursor: pointer;
                 }
+                &.calendar{
+                    display: block;
+                    position: static;
+                    float: right;
+                    margin-left: 10px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+                &.note{
+                    display: block;
+                    position: static;
+                    margin-left: auto;
+                    cursor: pointer;
+                    margin-right: 0px;
+                }
             }
             .desc{
                 clear: left;
@@ -48,7 +63,7 @@
                         list-style: none;
                         padding: 6px 12px;
                         margin: 0px 12px;
-                        border-bottom: 1px solid #f26c4f;
+                        border-bottom: 1px solid #e67e22;
                         li{
                             display: inline-block;
                             border-bottom: none;
@@ -67,6 +82,10 @@
             }
             p{
                 text-align: right;
+                margin: 0px;
+                float: right;
+                margin-right: 38px;
+                margin-top: 2px;
             }
         }
         .col-8{
@@ -75,12 +94,10 @@
                 .col-12{
                     margin-bottom: 10px;
                     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+                    height: calc(50% - 10px);
                     &:last-of-type{
                         margin-bottom: 0px;
                         margin-top: 10px;
-                    }
-                    canvas{
-
                     }
                 }
             }

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Message, ConfirmationService} from 'primeng/api';
+import {Message, ConfirmationService, SelectItem} from 'primeng/api';
 import { DataServiceProvider } from '../../../providers/data-service/data-service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Diet } from '../../../shared/diet';
@@ -28,6 +28,7 @@ export class DietsComponent implements OnInit, OnDestroy {
   public desc = '';
   public selectedDiets = [];
   public elements = {};
+  public types: SelectItem[];
 
   constructor( private data: DataServiceProvider, private fb: FormBuilder, private confirmationService: ConfirmationService) {
     this.cols = [
@@ -41,6 +42,14 @@ export class DietsComponent implements OnInit, OnDestroy {
       name: ['', Validators.required],
       long: ['', Validators.required]
     });
+    this.types = [
+      { label: 'Śniadanie', value: '0' },
+      { label: 'Drugie śniadanie', value: '1' },
+      { label: 'Lunch', value: '2' },
+      { label: 'Obiad', value: '3' },
+      { label: 'Kolacja', value: '4' },
+      { label: '-', value: null }
+    ];
    }
 
   ngOnInit() {
@@ -88,7 +97,7 @@ export class DietsComponent implements OnInit, OnDestroy {
     }
   }
 
-  public doSignUp() {
+  public makeDiet() {
     // Make sure form values are valid
     if (this.addDietForm.invalid) {
       this.error = 'Uzupełnij wymagane pola.';
@@ -184,6 +193,23 @@ export class DietsComponent implements OnInit, OnDestroy {
     } catch (e) {
       console.error(e);
     }
+  }
+
+  changed(event) {
+    const diet = {
+      desc: event.data.desc,
+      dishs: event.data.dishs,
+      long: event.data.long,
+      name: event.data.name
+    };
+    this.data.updateDiet(diet, event.data.key).then(res => {
+      if (res === true) {
+        this.msgs.push({severity: 'info', summary: 'Dieta zaktualizowana', detail: ''});
+      } else {
+        this.error = 'Nieoczekiwany błąd.';
+        this.msgs.push({severity: 'error', summary: this.error, detail: ''});
+      }
+    });
   }
 
 }

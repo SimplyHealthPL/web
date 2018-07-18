@@ -1,142 +1,375 @@
 <div class="container toolbar">
-    <div class="row">
-      <div class="col">
-        <button class="btn" (click)="addDish=true">Dodaj danie</button>
-        <button class="btn btn-danger" (click)="remove()">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>
-        <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
-        <i class="fa fa-search"></i>
-      </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn" (click)="showAdd()">Dodaj danie</button>
+      <button class="btn btn-danger" (click)="remove()">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>
+      <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
+      <i class="fa fa-search"></i>
     </div>
   </div>
-  
-  <p-table #dt [value]="dishs" [columns]="cols" [paginator]="true" [(selection)]="selectedDishs" [rows]="8">
-    <ng-template pTemplate="header" let-columns>
-      <tr>
-          <th style="width: 2.25em">
-              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-          </th>
-        <th *ngFor="let col of columns">
-          {{col.header}}
-        </th>
-      </tr>
-  
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
-      <tr [pSelectableRow]="rowData">
-          <td>
-              <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
-          </td>
-        <td *ngFor="let col of columns" [ngSwitch]="col.field">
-          <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
-          <span *ngSwitchCase="'type'">{{ rowData['type'][0] }}</span>
-          <span *ngSwitchCase="'diets'">{{ rowData['key'] }}</span>
-          <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['key']]">Zarządzaj</button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-  
-  <p-dialog [(visible)]="addDish" class="addDialog" header="Dodaj danie" [responsive]="true" [width]="700" [minWidth]="320"
-    [minY]="70" [baseZIndex]="100">
-    <form [formGroup]="addDishForm">
-  
-      <!-- name input -->
-      <div class="container-fluid">
+</div>
+
+<p-table #dt [value]="dishs" [columns]="cols" [paginator]="true" [(selection)]="selectedDishs" [rows]="8">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th style="width: 2.25em">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+      </th>
+    </tr>
+
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td *ngFor="let col of columns" [ngSwitch]="col.field">
+        <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
+        <span *ngSwitchCase="'type'">{{ types[rowData?.type[0]]?.label }}</span>
+        <span *ngSwitchCase="'shoplist'">
+          <i class="icon products list dark" [pTooltip]="getElements(rowData['key'])"></i>
+        </span>
+        <button class="btn" *ngSwitchCase="'button'" (click)="editDishInit(rowData)">Zarządzaj</button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog [(visible)]="addDish" class="addDialog" header="Dodaj danie" [responsive]="true" [width]="700" [minWidth]="320"
+  [minY]="70" [baseZIndex]="100">
+  <form [formGroup]="addDishForm">
+
+    <!-- name input -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          <input type="text" formControlName="name" placeholder="Nazwa dania" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-4">
+          <p-dropdown [options]="types" placeholder="Typ posiłku" formControlName="type"></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <p-tabView>
+    <p-tabPanel header="Lista zakupów">
+      <div class="container-fluid tableContainer elements">
         <div class="row">
-          <div class="col-8">
-            <input type="text" formControlName="name" placeholder="Nazwa dania" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
-              pInputText>
+          <div class="col-12">
+            <p-dropdown #dd [options]="elementsAll" filter="true" (onChange)="addElement($event, dd)" placeholder="Szukaj składnika...">
+              <ng-template let-item pTemplate="selectedItem">
+                <span style="vertical-align:middle">{{item.label}}</span>
+              </ng-template>
+              <ng-template let-element pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                  <div style="font-size:14px;float:right;margin-top:4px">{{element.label}}</div>
+                </div>
+              </ng-template>
+            </p-dropdown>
           </div>
-          <div class="col-4">
-              <p-dropdown [options]="types" placeholder="Typ posiłku" formControlName="type"></p-dropdown>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '220px'}">
+              <table>
+                <tr>
+                  <th>Nazwa</th>
+                  <th>Ilość</th>
+                  <th>Jednostka</th>
+                  <th> </th>
+                </tr>
+                <tr *ngFor="let el of elementsChoose; let i = index">
+                  <td>{{ el.name }}</td>
+                  <td>
+                    <p-inplace #inp>
+                      <span pInplaceDisplay>
+                        {{el.quanity}}
+                      </span>
+                      <span pInplaceContent>
+                        <input type="text" class="inplace" #in pInputText pKeyFilter="int" (keydown)="close($event, in, inp)" [(ngModel)]="el.quanity">
+                      </span>
+                    </p-inplace>
+                  </td>
+                  <td>
+                    <p-dropdown [options]="units" placeholder="Jednostka" required="true" [(ngModel)]="el.unit"></p-dropdown>
+                  </td>
+                  <td>
+                    <i (click)="removeElement(i)" class="pi pi-close"></i>
+                  </td>
+                </tr>
+              </table>
+            </p-scrollPanel>
           </div>
         </div>
       </div>
-  
-    </form>
-    <p-tabView>
-      <p-tabPanel header="Lista zakupów">
-        <div class="container-fluid tableContainer">
-          <div class="row">
-            <div class="col-12">
-              <p-dropdown #dd [options]="dishs" filter="true" (onChange)="addItem($event, dd)" placeholder="Szukaj dania...">
-                <ng-template let-item pTemplate="selectedItem">
-                  <span style="vertical-align:middle">{{item.label}}</span>
-                </ng-template>
-                <ng-template let-dish pTemplate="item">
-                  <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
-                    <div style="font-size:14px;float:right;margin-top:4px">{{dish.label}}</div>
-                  </div>
-                </ng-template>
-              </p-dropdown>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p-scrollPanel [style]="{width: '100%', height: '220px'}">
-                <table>
-                  <tr>
-                    <th>Nazwa</th>
-                    <th>Typ dania</th>
-                    <th>Wartość kaloryczna</th>
-                    <th> </th>
-                  </tr>
-                  <tr *ngFor="let el of dishsChoose; let i = index">
-                    <td>{{ el.name }}</td>
-                    <td>{{ el.type[0] }}</td>
-                    <td>{{ elements[el.key] | values: 'calories' }}</td>
-                    <td>
-                      <i (click)="removeItem(i)" class="pi pi-close"></i>
-                    </td>
-                  </tr>
-                </table>
-              </p-scrollPanel>
-            </div>
+    </p-tabPanel>
+    <p-tabPanel header="Diety">
+      <div class="container-fluid tableContainer">
+        <div class="row">
+          <div class="col-12">
+            <p-dropdown #ddD [options]="diets" filter="true" (onChange)="addDiet($event, ddD)" placeholder="Szukaj diety...">
+              <ng-template let-item pTemplate="selectedItem">
+                <span style="vertical-align:middle">{{item.label}}</span>
+              </ng-template>
+              <ng-template let-diet pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                  <div style="font-size:14px;float:right;margin-top:4px">{{diet.label}}</div>
+                </div>
+              </ng-template>
+            </p-dropdown>
           </div>
         </div>
-      </p-tabPanel>
-      <p-tabPanel header="Diety">
-        <div class="container-fluid descContainer">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="text-center">Opis diety</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p-scrollPanel [style]="{width: '100%', height: '230px'}">
-                <textarea pInputTextarea [(ngModel)]="desc"></textarea>
-              </p-scrollPanel>
-            </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '220px'}">
+              <table>
+                <tr>
+                  <th>Nazwa</th>
+                  <th> </th>
+                </tr>
+                <tr *ngFor="let el of dietsChoose; let i = index">
+                  <td>{{ el.name }}</td>
+                  <td>
+                    <i (click)="removeDiet(i)" class="pi pi-close"></i>
+                  </td>
+                </tr>
+              </table>
+            </p-scrollPanel>
           </div>
         </div>
-      </p-tabPanel>
-      <p-tabPanel header="Przepis">
-          <div class="container-fluid descContainer">
-            <div class="row">
-              <div class="col-12">
-                <h2 class="text-center">Opis diety</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <p-scrollPanel [style]="{width: '100%', height: '230px'}">
-                  <textarea pInputTextarea [(ngModel)]="desc"></textarea>
-                </p-scrollPanel>
-              </div>
-            </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Przepis">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <button class="btn" style="display: inline;" (click)="addStep()">Dodaj krok</button>
+            <button class="btn" style="display: inline;" (click)="removeStep()">Usuń krok</button>
           </div>
-        </p-tabPanel>
-    </p-tabView>
-  
-    <p-footer>
-      <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
-        <ng-template [ngIf]="!isBusy">Dodaj dietę</ng-template>
-        <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
-      </button>
-    </p-footer>
-  
-  </p-dialog>
-  
-  <p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
-  <p-confirmDialog></p-confirmDialog>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '200px'}">
+              <p-accordion>
+                <p-accordionTab *ngFor="let item of steps; let i = index" header="Krok {{ i + 1 }}">
+                  <textarea pInputTextarea [(ngModel)]="item.desc"></textarea>
+                </p-accordionTab>
+              </p-accordion>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Opis">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">Opis dania</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '230px'}">
+              <textarea pInputTextarea [(ngModel)]="desc"></textarea>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Zdjęcie">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">Zdjęcie</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+              <label class="btn btn-default">
+                <i class="fa fa-upload"></i>
+                <span class="file-label">
+                  wybierz zdjęcie
+                </span>
+                <input type="file" (change)="upload($event)" hidden>
+              </label>
+              <div *ngIf="percentage | async as pct">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{ width: + (pct | number) + '%'}"
+                    attr.aria-valuenow="{{ pct | number }}" aria-valuemin="0" aria-valuemax="100">{{ pct | number }}%</div>
+                </div>
+              </div>
+              <div *ngIf="downloadURL | async as url">
+                <img [src]="url" class="img-fluid dishPic">
+              </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+
+  <p-footer>
+    <button class="btn" (click)="makeDish()" [disabled]="isBusy">
+      <ng-template [ngIf]="!isBusy">Dodaj danie</ng-template>
+      <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
+    </button>
+  </p-footer>
+
+</p-dialog>
+
+<p-dialog [(visible)]="editDish" (onHide)="reset()" class="addDialog" header="Edytuj danie" [responsive]="true" [width]="700" [minWidth]="320"
+  [minY]="70" [baseZIndex]="100">
+  <form [formGroup]="addDishForm">
+
+    <!-- name input -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          <input type="text" formControlName="name" placeholder="Nazwa dania" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-4">
+          <p-dropdown [options]="types" placeholder="Typ posiłku" formControlName="type"></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <p-tabView>
+    <p-tabPanel header="Lista zakupów">
+      <div class="container-fluid tableContainer elements">
+        <div class="row">
+          <div class="col-12">
+            <p-dropdown #dde [options]="elementsAll" filter="true" (onChange)="addElement($event, dde)" placeholder="Szukaj składnika...">
+              <ng-template let-item pTemplate="selectedItem">
+                <span style="vertical-align:middle">{{item.label}}</span>
+              </ng-template>
+              <ng-template let-element pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                  <div style="font-size:14px;float:right;margin-top:4px">{{element.label}}</div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '220px'}">
+              <table>
+                <tr>
+                  <th>Nazwa</th>
+                  <th>Ilość</th>
+                  <th>Jednostka</th>
+                  <th> </th>
+                </tr>
+                <tr *ngFor="let el of elementsChoose; let i = index">
+                  <td>{{ el.name }}</td>
+                  <td>
+                    <p-inplace #inp>
+                      <span pInplaceDisplay>
+                        {{el.quanity}}
+                      </span>
+                      <span pInplaceContent>
+                        <input type="text" class="inplace" pInputText pKeyFilter="int" #ine (keydown)="close($event, ine, inp)" [(ngModel)]="el.quanity">
+                      </span>
+                    </p-inplace>
+                  </td>
+                  <td>
+                    <p-dropdown [options]="units" placeholder="Jednostka" required="true" [(ngModel)]="el.unit"></p-dropdown>
+                  </td>
+                  <td>
+                    <i (click)="removeElement(i)" class="pi pi-close"></i>
+                  </td>
+                </tr>
+              </table>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Przepis">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <button class="btn" style="display: inline;" (click)="addStep()">Dodaj krok</button>
+            <button class="btn" style="display: inline;" (click)="removeStep()">Usuń krok</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '200px'}">
+              <p-accordion>
+                <p-accordionTab *ngFor="let item of steps; let i = index" header="Krok {{ i + 1 }}">
+                  <textarea pInputTextarea [(ngModel)]="item.desc"></textarea>
+                </p-accordionTab>
+              </p-accordion>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Opis">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">Opis dania</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p-scrollPanel [style]="{width: '100%', height: '230px'}">
+              <textarea pInputTextarea [(ngModel)]="desc"></textarea>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Zdjęcie">
+      <div class="container-fluid descContainer">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">Zdjęcie</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+              <label class="btn btn-default">
+                <i class="fa fa-upload"></i>
+                <span class="file-label">
+                  wybierz zdjęcie
+                </span>
+                <input type="file" (change)="upload($event)" hidden>
+              </label>
+              <div *ngIf="percentage | async as pct">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{ width: + (pct | number) + '%'}"
+                    attr.aria-valuenow="{{ pct | number }}" aria-valuemin="0" aria-valuemax="100">{{ pct | number }}%</div>
+                </div>
+              </div>
+              <div *ngIf="downloadURL | async as url">
+                <img [src]="url" class="img-fluid dishPic">
+              </div>
+              <div *ngIf="editDishImageUrl">
+                  <img [src]="editDishImageUrl" class="img-fluid dishPic">
+              </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+
+  <p-footer>
+    <button class="btn" (click)="updateDish()" [disabled]="isBusy">
+      <ng-template [ngIf]="!isBusy">Aktualizuj danie</ng-template>
+      <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
+    </button>
+  </p-footer>
+
+</p-dialog>
+
+<p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
+<p-confirmDialog></p-confirmDialog>

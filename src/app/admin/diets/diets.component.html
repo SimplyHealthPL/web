@@ -9,12 +9,12 @@
   </div>
 </div>
 
-<p-table #dt [value]="diets" [columns]="cols" [paginator]="true" [(selection)]="selectedDiets" [rows]="8">
+<p-table #dt [value]="diets" [columns]="cols" [paginator]="true" [(selection)]="selectedDiets" [rows]="8" (onEditComplete)="changed($event)">
   <ng-template pTemplate="header" let-columns>
     <tr>
-        <th style="width: 2.25em">
-            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-        </th>
+      <th style="width: 2.25em">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
       <th *ngFor="let col of columns">
         {{col.header}}
       </th>
@@ -23,15 +23,33 @@
   </ng-template>
   <ng-template pTemplate="body" let-rowData let-columns="columns">
     <tr [pSelectableRow]="rowData">
-        <td>
-            <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
-        </td>
-      <td *ngFor="let col of columns" [ngSwitch]="col.field">
-        <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
-        <span *ngSwitchCase="'long'">{{ rowData['long'] }}</span>
-        <span *ngSwitchCase="'dishs'">{{ rowData['dishs'].length }}</span>
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td *ngFor="let col of columns" [ngSwitch]="col.field" [pEditableColumn]="rowData">
+        <span *ngSwitchCase="'name'">
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input type="text" [(ngModel)]="rowData.name">
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ rowData['name'] }}
+            </ng-template>
+          </p-cellEditor>
+        </span>
+        <span *ngSwitchCase="'long'">
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input type="text" [(ngModel)]="rowData.long">
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ rowData['long'] }}
+            </ng-template>
+          </p-cellEditor>
+        </span>
+        <span *ngSwitchCase="'dishs'">{{ rowData['dishs']? rowData['dishs'].length : '0' }}</span>
         <span *ngSwitchCase="'clients'">{{ clientOnDiet[rowData['key']] || '-' }}</span>
-        <button class="btn" *ngSwitchCase="'button'" [routerLink]="['edit/', rowData['key']]">Zarządzaj</button>
+        <button class="btn" *ngSwitchCase="'button'" [routerLink]="['../diet/', rowData['key']]">Zarządzaj</button>
       </td>
     </tr>
   </ng-template>
@@ -49,7 +67,7 @@
             pInputText>
         </div>
         <div class="col-4">
-          <input type="text" formControlName="long" placeholder="Długość diety" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+          <input type="text" formControlName="long" pKeyFilter="int" placeholder="Długość diety" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
             pInputText>
         </div>
       </div>
@@ -85,7 +103,7 @@
                 </tr>
                 <tr *ngFor="let el of dishsChoose; let i = index">
                   <td>{{ el.name }}</td>
-                  <td>{{ el.type[0] }}</td>
+                  <td>{{ types[el?.type[0]]?.label }}</td>
                   <td>{{ elements[el.key] | values: 'calories' }}</td>
                   <td>
                     <i (click)="removeItem(i)" class="pi pi-close"></i>
@@ -116,7 +134,7 @@
   </p-tabView>
 
   <p-footer>
-    <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
+    <button class="btn" (click)="makeDiet()" [disabled]="isBusy">
       <ng-template [ngIf]="!isBusy">Dodaj dietę</ng-template>
       <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
     </button>

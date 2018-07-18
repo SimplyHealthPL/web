@@ -3,7 +3,8 @@
     <div class="col-4">
       <h3>Karta pacjenta: {{ user?.name }} {{ user?.surename }}</h3>
       <h4>Dieta {{ diets? (diets | diet: user?.dietId : true) : '-'}}</h4>
-      <i class="icon pen"></i>
+      <i class="icon pen" (click)="editUser=true"></i>
+      <i class="icon calendar green"></i>
       <div class="desc">
         <ul>
           <li>Waga przy rozpoczęciu: {{ user?.weight? user.weight[0].value + 'kg' : '-'}}</li>
@@ -34,16 +35,120 @@
           <li>Liczba wizyt w poradni: {{ user?.calendar | consultation}}</li>
           <li>Email: {{ user?.email }}</li>
         </ul>
-        <p>Notatki</p>
+        <p class="note">Notatki</p>
+        <i class="icon note"></i>
       </div>
     </div>
     <div class="col-8">
       <div class="row justify-content-end">
         <div class="col-12"></div>
         <div class="col-12">
-            <canvas #chart class="chart" id="chart"></canvas>
+          <canvas #chart class="chart" id="chart"></canvas>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<p-dialog [(visible)]="editUser" class="addDialog" header="Edytuj dane pacjenta" [responsive]="true" [width]="700" [minWidth]="320"
+  [minY]="70" [baseZIndex]="100">
+  <form [formGroup]="editUserForm">
+
+    <!-- name input -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <input type="text" formControlName="name" placeholder="Imię" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="surename" placeholder="Nazwisko" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="email" formControlName="email" placeholder="Email" pTooltip="Wymagane" tooltipPosition="top" tooltipZIndex="10000"
+            pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="age" placeholder="Wiek" pInputText>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <input type="text" formControlName="height" placeholder="Wzrost" pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="weight" placeholder="Waga" pInputText>
+        </div>
+        <div class="col-3">
+          <input type="text" formControlName="weightPurpose" placeholder="Waga docelowa" pInputText>
+        </div>
+        <div class="col-3">
+          <p-dropdown [options]="lifestyle" placeholder="Styl życia" formControlName="lifestyle"></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="container-fluid chipsContainer">
+    <div class="row">
+      <div class="col-4">
+        <h3>Nie lubi</h3>
+        <input type="text" #unl (keydown)="addItem($event, 'unlike', unl)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of user?.unlike; let i = index">{{el}}
+              <i (click)="removeItem(i, 'unlike')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+      <div class="col-4">
+        <h3>Alergie</h3>
+        <input type="text" #al (keydown)="addItem($event, 'alergies', al)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of user?.alergies; let i = index">{{el}}
+              <i (click)="removeItem(i, 'alergies')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+      <div class="col-4">
+        <h3>Przeciwskazania</h3>
+        <input type="text" #re (keydown)="addItem($event, 'restricted', re)" placeholder="Pisz..." pInputText>
+        <p-scrollPanel [style]="{width: '100%', height: '90px'}">
+          <ul>
+            <li *ngFor="let el of user?.restricted; let i = index">{{el}}
+              <i (click)="removeItem(i, 'restricted')" class="pi pi-close"></i>
+            </li>
+          </ul>
+        </p-scrollPanel>
+      </div>
+    </div>
+  </div>
+
+  <p-footer>
+    <p-dropdown [options]="diets" [(ngModel)]="diet" filter="true" placeholder="Szukaj diety..." pTooltip="Wybierz diete" tooltipPosition="top" tooltipZIndex="10000">
+      <ng-template let-item pTemplate="selectedItem">
+        <span style="vertical-align:middle">{{item.label}}</span>
+      </ng-template>
+      <ng-template let-dietChosse pTemplate="item">
+        <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+          <div style="font-size:14px;float:right;margin-top:4px">{{dietChosse.label}}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+    <div class="calendar">
+      <p-calendar [(ngModel)]="date"  dateFormat="dd.mm.yy" pTooltip="Data rozpoczęcia diety" tooltipPosition="top" tooltipZIndex="10000"></p-calendar>
+    </div>
+    <button class="btn" (click)="doSignUp()" [disabled]="isBusy">
+      <ng-template [ngIf]="!isBusy">Zapisz zmiany</ng-template>
+      <ng-template [ngIf]="isBusy">Czekaj...</ng-template>
+    </button>
+  </p-footer>
+
+</p-dialog>
+
+<p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>

@@ -2,6 +2,6 @@ export interface Dish {
     name: string;
     image: string;
     elements: {};
-    recipe: Array<any>;
+    recipe: Object;
     type: Array<any>;
 }

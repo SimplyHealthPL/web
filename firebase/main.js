@@ -419,33 +419,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./dishs/dishs.component */ "./src/app/admin/dishs/dishs.component.ts");
 /* harmony import */ var _products_products_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./products/products.component */ "./src/app/admin/products/products.component.ts");
 /* harmony import */ var _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./calendar/calendar.component */ "./src/app/admin/calendar/calendar.component.ts");
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/table.js");
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(primeng_table__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! primeng/dropdown */ "./node_modules/primeng/dropdown.js");
-/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(primeng_dropdown__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pipes/pipes.module */ "./src/app/pipes/pipes.module.ts");
-/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! primeng/dialog */ "./node_modules/primeng/dialog.js");
-/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(primeng_dialog__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! primeng/autocomplete */ "./node_modules/primeng/autocomplete.js");
-/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! primeng/chips */ "./node_modules/primeng/chips.js");
-/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(primeng_chips__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! primeng/tooltip */ "./node_modules/primeng/tooltip.js");
-/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! primeng/scrollpanel */ "./node_modules/primeng/scrollpanel.js");
-/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/inputtextarea.js");
-/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__);
-/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! primeng/confirmdialog */ "./node_modules/primeng/confirmdialog.js");
-/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__);
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var _diet_detail_diet_detail_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./diet-detail/diet-detail.component */ "./src/app/admin/diet-detail/diet-detail.component.ts");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/table.js");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(primeng_table__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! primeng/dropdown */ "./node_modules/primeng/dropdown.js");
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(primeng_dropdown__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pipes/pipes.module */ "./src/app/pipes/pipes.module.ts");
+/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! primeng/dialog */ "./node_modules/primeng/dialog.js");
+/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(primeng_dialog__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! primeng/autocomplete */ "./node_modules/primeng/autocomplete.js");
+/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(primeng_autocomplete__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! primeng/chips */ "./node_modules/primeng/chips.js");
+/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(primeng_chips__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! primeng/tooltip */ "./node_modules/primeng/tooltip.js");
+/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(primeng_tooltip__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! primeng/scrollpanel */ "./node_modules/primeng/scrollpanel.js");
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/inputtextarea.js");
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! primeng/confirmdialog */ "./node_modules/primeng/confirmdialog.js");
+/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./user-detail/user-detail.component */ "./src/app/admin/user-detail/user-detail.component.ts");
+/* harmony import */ var primeng_accordion__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! primeng/accordion */ "./node_modules/primeng/accordion.js");
+/* harmony import */ var primeng_accordion__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(primeng_accordion__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var primeng_inplace__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! primeng/inplace */ "./node_modules/primeng/inplace.js");
+/* harmony import */ var primeng_inplace__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(primeng_inplace__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var primeng_keyfilter__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! primeng/keyfilter */ "./node_modules/primeng/keyfilter.js");
+/* harmony import */ var primeng_keyfilter__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(primeng_keyfilter__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var primeng_inputswitch__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! primeng/inputswitch */ "./node_modules/primeng/inputswitch.js");
+/* harmony import */ var primeng_inputswitch__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(primeng_inputswitch__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var primeng_multiselect__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! primeng/multiselect */ "./node_modules/primeng/multiselect.js");
+/* harmony import */ var primeng_multiselect__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(primeng_multiselect__WEBPACK_IMPORTED_MODULE_41__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
 
 
 
@@ -503,20 +522,26 @@ var AdminModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_16__["BrowserModule"],
                 primeng_orderlist__WEBPACK_IMPORTED_MODULE_17__["OrderListModule"],
-                primeng_table__WEBPACK_IMPORTED_MODULE_24__["TableModule"],
-                primeng_dropdown__WEBPACK_IMPORTED_MODULE_25__["DropdownModule"],
-                primeng_dialog__WEBPACK_IMPORTED_MODULE_27__["DialogModule"],
-                _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_26__["PipesModule"].forRoot(),
+                primeng_table__WEBPACK_IMPORTED_MODULE_25__["TableModule"],
+                primeng_dropdown__WEBPACK_IMPORTED_MODULE_26__["DropdownModule"],
+                primeng_dialog__WEBPACK_IMPORTED_MODULE_28__["DialogModule"],
+                _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_27__["PipesModule"].forRoot(),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
-                primeng_autocomplete__WEBPACK_IMPORTED_MODULE_28__["AutoCompleteModule"],
-                primeng_chips__WEBPACK_IMPORTED_MODULE_29__["ChipsModule"],
-                primeng_tooltip__WEBPACK_IMPORTED_MODULE_30__["TooltipModule"],
-                primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_31__["ScrollPanelModule"],
-                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_32__["InputTextareaModule"],
-                primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_33__["ConfirmDialogModule"]
+                primeng_autocomplete__WEBPACK_IMPORTED_MODULE_29__["AutoCompleteModule"],
+                primeng_chips__WEBPACK_IMPORTED_MODULE_30__["ChipsModule"],
+                primeng_tooltip__WEBPACK_IMPORTED_MODULE_31__["TooltipModule"],
+                primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_32__["ScrollPanelModule"],
+                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_33__["InputTextareaModule"],
+                primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_34__["ConfirmDialogModule"],
+                primeng_accordion__WEBPACK_IMPORTED_MODULE_37__["AccordionModule"],
+                primeng_inplace__WEBPACK_IMPORTED_MODULE_38__["InplaceModule"],
+                primeng_keyfilter__WEBPACK_IMPORTED_MODULE_39__["KeyFilterModule"],
+                primeng_inputswitch__WEBPACK_IMPORTED_MODULE_40__["InputSwitchModule"],
+                primeng_multiselect__WEBPACK_IMPORTED_MODULE_41__["MultiSelectModule"]
             ],
-            declarations: [_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"], _users_users_component__WEBPACK_IMPORTED_MODULE_19__["UsersComponent"], _diets_diets_component__WEBPACK_IMPORTED_MODULE_20__["DietsComponent"], _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_21__["DishsComponent"], _products_products_component__WEBPACK_IMPORTED_MODULE_22__["ProductsComponent"], _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_23__["CalendarComponent"]],
-            providers: [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_18__["DataServiceProvider"], _administration_guard__WEBPACK_IMPORTED_MODULE_6__["AdministrationGuard"], primeng_api__WEBPACK_IMPORTED_MODULE_34__["ConfirmationService"]]
+            declarations: [_admin_component__WEBPACK_IMPORTED_MODULE_2__["AdminComponent"], _users_users_component__WEBPACK_IMPORTED_MODULE_19__["UsersComponent"], _diets_diets_component__WEBPACK_IMPORTED_MODULE_20__["DietsComponent"], _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_21__["DishsComponent"],
+                _products_products_component__WEBPACK_IMPORTED_MODULE_22__["ProductsComponent"], _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_23__["CalendarComponent"], _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_36__["UserDetailComponent"], _diet_detail_diet_detail_component__WEBPACK_IMPORTED_MODULE_24__["DietDetailComponent"]],
+            providers: [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_18__["DataServiceProvider"], _administration_guard__WEBPACK_IMPORTED_MODULE_6__["AdministrationGuard"], primeng_api__WEBPACK_IMPORTED_MODULE_35__["ConfirmationService"]]
         })
     ], AdminModule);
     return AdminModule;
@@ -545,12 +570,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dishs/dishs.component */ "./src/app/admin/dishs/dishs.component.ts");
 /* harmony import */ var _products_products_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products/products.component */ "./src/app/admin/products/products.component.ts");
 /* harmony import */ var _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./calendar/calendar.component */ "./src/app/admin/calendar/calendar.component.ts");
+/* harmony import */ var _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-detail/user-detail.component */ "./src/app/admin/user-detail/user-detail.component.ts");
+/* harmony import */ var _diet_detail_diet_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./diet-detail/diet-detail.component */ "./src/app/admin/diet-detail/diet-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -580,7 +609,9 @@ var AdminRoutingModule = /** @class */ (function () {
                             { path: 'diets', component: _diets_diets_component__WEBPACK_IMPORTED_MODULE_5__["DietsComponent"] },
                             { path: 'dishs', component: _dishs_dishs_component__WEBPACK_IMPORTED_MODULE_6__["DishsComponent"] },
                             { path: 'products', component: _products_products_component__WEBPACK_IMPORTED_MODULE_7__["ProductsComponent"] },
-                            { path: 'calendar', component: _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_8__["CalendarComponent"] }
+                            { path: 'calendar', component: _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_8__["CalendarComponent"] },
+                            { path: 'user/:id', component: _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_9__["UserDetailComponent"] },
+                            { path: 'diet/:id', component: _diet_detail_diet_detail_component__WEBPACK_IMPORTED_MODULE_10__["DietDetailComponent"] }
                         ]
                     }
                 ])
@@ -658,6 +689,263 @@ var CalendarComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/admin/diet-detail/diet-detail.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/admin/diet-detail/diet-detail.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-8\">\n      <div class=\"container toolbar\">\n        <div class=\"row\">\n          <div class=\"col\">\n            <h3>Dieta {{ diet?.name }}</h3>\n            <button class=\"btn\" (click)=\"''\">Dodaj danie</button>\n            <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>\n            <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n            <i class=\"fa fa-search\"></i>\n          </div>\n        </div>\n      </div>\n      <p-table #dt [value]=\"dishs\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDishs\" [rows]=\"8\">\n        <ng-template pTemplate=\"header\" let-columns>\n          <tr>\n            <th style=\"width: 2.25em\">\n              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n            </th>\n            <th *ngFor=\"let col of columns\">\n              {{col.header}}\n            </th>\n          </tr>\n\n        </ng-template>\n        <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n          <tr [pSelectableRow]=\"rowData\">\n            <td>\n              <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n            </td>\n            <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n              <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n              <span *ngSwitchCase=\"'type'\">{{ types[rowData?.type[0]]?.label }}</span>\n              <span *ngSwitchCase=\"'shoplist'\">\n                <i class=\"icon products list dark\" [pTooltip]=\"getElements(rowData['key'])\"></i>\n              </span>\n            </td>\n          </tr>\n        </ng-template>\n      </p-table>\n    </div>\n    <div class=\"col-4\">\n\n    </div>\n  </div>\n</div>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/diet-detail/diet-detail.component.scss":
+/*!**************************************************************!*\
+  !*** ./src/app/admin/diet-detail/diet-detail.component.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/admin/diet-detail/diet-detail.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/diet-detail/diet-detail.component.ts ***!
+  \************************************************************/
+/*! exports provided: DietDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DietDetailComponent", function() { return DietDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/api.js");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var DietDetailComponent = /** @class */ (function () {
+    function DietDetailComponent(data, route, confirmationService, fb) {
+        this.data = data;
+        this.route = route;
+        this.confirmationService = confirmationService;
+        this.fb = fb;
+        this.dishs = [];
+        this.selectedDishs = [];
+        this.dishElements = {};
+        this.error = '';
+        this.msgs = [];
+        this.cols = [
+            { field: 'name', header: 'Nazwa dania' },
+            { field: 'type', header: 'Typ posiłku' },
+            { field: 'shoplist', header: 'Lista zakupów' }
+        ];
+        this.types = [
+            { label: 'Śniadanie', value: '0' },
+            { label: 'Drugie śniadanie', value: '1' },
+            { label: 'Lunch', value: '2' },
+            { label: 'Obiad', value: '3' },
+            { label: 'Kolacja', value: '4' },
+            { label: '-', value: null }
+        ];
+    }
+    DietDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscription = this.getDietId().flatMap(function (x) { return _this.getDiet(x.id); })
+            .flatMap(function (diet) { return _this.loadDishs(diet); })
+            .subscribe(function (dishs) {
+            _this.filterDishs(dishs);
+        });
+    };
+    DietDetailComponent.prototype.getDietId = function () {
+        return this.route.params;
+    };
+    DietDetailComponent.prototype.getDiet = function (id) {
+        this.dietId = id;
+        return this.data.getDietByKey(id);
+    };
+    DietDetailComponent.prototype.loadDishs = function (data) {
+        this.diet = data;
+        return this.data.getDishs();
+    };
+    DietDetailComponent.prototype.filterDishs = function (data) {
+        var _this = this;
+        this.dishs = [];
+        data.forEach(function (el) {
+            if (_this.diet.dishs) {
+                _this.diet.dishs.forEach(function (dishEl) {
+                    if (el.payload.key === dishEl.dishId) {
+                        var dish_1 = __assign({ key: el.payload.key }, el.payload.val());
+                        _this.dishElements[dish_1.key] = [];
+                        dish_1.elements.forEach(function (ele) {
+                            _this.getItem(ele, dish_1.key);
+                        });
+                        _this.dishs.push(dish_1);
+                    }
+                });
+            }
+        });
+    };
+    DietDetailComponent.prototype.getElements = function (elements) {
+        var eleNames = this.dishElements[elements].map(function (el) {
+            return el.element.name;
+        });
+        var label = '';
+        if (Array.isArray(eleNames)) {
+            eleNames.forEach(function (el, index) {
+                if (index + 1 === eleNames.length) {
+                    label += el;
+                }
+                else {
+                    label += el + ', ';
+                }
+            });
+        }
+        return label;
+    };
+    DietDetailComponent.prototype.getItem = function (el, key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var item, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        item = { element: {}, unit: {}, amount: 0 };
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 4, , 5]);
+                        return [4 /*yield*/, this.data.getElement(el.elementId).subscribe(function (element) {
+                                item.element = element;
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.data.getUnit(el.unitId).subscribe(function (unit) {
+                                item.unit = unit;
+                            })];
+                    case 3:
+                        _a.sent();
+                        item.amount = el.amount;
+                        this.dishElements[key].push(item);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DietDetailComponent.prototype.remove = function () {
+        var _this = this;
+        if (this.selectedDishs.length > 0) {
+            this.confirmationService.confirm({
+                message: 'Na pewno chcesz usunąć te elementy?',
+                header: 'Potwierdź usunięcie',
+                accept: function () {
+                    _this.selectedDishs.forEach(function (el) {
+                        _this.diet.dishs = _this.diet.dishs.filter(function (dish) {
+                            return dish.dishId !== el.key;
+                        });
+                    });
+                    _this.data.updateDiet(_this.diet, _this.dietId).then(function (res) {
+                        if (res === true) {
+                            _this.msgs.push({ severity: 'info', summary: 'Dania usunięte z diety', detail: '' });
+                        }
+                        else {
+                            _this.error = 'Nieoczekiwany błąd.';
+                            _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                        }
+                    });
+                },
+                reject: function () {
+                    _this.msgs.push({ severity: 'info', summary: 'Anulowano usunięcie', detail: '' });
+                },
+                acceptLabel: 'Potwierdź',
+                rejectLabel: 'Anuluj'
+            });
+        }
+    };
+    DietDetailComponent.prototype.ngOnDestroy = function () {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+    };
+    DietDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-diet-detail',
+            template: __webpack_require__(/*! ./diet-detail.component.html */ "./src/app/admin/diet-detail/diet-detail.component.html"),
+            styles: [__webpack_require__(/*! ./diet-detail.component.scss */ "./src/app/admin/diet-detail/diet-detail.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    ], DietDetailComponent);
+    return DietDetailComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/diets/diets.component.html":
 /*!**************************************************!*\
   !*** ./src/app/admin/diets/diets.component.html ***!
@@ -665,7 +953,7 @@ var CalendarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addDiet=true\">Dodaj dietę</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDiets.length>0? 'Usuń ( ' + selectedDiets.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"diets\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDiets\" [rows]=\"8\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n        <th style=\"width: 2.25em\">\n            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n        </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n        <td>\n            <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n        </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n        <span *ngSwitchCase=\"'long'\">{{ rowData['long'] }}</span>\n        <span *ngSwitchCase=\"'dishs'\">{{ rowData['dishs'].length }}</span>\n        <span *ngSwitchCase=\"'clients'\">{{ clientOnDiet[rowData['key']] || '-' }}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addDiet\" class=\"addDialog\" header=\"Dodaj dietę\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addDietForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <input type=\"text\" formControlName=\"long\" placeholder=\"Długość diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-tabView>\n    <p-tabPanel header=\"Dania\">\n      <div class=\"container-fluid tableContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #dd [options]=\"dishs\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-dish pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{dish.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th>Typ dania</th>\n                  <th>Wartość kaloryczna</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of dishsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>{{ el.type[0] }}</td>\n                  <td>{{ elements[el.key] | values: 'calories' }}</td>\n                  <td>\n                    <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Opis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Opis diety</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n              <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n  </p-tabView>\n\n  <p-footer>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addDiet=true\">Dodaj dietę</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDiets.length>0? 'Usuń ( ' + selectedDiets.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"diets\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDiets\" [rows]=\"8\" (onEditComplete)=\"changed($event)\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\" [pEditableColumn]=\"rowData\">\n        <span *ngSwitchCase=\"'name'\">\n          <p-cellEditor>\n            <ng-template pTemplate=\"input\">\n              <input type=\"text\" [(ngModel)]=\"rowData.name\">\n            </ng-template>\n            <ng-template pTemplate=\"output\">\n              {{ rowData['name'] }}\n            </ng-template>\n          </p-cellEditor>\n        </span>\n        <span *ngSwitchCase=\"'long'\">\n          <p-cellEditor>\n            <ng-template pTemplate=\"input\">\n              <input type=\"text\" [(ngModel)]=\"rowData.long\">\n            </ng-template>\n            <ng-template pTemplate=\"output\">\n              {{ rowData['long'] }}\n            </ng-template>\n          </p-cellEditor>\n        </span>\n        <span *ngSwitchCase=\"'dishs'\">{{ rowData['dishs']? rowData['dishs'].length : '0' }}</span>\n        <span *ngSwitchCase=\"'clients'\">{{ clientOnDiet[rowData['key']] || '-' }}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['../diet/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addDiet\" class=\"addDialog\" header=\"Dodaj dietę\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addDietForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <input type=\"text\" formControlName=\"long\" pKeyFilter=\"int\" placeholder=\"Długość diety\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-tabView>\n    <p-tabPanel header=\"Dania\">\n      <div class=\"container-fluid tableContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #dd [options]=\"dishs\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-dish pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{dish.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th>Typ dania</th>\n                  <th>Wartość kaloryczna</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of dishsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>{{ types[el?.type[0]]?.label }}</td>\n                  <td>{{ elements[el.key] | values: 'calories' }}</td>\n                  <td>\n                    <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Opis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Opis diety</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n              <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n  </p-tabView>\n\n  <p-footer>\n    <button class=\"btn\" (click)=\"makeDiet()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>\n"
 
 /***/ }),
 
@@ -778,6 +1066,14 @@ var DietsComponent = /** @class */ (function () {
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             long: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
+        this.types = [
+            { label: 'Śniadanie', value: '0' },
+            { label: 'Drugie śniadanie', value: '1' },
+            { label: 'Lunch', value: '2' },
+            { label: 'Obiad', value: '3' },
+            { label: 'Kolacja', value: '4' },
+            { label: '-', value: null }
+        ];
     }
     DietsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -822,7 +1118,7 @@ var DietsComponent = /** @class */ (function () {
             this.subscriptionDishs.unsubscribe();
         }
     };
-    DietsComponent.prototype.doSignUp = function () {
+    DietsComponent.prototype.makeDiet = function () {
         var _this = this;
         // Make sure form values are valid
         if (this.addDietForm.invalid) {
@@ -931,6 +1227,24 @@ var DietsComponent = /** @class */ (function () {
             });
         });
     };
+    DietsComponent.prototype.changed = function (event) {
+        var _this = this;
+        var diet = {
+            desc: event.data.desc,
+            dishs: event.data.dishs,
+            long: event.data.long,
+            name: event.data.name
+        };
+        this.data.updateDiet(diet, event.data.key).then(function (res) {
+            if (res === true) {
+                _this.msgs.push({ severity: 'info', summary: 'Dieta zaktualizowana', detail: '' });
+            }
+            else {
+                _this.error = 'Nieoczekiwany błąd.';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
     DietsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-diets',
@@ -953,7 +1267,7 @@ var DietsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container toolbar\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <button class=\"btn\" (click)=\"addDish=true\">Dodaj danie</button>\n        <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>\n        <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n        <i class=\"fa fa-search\"></i>\n      </div>\n    </div>\n  </div>\n  \n  <p-table #dt [value]=\"dishs\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDishs\" [rows]=\"8\">\n    <ng-template pTemplate=\"header\" let-columns>\n      <tr>\n          <th style=\"width: 2.25em\">\n              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n          </th>\n        <th *ngFor=\"let col of columns\">\n          {{col.header}}\n        </th>\n      </tr>\n  \n    </ng-template>\n    <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n      <tr [pSelectableRow]=\"rowData\">\n          <td>\n              <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n          </td>\n        <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n          <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n          <span *ngSwitchCase=\"'type'\">{{ rowData['type'][0] }}</span>\n          <span *ngSwitchCase=\"'diets'\">{{ rowData['key'] }}</span>\n          <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n        </td>\n      </tr>\n    </ng-template>\n  </p-table>\n  \n  <p-dialog [(visible)]=\"addDish\" class=\"addDialog\" header=\"Dodaj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n    [minY]=\"70\" [baseZIndex]=\"100\">\n    <form [formGroup]=\"addDishForm\">\n  \n      <!-- name input -->\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n              pInputText>\n          </div>\n          <div class=\"col-4\">\n              <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n          </div>\n        </div>\n      </div>\n  \n    </form>\n    <p-tabView>\n      <p-tabPanel header=\"Lista zakupów\">\n        <div class=\"container-fluid tableContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-dropdown #dd [options]=\"dishs\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n                <ng-template let-item pTemplate=\"selectedItem\">\n                  <span style=\"vertical-align:middle\">{{item.label}}</span>\n                </ng-template>\n                <ng-template let-dish pTemplate=\"item\">\n                  <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                    <div style=\"font-size:14px;float:right;margin-top:4px\">{{dish.label}}</div>\n                  </div>\n                </ng-template>\n              </p-dropdown>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n                <table>\n                  <tr>\n                    <th>Nazwa</th>\n                    <th>Typ dania</th>\n                    <th>Wartość kaloryczna</th>\n                    <th> </th>\n                  </tr>\n                  <tr *ngFor=\"let el of dishsChoose; let i = index\">\n                    <td>{{ el.name }}</td>\n                    <td>{{ el.type[0] }}</td>\n                    <td>{{ elements[el.key] | values: 'calories' }}</td>\n                    <td>\n                      <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                    </td>\n                  </tr>\n                </table>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Diety\">\n        <div class=\"container-fluid descContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <h2 class=\"text-center\">Opis diety</h2>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Przepis\">\n          <div class=\"container-fluid descContainer\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h2 class=\"text-center\">Opis diety</h2>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                  <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n                </p-scrollPanel>\n              </div>\n            </div>\n          </div>\n        </p-tabPanel>\n    </p-tabView>\n  \n    <p-footer>\n      <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n        <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n        <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n      </button>\n    </p-footer>\n  \n  </p-dialog>\n  \n  <p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n  <p-confirmDialog></p-confirmDialog>"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"showAdd()\">Dodaj danie</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"dishs\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedDishs\" [rows]=\"8\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n        <span *ngSwitchCase=\"'type'\">{{ types[rowData?.type[0]]?.label }}</span>\n        <span *ngSwitchCase=\"'shoplist'\">\n          <i class=\"icon products list dark\" [pTooltip]=\"getElements(rowData['key'])\"></i>\n        </span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" (click)=\"editDishInit(rowData)\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addDish\" class=\"addDialog\" header=\"Dodaj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addDishForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-tabView>\n    <p-tabPanel header=\"Lista zakupów\">\n      <div class=\"container-fluid tableContainer elements\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #dd [options]=\"elementsAll\" filter=\"true\" (onChange)=\"addElement($event, dd)\" placeholder=\"Szukaj składnika...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-element pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{element.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th>Ilość</th>\n                  <th>Jednostka</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of elementsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>\n                    <p-inplace #inp>\n                      <span pInplaceDisplay>\n                        {{el.quanity}}\n                      </span>\n                      <span pInplaceContent>\n                        <input type=\"text\" class=\"inplace\" #in pInputText pKeyFilter=\"int\" (keydown)=\"close($event, in, inp)\" [(ngModel)]=\"el.quanity\">\n                      </span>\n                    </p-inplace>\n                  </td>\n                  <td>\n                    <p-dropdown [options]=\"units\" placeholder=\"Jednostka\" required=\"true\" [(ngModel)]=\"el.unit\"></p-dropdown>\n                  </td>\n                  <td>\n                    <i (click)=\"removeElement(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Diety\">\n      <div class=\"container-fluid tableContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #ddD [options]=\"diets\" filter=\"true\" (onChange)=\"addDiet($event, ddD)\" placeholder=\"Szukaj diety...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-diet pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{diet.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of dietsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>\n                    <i (click)=\"removeDiet(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Przepis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <button class=\"btn\" style=\"display: inline;\" (click)=\"addStep()\">Dodaj krok</button>\n            <button class=\"btn\" style=\"display: inline;\" (click)=\"removeStep()\">Usuń krok</button>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '200px'}\">\n              <p-accordion>\n                <p-accordionTab *ngFor=\"let item of steps; let i = index\" header=\"Krok {{ i + 1 }}\">\n                  <textarea pInputTextarea [(ngModel)]=\"item.desc\"></textarea>\n                </p-accordionTab>\n              </p-accordion>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Opis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Opis dania</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n              <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Zdjęcie\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Zdjęcie</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n              <label class=\"btn btn-default\">\n                <i class=\"fa fa-upload\"></i>\n                <span class=\"file-label\">\n                  wybierz zdjęcie\n                </span>\n                <input type=\"file\" (change)=\"upload($event)\" hidden>\n              </label>\n              <div *ngIf=\"percentage | async as pct\">\n                <div class=\"progress\">\n                  <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" [ngStyle]=\"{ width: + (pct | number) + '%'}\"\n                    attr.aria-valuenow=\"{{ pct | number }}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{ pct | number }}%</div>\n                </div>\n              </div>\n              <div *ngIf=\"downloadURL | async as url\">\n                <img [src]=\"url\" class=\"img-fluid dishPic\">\n              </div>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n  </p-tabView>\n\n  <p-footer>\n    <button class=\"btn\" (click)=\"makeDish()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj danie</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-dialog [(visible)]=\"editDish\" (onHide)=\"reset()\" class=\"addDialog\" header=\"Edytuj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addDishForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-tabView>\n    <p-tabPanel header=\"Lista zakupów\">\n      <div class=\"container-fluid tableContainer elements\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-dropdown #dde [options]=\"elementsAll\" filter=\"true\" (onChange)=\"addElement($event, dde)\" placeholder=\"Szukaj składnika...\">\n              <ng-template let-item pTemplate=\"selectedItem\">\n                <span style=\"vertical-align:middle\">{{item.label}}</span>\n              </ng-template>\n              <ng-template let-element pTemplate=\"item\">\n                <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                  <div style=\"font-size:14px;float:right;margin-top:4px\">{{element.label}}</div>\n                </div>\n              </ng-template>\n            </p-dropdown>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n              <table>\n                <tr>\n                  <th>Nazwa</th>\n                  <th>Ilość</th>\n                  <th>Jednostka</th>\n                  <th> </th>\n                </tr>\n                <tr *ngFor=\"let el of elementsChoose; let i = index\">\n                  <td>{{ el.name }}</td>\n                  <td>\n                    <p-inplace #inp>\n                      <span pInplaceDisplay>\n                        {{el.quanity}}\n                      </span>\n                      <span pInplaceContent>\n                        <input type=\"text\" class=\"inplace\" pInputText pKeyFilter=\"int\" #ine (keydown)=\"close($event, ine, inp)\" [(ngModel)]=\"el.quanity\">\n                      </span>\n                    </p-inplace>\n                  </td>\n                  <td>\n                    <p-dropdown [options]=\"units\" placeholder=\"Jednostka\" required=\"true\" [(ngModel)]=\"el.unit\"></p-dropdown>\n                  </td>\n                  <td>\n                    <i (click)=\"removeElement(i)\" class=\"pi pi-close\"></i>\n                  </td>\n                </tr>\n              </table>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Przepis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <button class=\"btn\" style=\"display: inline;\" (click)=\"addStep()\">Dodaj krok</button>\n            <button class=\"btn\" style=\"display: inline;\" (click)=\"removeStep()\">Usuń krok</button>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '200px'}\">\n              <p-accordion>\n                <p-accordionTab *ngFor=\"let item of steps; let i = index\" header=\"Krok {{ i + 1 }}\">\n                  <textarea pInputTextarea [(ngModel)]=\"item.desc\"></textarea>\n                </p-accordionTab>\n              </p-accordion>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Opis\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Opis dania</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n              <textarea pInputTextarea [(ngModel)]=\"desc\"></textarea>\n            </p-scrollPanel>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n    <p-tabPanel header=\"Zdjęcie\">\n      <div class=\"container-fluid descContainer\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <h2 class=\"text-center\">Zdjęcie</h2>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-12\">\n              <label class=\"btn btn-default\">\n                <i class=\"fa fa-upload\"></i>\n                <span class=\"file-label\">\n                  wybierz zdjęcie\n                </span>\n                <input type=\"file\" (change)=\"upload($event)\" hidden>\n              </label>\n              <div *ngIf=\"percentage | async as pct\">\n                <div class=\"progress\">\n                  <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" [ngStyle]=\"{ width: + (pct | number) + '%'}\"\n                    attr.aria-valuenow=\"{{ pct | number }}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{ pct | number }}%</div>\n                </div>\n              </div>\n              <div *ngIf=\"downloadURL | async as url\">\n                <img [src]=\"url\" class=\"img-fluid dishPic\">\n              </div>\n              <div *ngIf=\"editDishImageUrl\">\n                  <img [src]=\"editDishImageUrl\" class=\"img-fluid dishPic\">\n              </div>\n          </div>\n        </div>\n      </div>\n    </p-tabPanel>\n  </p-tabView>\n\n  <p-footer>\n    <button class=\"btn\" (click)=\"updateDish()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Aktualizuj danie</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>\n"
 
 /***/ }),
 
@@ -983,6 +1297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1039,41 +1354,46 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var DishsComponent = /** @class */ (function () {
-    function DishsComponent(data, fb, confirmationService) {
+    function DishsComponent(data, fb, confirmationService, storage) {
         this.data = data;
         this.fb = fb;
         this.confirmationService = confirmationService;
+        this.storage = storage;
         this.addDish = false;
+        this.editDish = false;
         this.msgs = [];
         this.dishs = [];
-        this.dishsChoose = [];
+        this.elementsChoose = [];
+        this.dietsChoose = [];
         this.diets = [];
         this.isBusy = false;
         this.error = '';
         this.clientOnDish = {};
         this.desc = '';
         this.selectedDishs = [];
-        this.elements = {};
+        this.dishElements = {};
+        this.elementsAll = [];
+        this.steps = [];
+        this.editDishId = '';
         this.cols = [
             { field: 'name', header: 'Nazwa dania' },
             { field: 'type', header: 'Typ posiłku' },
-            { field: 'diets', header: 'Dieta' },
             { field: 'shoplist', header: 'Lista zakupów' },
             { field: 'button', header: '' }
         ];
         this.addDishForm = fb.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            image: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            type: ['']
+            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
         this.types = [
-            { label: '-', value: null },
             { label: 'Śniadanie', value: '0' },
             { label: 'Drugie śniadanie', value: '1' },
             { label: 'Lunch', value: '2' },
             { label: 'Obiad', value: '3' },
-            { label: 'Kolacja', value: '4' }
+            { label: 'Kolacja', value: '4' },
+            { label: '-', value: null }
         ];
     }
     DishsComponent.prototype.ngOnInit = function () {
@@ -1081,18 +1401,33 @@ var DishsComponent = /** @class */ (function () {
         this.subscriptionDiets = this.data.getDiets().subscribe(function (data) {
             _this.diets = [];
             data.forEach(function (el) {
-                _this.diets.push(__assign({ key: el.payload.key }, el.payload.val()));
+                var diet = __assign({ key: el.payload.key }, el.payload.val());
+                _this.diets.push({ label: el.payload.val().name, value: diet });
             });
         });
         this.subscriptionDishs = this.data.getDishs().subscribe(function (data) {
             _this.dishs = [];
             data.forEach(function (el) {
                 var dish = __assign({ key: el.payload.key }, el.payload.val());
-                _this.elements[dish.key] = [];
+                _this.dishElements[dish.key] = [];
                 dish.elements.forEach(function (ele) {
                     _this.getItem(ele, dish.key);
                 });
                 _this.dishs.push(dish);
+            });
+        });
+        this.subscriptionElements = this.data.getElements().subscribe(function (data) {
+            _this.elementsAll = [];
+            data.forEach(function (el) {
+                var element = __assign({ key: el.payload.key }, el.payload.val());
+                _this.elementsAll.push({ label: el.payload.val().name, value: element });
+            });
+        });
+        this.subscriptionUnits = this.data.getUnits().subscribe(function (data) {
+            _this.units = [];
+            data.forEach(function (el) {
+                var unit = __assign({ key: el.payload.key }, el.payload.val());
+                _this.units.push({ label: el.payload.val().name, value: unit });
             });
         });
     };
@@ -1103,8 +1438,14 @@ var DishsComponent = /** @class */ (function () {
         if (this.subscriptionDishs) {
             this.subscriptionDishs.unsubscribe();
         }
+        if (this.subscriptionUnits) {
+            this.subscriptionUnits.unsubscribe();
+        }
+        if (this.subscriptionElements) {
+            this.subscriptionElements.unsubscribe();
+        }
     };
-    DishsComponent.prototype.doSignUp = function () {
+    DishsComponent.prototype.makeDish = function () {
         var _this = this;
         // Make sure form values are valid
         if (this.addDishForm.invalid) {
@@ -1112,49 +1453,107 @@ var DishsComponent = /** @class */ (function () {
             this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
             return;
         }
+        if (this.steps.length === 0) {
+            this.error = 'Dodaj przepis.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        if (this.downloadURL === undefined) {
+            this.error = 'Dodaj zdjęcie';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        if (this.elementsChoose.length === 0) {
+            this.error = 'Dodaj składnik';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
         // Reset status
         this.error = '';
         this.isBusy = true;
-        var formModel = this.addDishForm.value;
-        // Grab values from form
-        var name = formModel.name;
-        var image = formModel.image;
-        var elements = this.elements;
-        var recipe = this.recipe || [];
-        var type = formModel.type || [];
-        this.newDish = {
-            name: name,
-            image: image,
-            elements: elements,
-            recipe: recipe,
-            type: type
-        };
-        this.data.addDish(this.newDish).then(function (res) {
-            if (res === true) {
-                _this.isBusy = false;
-                _this.addDishForm.reset();
-                _this.desc = '';
-                _this.dishsChoose = [];
-                _this.msgs.push({ severity: 'info', summary: 'Disha dodana', detail: '' });
-            }
-            else {
-                _this.isBusy = false;
-                _this.error = 'Nieoczekiwany błąd.';
-                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
-            }
+        this.downloadURL.toPromise().then(function (url) {
+            var formModel = _this.addDishForm.value;
+            var name = formModel.name;
+            var type = [formModel.type] || [];
+            var image = url;
+            var elements = [];
+            var recipe = {
+                des: _this.desc,
+                steps: []
+            };
+            _this.steps.forEach(function (step) {
+                recipe.steps.push(step.desc);
+            });
+            _this.elementsChoose.forEach(function (el) {
+                elements.push({
+                    amount: el.quanity,
+                    elementId: el.key,
+                    unitId: el.unit.key
+                });
+            });
+            _this.newDish = {
+                name: name,
+                image: image,
+                elements: elements,
+                recipe: recipe,
+                type: type
+            };
+            _this.data.addDish(_this.newDish).then(function (res) {
+                if (res) {
+                    if (_this.dietsChoose.length > 0) {
+                        _this.dietsChoose.forEach(function (diet) {
+                            var dishs = diet.dishs;
+                            dishs.push({ dishId: res });
+                            var updateDiet = {
+                                desc: diet.desc,
+                                dishs: dishs,
+                                long: diet.long,
+                                name: diet.name
+                            };
+                            _this.data.updateDiet(updateDiet, diet.key);
+                        });
+                    }
+                    _this.isBusy = false;
+                    _this.addDishForm.reset();
+                    _this.desc = '';
+                    _this.elementsChoose = [];
+                    _this.steps = [];
+                    _this.dietsChoose = [];
+                    _this.downloadURL = undefined;
+                    _this.percentage = undefined;
+                    _this.msgs.push({ severity: 'info', summary: 'Danie dodane', detail: '' });
+                }
+                else {
+                    _this.isBusy = false;
+                    _this.error = 'Nieoczekiwany błąd.';
+                    _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                }
+            });
         });
     };
-    DishsComponent.prototype.addItem = function (event, dd) {
-        var repeat = this.dishsChoose.find(function (el) {
+    DishsComponent.prototype.addElement = function (event, dd) {
+        var repeat = this.elementsChoose.find(function (el) {
             return el.name === event.value.name;
         });
         if (!repeat) {
-            this.dishsChoose.push(event.value);
+            this.elementsChoose.push(__assign({ quanity: 0, unit: '' }, event.value));
         }
         dd.resetFilter();
     };
-    DishsComponent.prototype.removeItem = function (i) {
-        this.dishsChoose.splice(i, 1);
+    DishsComponent.prototype.removeElement = function (i) {
+        this.elementsChoose.splice(i, 1);
+    };
+    DishsComponent.prototype.addDiet = function (event, dd) {
+        var repeat = this.dietsChoose.find(function (el) {
+            return el.name === event.value.name;
+        });
+        if (!repeat) {
+            this.dietsChoose.push(event.value);
+        }
+        dd.resetFilter();
+    };
+    DishsComponent.prototype.removeDiet = function (i) {
+        this.dietsChoose.splice(i, 1);
     };
     DishsComponent.prototype.remove = function () {
         var _this = this;
@@ -1169,14 +1568,14 @@ var DishsComponent = /** @class */ (function () {
                     });
                     Promise.all(promises).then(function () {
                         _this.selectedDishs = [];
-                        _this.msgs.push({ severity: 'info', summary: 'Diety usunięte', detail: '' });
+                        _this.msgs.push({ severity: 'info', summary: 'Dania usunięte', detail: '' });
                     }).catch(function (e) {
                         console.log(e);
                         _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
                     });
                 },
                 reject: function () {
-                    _this.msgs = [{ severity: 'info', summary: 'Anulowano usunięcie', detail: '' }];
+                    _this.msgs.push({ severity: 'info', summary: 'Anulowano usunięcie', detail: '' });
                 },
                 acceptLabel: 'Potwierdź',
                 rejectLabel: 'Anuluj'
@@ -1204,7 +1603,7 @@ var DishsComponent = /** @class */ (function () {
                     case 3:
                         _a.sent();
                         item.amount = el.amount;
-                        this.elements[key].push(item);
+                        this.dishElements[key].push(item);
                         return [3 /*break*/, 5];
                     case 4:
                         e_1 = _a.sent();
@@ -1215,13 +1614,207 @@ var DishsComponent = /** @class */ (function () {
             });
         });
     };
+    DishsComponent.prototype.getElements = function (elements) {
+        var eleNames = this.dishElements[elements].map(function (el) {
+            return el.element.name;
+        });
+        var label = '';
+        if (Array.isArray(eleNames)) {
+            eleNames.forEach(function (el, index) {
+                if (index + 1 === eleNames.length) {
+                    label += el;
+                }
+                else {
+                    label += el + ', ';
+                }
+            });
+        }
+        return label;
+    };
+    DishsComponent.prototype.close = function (event, input, inplace) {
+        if (event.keyCode === 13 && input.value !== '') {
+            inplace.deactivate(event);
+        }
+    };
+    DishsComponent.prototype.upload = function (event) {
+        var _this = this;
+        var file = event.target.files[0];
+        var filePath = "dishs/" + new Date().getTime() + "_" + file.name;
+        var fileRef = this.storage.ref(filePath);
+        this.task = this.storage.upload(filePath, file);
+        this.percentage = this.task.percentageChanges();
+        this.snapshot = this.task.snapshotChanges();
+        this.task.snapshotChanges().toPromise().then(function () {
+            _this.downloadURL = fileRef.getDownloadURL();
+            _this.editDishImageUrl = undefined;
+            _this.msgs.push({ severity: 'success', summary: 'Zdjęcie dodane', detail: '' });
+        });
+    };
+    DishsComponent.prototype.addStep = function () {
+        this.steps.push({ desc: '' });
+    };
+    DishsComponent.prototype.removeStep = function () {
+        this.steps.pop();
+    };
+    DishsComponent.prototype.editDishInit = function (dishData) {
+        var _this = this;
+        this.addDish = false;
+        this.steps = [];
+        this.elementsChoose = [];
+        this.editDish = true;
+        this.editDishId = dishData.key;
+        var dish = {
+            name: dishData.name,
+            type: dishData.type[0]
+        };
+        this.addDishForm.setValue(dish);
+        dishData.recipe.steps.forEach(function (step) {
+            _this.steps.push({ desc: step });
+        });
+        this.desc = dishData.recipe.des;
+        this.editDishImageUrl = dishData.image;
+        dishData.elements.forEach(function (el) {
+            var elementAdded = _this.elementsAll.find(function (elS) {
+                return elS.value.key === el.elementId.toString();
+            });
+            var unitAdded = _this.units.find(function (unit) {
+                return unit.value.key === el.unitId.toString();
+            });
+            _this.elementsChoose.push(__assign({ quanity: el.amount, unit: unitAdded.value }, elementAdded.value));
+        });
+    };
+    DishsComponent.prototype.reset = function () {
+        this.isBusy = false;
+        this.addDishForm.reset();
+        this.desc = '';
+        this.elementsChoose = [];
+        this.steps = [];
+        this.downloadURL = undefined;
+        this.percentage = undefined;
+        this.editDishImageUrl = undefined;
+    };
+    DishsComponent.prototype.showAdd = function () {
+        if (this.editDish !== true) {
+            this.addDish = true;
+        }
+    };
+    DishsComponent.prototype.updateDish = function (update) {
+        var _this = this;
+        if (update === void 0) { update = false; }
+        console.log(update);
+        // Make sure form values are valid
+        if (this.addDishForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        if (this.steps.length === 0) {
+            this.error = 'Dodaj przepis.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        if (this.elementsChoose.length === 0) {
+            this.error = 'Dodaj składnik';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        if (this.downloadURL === undefined) {
+            var formModel = this.addDishForm.value;
+            var name_1 = formModel.name;
+            var type = [formModel.type] || [];
+            var image = this.editDishImageUrl;
+            var elements_1 = [];
+            var recipe_1 = {
+                des: this.desc,
+                steps: []
+            };
+            this.steps.forEach(function (step) {
+                recipe_1.steps.push(step.desc);
+            });
+            this.elementsChoose.forEach(function (el) {
+                elements_1.push({
+                    amount: el.quanity,
+                    elementId: el.key,
+                    unitId: el.unit.key
+                });
+            });
+            this.newDish = {
+                name: name_1,
+                image: image,
+                elements: elements_1,
+                recipe: recipe_1,
+                type: type
+            };
+            this.data.updateDish(this.newDish, this.editDishId).then(function (res) {
+                if (res === true) {
+                    _this.isBusy = false;
+                    _this.percentage = undefined;
+                    _this.msgs.push({ severity: 'info', summary: 'Danie dodane', detail: '' });
+                }
+                else {
+                    _this.isBusy = false;
+                    _this.error = 'Nieoczekiwany błąd.';
+                    _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                }
+            });
+        }
+        else {
+            this.downloadURL.toPromise().then(function (url) {
+                var formModel = _this.addDishForm.value;
+                var name = formModel.name;
+                var type = [formModel.type] || [];
+                var image = url;
+                var elements = [];
+                var recipe = {
+                    des: _this.desc,
+                    steps: []
+                };
+                _this.steps.forEach(function (step) {
+                    recipe.steps.push(step.desc);
+                });
+                _this.elementsChoose.forEach(function (el) {
+                    elements.push({
+                        amount: el.quanity,
+                        elementId: el.key,
+                        unitId: el.unit.key
+                    });
+                });
+                _this.newDish = {
+                    name: name,
+                    image: image,
+                    elements: elements,
+                    recipe: recipe,
+                    type: type
+                };
+                _this.data.updateDish(_this.newDish, _this.editDishId).then(function (res) {
+                    if (res === true) {
+                        _this.isBusy = false;
+                        _this.downloadURL = undefined;
+                        _this.percentage = undefined;
+                        _this.msgs.push({ severity: 'info', summary: 'Danie dodane', detail: '' });
+                    }
+                    else {
+                        _this.isBusy = false;
+                        _this.error = 'Nieoczekiwany błąd.';
+                        _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                    }
+                });
+            });
+        }
+    };
     DishsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-dishs',
             template: __webpack_require__(/*! ./dishs.component.html */ "./src/app/admin/dishs/dishs.component.html"),
             styles: [__webpack_require__(/*! ./dishs.component.scss */ "./src/app/admin/dishs/dishs.component.scss")]
         }),
-        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"]])
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataServiceProvider"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            primeng_api__WEBPACK_IMPORTED_MODULE_1__["ConfirmationService"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"]])
     ], DishsComponent);
     return DishsComponent;
 }());
@@ -1237,7 +1830,7 @@ var DishsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container toolbar\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <button class=\"btn\" (click)=\"addElement=true\">Dodaj danie</button>\n        <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedElements.length>0? 'Usuń ( ' + selectedElements.length + ' )': 'Usuń'}}</button>\n        <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n        <i class=\"fa fa-search\"></i>\n      </div>\n    </div>\n  </div>\n  \n  <p-table #dt [value]=\"elements\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedElements\" [rows]=\"8\">\n    <ng-template pTemplate=\"header\" let-columns>\n      <tr>\n          <th style=\"width: 2.25em\">\n              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n          </th>\n        <th *ngFor=\"let col of columns\">\n          {{col.header}}\n        </th>\n      </tr>\n  \n    </ng-template>\n    <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n      <tr [pSelectableRow]=\"rowData\">\n          <td>\n              <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n          </td>\n        <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n          <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n          <span *ngSwitchCase=\"'group'\">{{ rowData['group'] }}</span>\n          <span *ngSwitchCase=\"'values'\">{{ rowData['key'] }}</span>\n          <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n        </td>\n      </tr>\n    </ng-template>\n  </p-table>\n  \n  <p-dialog [(visible)]=\"addElement\" class=\"addDialog\" header=\"Dodaj danie\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n    [minY]=\"70\" [baseZIndex]=\"100\">\n    <form [formGroup]=\"addElementForm\">\n  \n      <!-- name input -->\n      <div class=\"container-fluid\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa dania\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n              pInputText>\n          </div>\n          <div class=\"col-4\">\n              <p-dropdown [options]=\"types\" placeholder=\"Typ posiłku\" formControlName=\"type\"></p-dropdown>\n          </div>\n        </div>\n      </div>\n  \n    </form>\n    <p-tabView>\n      <p-tabPanel header=\"Lista zakupów\">\n        <div class=\"container-fluid tableContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-dropdown #dd [options]=\"elements\" filter=\"true\" (onChange)=\"addItem($event, dd)\" placeholder=\"Szukaj dania...\">\n                <ng-template let-item pTemplate=\"selectedItem\">\n                  <span style=\"vertical-align:middle\">{{item.label}}</span>\n                </ng-template>\n                <ng-template let-element pTemplate=\"item\">\n                  <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n                    <div style=\"font-size:14px;float:right;margin-top:4px\">{{element.label}}</div>\n                  </div>\n                </ng-template>\n              </p-dropdown>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '220px'}\">\n                <table>\n                  <tr>\n                    <th>Nazwa</th>\n                    <th>Typ dania</th>\n                    <th>Wartość kaloryczna</th>\n                    <th> </th>\n                  </tr>\n                  <tr *ngFor=\"let el of elementsChoose; let i = index\">\n                    <td>{{ el.name }}</td>\n                    <td>{{ el.type[0] }}</td>\n                    <td>{{ elements[el.key] | values: 'calories' }}</td>\n                    <td>\n                      <i (click)=\"removeItem(i)\" class=\"pi pi-close\"></i>\n                    </td>\n                  </tr>\n                </table>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Diety\">\n        <div class=\"container-fluid descContainer\">\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <h2 class=\"text-center\">Opis diety</h2>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                <textarea pInputTextarea [(ngModel)]=\"recipe\"></textarea>\n              </p-scrollPanel>\n            </div>\n          </div>\n        </div>\n      </p-tabPanel>\n      <p-tabPanel header=\"Przepis\">\n          <div class=\"container-fluid descContainer\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h2 class=\"text-center\">Opis diety</h2>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <p-scrollPanel [style]=\"{width: '100%', height: '230px'}\">\n                  <textarea pInputTextarea [(ngModel)]=\"recipe\"></textarea>\n                </p-scrollPanel>\n              </div>\n            </div>\n          </div>\n        </p-tabPanel>\n    </p-tabView>\n  \n    <p-footer>\n      <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n        <ng-template [ngIf]=\"!isBusy\">Dodaj dietę</ng-template>\n        <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n      </button>\n    </p-footer>\n  \n  </p-dialog>\n  \n  <p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n  <p-confirmDialog></p-confirmDialog>"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addElement=true\">Dodaj składnik</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedElements.length>0? 'Usuń ( ' + selectedElements.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"elements\" [columns]=\"cols\" [paginator]=\"true\" [(selection)]=\"selectedElements\" [rows]=\"8\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{ rowData['name'] }}</span>\n        <span *ngSwitchCase=\"'group'\">{{ getType(rowData['group']) }}</span>\n        <span *ngSwitchCase=\"'values'\">\n            <i class=\"icon products list dark\" [pTooltip]=\"getValues(rowData['values'])\"></i>\n          </span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" (click)=\"editElementInit(rowData)\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addElement\" class=\"addDialog\" [header]=\"editElement? 'Edytuj składnik' : 'Dodaj składnik'\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addElementForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Nazwa składnika\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-4\">\n          <p-multiSelect [options]=\"types\" defaultLabel=\"Typ składniku\" selectedItemsLabel=\"Wybrano: {0}\" formControlName=\"type\" maxSelectedLabels=\"1\"></p-multiSelect>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <div class=\"container-fluid valuesContainer\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h3>Wartość odżywcza / 100g</h3>\n                <div class=\"form-group row\">\n                  <label for=\"staticEmail\" class=\"col-sm-6 col-form-label\">Wartość energetyczna</label>\n                  <div class=\"col-sm-6\">\n                    <div class=\"input-wrapper\">\n                      <input type=\"text\" class=\"form-control-plaintext\" formControlName=\"energy\" pTooltip=\"Wymagane\" tooltipPosition=\"top\"\n                        tooltipZIndex=\"10000\" pKeyFilter=\"num\" pInputText>\n                      <span class=\"unit\">kcl</span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"form-group row\">\n                  <label for=\"staticEmail\" class=\"col-sm-6 col-form-label\">Węglowodany</label>\n                  <div class=\"col-sm-6\">\n                    <div class=\"input-wrapper\">\n                      <input type=\"text\" class=\"form-control-plaintext\" formControlName=\"sugar\" pTooltip=\"Wymagane\" tooltipPosition=\"top\"\n                        tooltipZIndex=\"10000\" pKeyFilter=\"num\" pInputText>\n                      <span class=\"unit\">g</span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"form-group row\">\n                  <label for=\"staticEmail\" class=\"col-sm-6 col-form-label\">Białko</label>\n                  <div class=\"col-sm-6\">\n                    <div class=\"input-wrapper\">\n                      <input type=\"text\" class=\"form-control-plaintext\" formControlName=\"protein\" pTooltip=\"Wymagane\" tooltipPosition=\"top\"\n                        tooltipZIndex=\"10000\" pKeyFilter=\"num\" pInputText>\n                      <span class=\"unit\">g</span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"form-group row\">\n                  <label for=\"staticEmail\" class=\"col-sm-6 col-form-label\">fat</label>\n                  <div class=\"col-sm-6\">\n                    <div class=\"input-wrapper\">\n                      <input type=\"text\" class=\"form-control-plaintext\" formControlName=\"fat\" pTooltip=\"Wymagane\" tooltipPosition=\"top\"\n                        tooltipZIndex=\"10000\" pKeyFilter=\"num\" pInputText>\n                      <span class=\"unit\">g</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-4\">\n          <div class=\"container-fluid chipsContainer allergen\">\n            <div class=\"row\">\n              <div class=\"col-12\">\n                <h3>Alergeny</h3>\n                <input type=\"text\" #unl (keydown)=\"addItem($event, 'allergen', unl)\" placeholder=\"Pisz...\" pInputText>\n                <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n                  <ul>\n                    <li *ngFor=\"let el of allergen; let i = index\">{{el}}\n                      <i (click)=\"removeItem(i, 'allergen')\" class=\"pi pi-close\"></i>\n                    </li>\n                  </ul>\n                </p-scrollPanel>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n  </form>\n  <p-footer>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy && !editElement\">Dodaj składnik</ng-template>\n      <ng-template [ngIf]=\"!isBusy && editElement\">Edytuj składnik</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>\n"
 
 /***/ }),
 
@@ -1267,6 +1860,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _shared_groups__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/groups */ "./src/shared/groups.ts");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1284,41 +1878,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
+
 
 
 
@@ -1329,13 +1889,14 @@ var ProductsComponent = /** @class */ (function () {
         this.fb = fb;
         this.confirmationService = confirmationService;
         this.addElement = false;
+        this.editElement = false;
         this.msgs = [];
         this.elements = [];
-        this.elementsChoose = [];
-        this.diets = [];
         this.isBusy = false;
         this.error = '';
         this.selectedElements = [];
+        this.allergen = [];
+        this.editElementId = '';
         this.cols = [
             { field: 'name', header: 'Nazwa składnika' },
             { field: 'group', header: 'Typ składniku' },
@@ -1344,17 +1905,13 @@ var ProductsComponent = /** @class */ (function () {
         ];
         this.addElementForm = fb.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            image: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            type: ['']
+            energy: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            sugar: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            protein: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            fat: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
-        this.types = [
-            { label: '-', value: null },
-            { label: 'Śniadanie', value: '0' },
-            { label: 'Drugie śniadanie', value: '1' },
-            { label: 'Lunch', value: '2' },
-            { label: 'Obiad', value: '3' },
-            { label: 'Kolacja', value: '4' }
-        ];
+        this.types = _shared_groups__WEBPACK_IMPORTED_MODULE_4__["Groups"].slice();
     }
     ProductsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1384,10 +1941,15 @@ var ProductsComponent = /** @class */ (function () {
         var formModel = this.addElementForm.value;
         // Grab values from form
         var name = formModel.name;
-        var group = formModel.group;
+        var group = formModel.type;
         var allergen = this.allergen;
-        var promotion = formModel.promotion;
-        var values = formModel.values;
+        var promotion = formModel.promotion || 0;
+        var values = {
+            calories: formModel.energy,
+            carb: formModel.sugar,
+            fat: formModel.fat,
+            protein: formModel.protein
+        };
         this.newElement = {
             allergen: allergen,
             group: group,
@@ -1395,31 +1957,58 @@ var ProductsComponent = /** @class */ (function () {
             promotion: promotion,
             values: values
         };
-        this.data.addElement(this.newElement).then(function (res) {
-            if (res === true) {
-                _this.isBusy = false;
-                _this.addElementForm.reset();
-                _this.elementsChoose = [];
-                _this.msgs.push({ severity: 'info', summary: 'Składnik dodany', detail: '' });
-            }
-            else {
-                _this.isBusy = false;
-                _this.error = 'Nieoczekiwany błąd.';
-                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
-            }
-        });
-    };
-    ProductsComponent.prototype.addItem = function (event, dd) {
-        var repeat = this.elementsChoose.find(function (el) {
-            return el.name === event.value.name;
-        });
-        if (!repeat) {
-            this.elementsChoose.push(event.value);
+        if (!this.editElement) {
+            this.data.addElement(this.newElement).then(function (res) {
+                if (res === true) {
+                    _this.isBusy = false;
+                    _this.addElementForm.reset();
+                    _this.allergen = [];
+                    _this.msgs.push({ severity: 'info', summary: 'Składnik dodany', detail: '' });
+                }
+                else {
+                    _this.isBusy = false;
+                    _this.error = 'Nieoczekiwany błąd.';
+                    _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                }
+            });
         }
-        dd.resetFilter();
+        else {
+            this.data.updateElement(this.newElement, this.editElementId).then(function (res) {
+                if (res === true) {
+                    _this.isBusy = false;
+                    _this.addElement = false;
+                    _this.editElement = false;
+                    _this.editElementId = '';
+                    _this.addElementForm.reset();
+                    _this.allergen = [];
+                    _this.msgs.push({ severity: 'info', summary: 'Składnik zmieniony', detail: '' });
+                }
+                else {
+                    _this.isBusy = false;
+                    _this.error = 'Nieoczekiwany błąd.';
+                    _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+                }
+            });
+        }
     };
-    ProductsComponent.prototype.removeItem = function (i) {
-        this.elementsChoose.splice(i, 1);
+    ProductsComponent.prototype.addItem = function (event, list, input) {
+        if (event.keyCode === 13 && input.value !== '') {
+            switch (list) {
+                case 'allergen': {
+                    this.allergen.push(input.value);
+                    input.value = '';
+                    break;
+                }
+            }
+        }
+    };
+    ProductsComponent.prototype.removeItem = function (i, list) {
+        switch (list) {
+            case 'allergen': {
+                this.allergen.splice(i, 1);
+                break;
+            }
+        }
     };
     ProductsComponent.prototype.remove = function () {
         var _this = this;
@@ -1448,37 +2037,42 @@ var ProductsComponent = /** @class */ (function () {
             });
         }
     };
-    ProductsComponent.prototype.getItem = function (el, key) {
-        return __awaiter(this, void 0, void 0, function () {
-            var item, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        item = { element: {}, unit: {}, amount: 0 };
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 4, , 5]);
-                        return [4 /*yield*/, this.data.getElement(el.elementId).subscribe(function (element) {
-                                item.element = element;
-                            })];
-                    case 2:
-                        _a.sent();
-                        return [4 /*yield*/, this.data.getUnit(el.unitId).subscribe(function (unit) {
-                                item.unit = unit;
-                            })];
-                    case 3:
-                        _a.sent();
-                        item.amount = el.amount;
-                        this.elements[key].push(item);
-                        return [3 /*break*/, 5];
-                    case 4:
-                        e_1 = _a.sent();
-                        console.error(e_1);
-                        return [3 /*break*/, 5];
-                    case 5: return [2 /*return*/];
+    ProductsComponent.prototype.getType = function (types) {
+        var _this = this;
+        var label = '';
+        if (Array.isArray(types)) {
+            types.forEach(function (el, index) {
+                if (index + 1 === types.length) {
+                    label += _this.types[el].label;
+                }
+                else {
+                    label += _this.types[el].label + ', ';
                 }
             });
-        });
+        }
+        else {
+            label = types;
+        }
+        return label;
+    };
+    ProductsComponent.prototype.getValues = function (values) {
+        var label = "Kalorie - " + values.calories + " kcl\n      W\u0119glowodany - " + values.carb + " g\n      T\u0142uszcze - " + values.fat + " g\n      Bia\u0142ko - " + values.protein + " g\n    ";
+        return label;
+    };
+    ProductsComponent.prototype.editElementInit = function (elementData) {
+        this.addElement = true;
+        this.allergen = elementData.allergen;
+        this.editElement = true;
+        this.editElementId = elementData.key;
+        var element = {
+            name: elementData.name,
+            type: elementData.group,
+            energy: elementData.values.calories,
+            sugar: elementData.values.carb,
+            protein: elementData.values.protein,
+            fat: elementData.values.fat
+        };
+        this.addElementForm.setValue(element);
     };
     ProductsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1495,6 +2089,327 @@ var ProductsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/admin/user-detail/user-detail.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/admin/user-detail/user-detail.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-4\">\n      <h3>Karta pacjenta: {{ user?.name }} {{ user?.surename }}</h3>\n      <h4>Dieta {{ diets? (diets | diet: user?.dietId : true) : '-'}}</h4>\n      <i class=\"icon pen\" (click)=\"editUser=true\"></i>\n      <i class=\"icon calendar green\"></i>\n      <div class=\"desc\">\n        <ul>\n          <li>Waga przy rozpoczęciu: {{ user?.weight? user.weight[0].value + 'kg' : '-'}}</li>\n          <li>Waga docelowa: {{ user?.weightPurpose? user.weightPurpose + 'kg' : '-' }}</li>\n          <li>Wiek: {{ user?.age? user.age + 'lat' : '-' }}</li>\n          <li>Wzrost: {{ user?.height? user.height + 'cm' : '-' }}</li>\n          <li>Tryb życia: {{ lifestyle[user?.lifestyle]?.label }}</li>\n          <li class=\"empty\"></li>\n          <p-accordion expandIcon=\"\" collapseIcon=\"\">\n            <p-accordionTab header=\"Nie lubi\">\n              <ul class=\"tag\">\n                <li *ngFor=\"let el of user?.unlike\">{{el}}</li>\n              </ul>\n            </p-accordionTab>\n            <p-accordionTab header=\"Alergia\">\n              <ul class=\"tag\">\n                <li *ngFor=\"let el of user?.alergies\">{{el}}</li>\n              </ul>\n            </p-accordionTab>\n            <p-accordionTab header=\"Przeciwskazania\">\n              <ul class=\"tag\">\n                <li *ngFor=\"let el of user?.restricted\">{{el}}</li>\n              </ul>\n            </p-accordionTab>\n          </p-accordion>\n          <li class=\"empty\"></li>\n          <li class=\"empty\"></li>\n          <li>Liczba wizyt w poradni: {{ user?.calendar | consultation}}</li>\n          <li>Email: {{ user?.email }}</li>\n        </ul>\n        <p class=\"note\">Notatki</p>\n        <i class=\"icon note\"></i>\n      </div>\n    </div>\n    <div class=\"col-8\">\n      <div class=\"row justify-content-end\">\n        <div class=\"col-12\"></div>\n        <div class=\"col-12\">\n          <canvas #chart class=\"chart\" id=\"chart\"></canvas>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<p-dialog [(visible)]=\"editUser\" class=\"addDialog\" header=\"Edytuj dane pacjenta\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"editUserForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Imię\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"surename\" placeholder=\"Nazwisko\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"email\" formControlName=\"email\" placeholder=\"Email\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"age\" placeholder=\"Wiek\" pInputText>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"height\" placeholder=\"Wzrost\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weight\" placeholder=\"Waga\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weightPurpose\" placeholder=\"Waga docelowa\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <p-dropdown [options]=\"lifestyle\" placeholder=\"Styl życia\" formControlName=\"lifestyle\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n\n  <div class=\"container-fluid chipsContainer\">\n    <div class=\"row\">\n      <div class=\"col-4\">\n        <h3>Nie lubi</h3>\n        <input type=\"text\" #unl (keydown)=\"addItem($event, 'unlike', unl)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of user?.unlike; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'unlike')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Alergie</h3>\n        <input type=\"text\" #al (keydown)=\"addItem($event, 'alergies', al)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of user?.alergies; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'alergies')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Przeciwskazania</h3>\n        <input type=\"text\" #re (keydown)=\"addItem($event, 'restricted', re)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of user?.restricted; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'restricted')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n    </div>\n  </div>\n\n  <p-footer>\n    <p-dropdown [options]=\"diets\" [(ngModel)]=\"diet\" filter=\"true\" placeholder=\"Szukaj diety...\" pTooltip=\"Wybierz diete\" tooltipPosition=\"top\" tooltipZIndex=\"10000\">\n      <ng-template let-item pTemplate=\"selectedItem\">\n        <span style=\"vertical-align:middle\">{{item.label}}</span>\n      </ng-template>\n      <ng-template let-dietChosse pTemplate=\"item\">\n        <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n          <div style=\"font-size:14px;float:right;margin-top:4px\">{{dietChosse.label}}</div>\n        </div>\n      </ng-template>\n    </p-dropdown>\n    <div class=\"calendar\">\n      <p-calendar [(ngModel)]=\"date\"  dateFormat=\"dd.mm.yy\" pTooltip=\"Data rozpoczęcia diety\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"></p-calendar>\n    </div>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Zapisz zmiany</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/user-detail/user-detail.component.scss":
+/*!**************************************************************!*\
+  !*** ./src/app/admin/user-detail/user-detail.component.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container {\n  margin-top: 30px;\n  height: calc( 100vh - 100px); }\n  .container .row {\n    height: 100%; }\n  .container .row .col-4 {\n      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }\n  .container .row .col-4 h3 {\n        font-weight: 300;\n        font-size: 21px;\n        margin-top: 20px; }\n  .container .row .col-4 h4 {\n        font-weight: 300;\n        font-size: 21px;\n        color: #e67e22;\n        float: left; }\n  .container .row .col-4 .icon.pen {\n        display: block;\n        position: static;\n        float: left;\n        margin-left: 10px;\n        margin-bottom: 20px;\n        cursor: pointer; }\n  .container .row .col-4 .icon.calendar {\n        display: block;\n        position: static;\n        float: right;\n        margin-left: 10px;\n        margin-bottom: 20px;\n        cursor: pointer; }\n  .container .row .col-4 .icon.note {\n        display: block;\n        position: static;\n        margin-left: auto;\n        cursor: pointer;\n        margin-right: 0px; }\n  .container .row .col-4 .desc {\n        clear: left; }\n  .container .row .col-4 .desc ul {\n          border: 1px solid #0ab6a2;\n          list-style: none;\n          padding: 10px 0px;\n          padding-bottom: 30px; }\n  .container .row .col-4 .desc ul li {\n            border-bottom: 1px solid #ebebeb;\n            margin: 6px 12px;\n            padding-left: 2px;\n            color: #5c5c5c;\n            line-height: 21px; }\n  .container .row .col-4 .desc ul li.empty {\n              height: 22px; }\n  .container .row .col-4 .desc ul.tag {\n            border: none;\n            list-style: none;\n            padding: 6px 12px;\n            margin: 0px 12px;\n            border-bottom: 1px solid #e67e22; }\n  .container .row .col-4 .desc ul.tag li {\n              display: inline-block;\n              border-bottom: none;\n              margin: 0px; }\n  .container .row .col-4 .desc ul.tag li::after {\n                content: \",\"; }\n  .container .row .col-4 .desc ul.tag li:last-of-type::after {\n                content: \"\"; }\n  .container .row .col-4 p {\n        text-align: right;\n        margin: 0px;\n        float: right;\n        margin-right: 38px;\n        margin-top: 2px; }\n  .container .row .col-8 .row {\n      padding-left: 20px; }\n  .container .row .col-8 .row .col-12 {\n        margin-bottom: 10px;\n        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);\n        height: calc(50% - 10px); }\n  .container .row .col-8 .row .col-12:last-of-type {\n          margin-bottom: 0px;\n          margin-top: 10px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/user-detail/user-detail.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/user-detail/user-detail.component.ts ***!
+  \************************************************************/
+/*! exports provided: UserDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserDetailComponent", function() { return UserDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs_add_operator_mergeMap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ "./node_modules/rxjs-compat/_esm5/add/operator/mergeMap.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/src/chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+// import { User } from '../../../shared/user';
+var UserDetailComponent = /** @class */ (function () {
+    function UserDetailComponent(data, route, fb) {
+        this.data = data;
+        this.route = route;
+        this.fb = fb;
+        this.lifestyle = [];
+        this.diets = [];
+        this.editUser = false;
+        this.msgs = [];
+        this.isBusy = false;
+        this.error = '';
+        this.lifestyle = [
+            { label: 'Siedzący', value: '0' },
+            { label: 'Normalny', value: '1' },
+            { label: 'Aktywny', value: '2' }
+        ];
+        this.editUserForm = fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            surename: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email]],
+            age: [''],
+            height: [''],
+            weight: [''],
+            weightPurpose: [''],
+            lifestyle: ['']
+        });
+    }
+    UserDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.initChart();
+        this.subscriptionUser = this.getUserId().flatMap(function (x) { return _this.getUser(x.id); })
+            .subscribe(function (user) {
+            _this.user = user;
+            _this.updateChart();
+            _this.updateForm();
+        });
+        this.subscriptionDiets = this.data.getDiets().subscribe(function (data) { return _this.getDiets(data); });
+    };
+    UserDetailComponent.prototype.getUserId = function () {
+        return this.route.params;
+    };
+    UserDetailComponent.prototype.getUser = function (id) {
+        this.userId = id;
+        return this.data.getUserByKey(id);
+    };
+    UserDetailComponent.prototype.getDiets = function (data) {
+        var _this = this;
+        this.diets = [];
+        data.forEach(function (el) {
+            var diet = __assign({ key: el.payload.key }, el.payload.val());
+            _this.diets.push({ label: el.payload.val().name, value: diet });
+        });
+        var dietChoose = this.diets.find(function (el) {
+            return el.value.key === _this.user.dietId;
+        });
+        this.diet = dietChoose.value;
+    };
+    UserDetailComponent.prototype.initChart = function () {
+        var data = {
+            datasets: [{
+                    label: 'Waga',
+                    borderColor: '#0ab6a2',
+                    backgroundColor: '#fff',
+                    fill: false,
+                    data: [],
+                    yAxisID: 'y-axis-1',
+                }
+            ]
+        };
+        this.weightChart = new chart_js__WEBPACK_IMPORTED_MODULE_5___default.a(this.chart.nativeElement, {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                hoverMode: 'index',
+                stacked: false,
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Wykres wagi',
+                    fontSize: 18,
+                    fontColor: '#e67e22',
+                    fontStyle: 'normal',
+                    fontFamily: 'FiraSansLight',
+                    padding: 20
+                },
+                scales: {
+                    yAxes: [{
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            id: 'y-axis-1'
+                        }],
+                    xAxes: [{
+                            type: 'time',
+                            time: {
+                                unit: 'day',
+                                parser: 'DD.MM.YYYY'
+                            }
+                        }]
+                }
+            }
+        });
+    };
+    UserDetailComponent.prototype.updateChart = function () {
+        var weightData = this.user.weight.map(function (el) {
+            return { t: el.date, y: el.value };
+        });
+        this.weightChart.data.datasets[0].data = weightData;
+        this.weightChart.update();
+    };
+    UserDetailComponent.prototype.updateForm = function () {
+        var user = {
+            name: this.user.name,
+            surename: this.user.surename,
+            email: this.user.email,
+            age: this.user.age,
+            height: this.user.height,
+            weight: this.user.weight[0].value,
+            weightPurpose: this.user.weightPurpose,
+            lifestyle: this.user.lifestyle
+        };
+        this.editUserForm.setValue(user);
+        if (this.user.unlike === undefined) {
+            this.user.unlike = [];
+        }
+        if (this.user.alergies === undefined) {
+            this.user.alergies = [];
+        }
+        if (this.user.restricted === undefined) {
+            this.user.restricted = [];
+        }
+        this.date = moment__WEBPACK_IMPORTED_MODULE_6__(this.user.dietStart, 'DD.MM.YYYY').toDate();
+    };
+    UserDetailComponent.prototype.addItem = function (event, list, input) {
+        if (event.keyCode === 13 && input.value !== '') {
+            switch (list) {
+                case 'unlike': {
+                    this.user.unlike.push(input.value);
+                    input.value = '';
+                    break;
+                }
+                case 'alergies': {
+                    this.user.alergies.push(input.value);
+                    input.value = '';
+                    break;
+                }
+                case 'restricted': {
+                    this.user.restricted.push(input.value);
+                    input.value = '';
+                    break;
+                }
+            }
+        }
+    };
+    UserDetailComponent.prototype.removeItem = function (i, list) {
+        switch (list) {
+            case 'unlike': {
+                this.user.unlike.splice(i, 1);
+                break;
+            }
+            case 'alergies': {
+                this.user.alergies.splice(i, 1);
+                break;
+            }
+            case 'restricted': {
+                this.user.restricted.splice(i, 1);
+                break;
+            }
+        }
+    };
+    UserDetailComponent.prototype.doSignUp = function () {
+        var _this = this;
+        // Make sure form values are valid
+        if (this.editUserForm.invalid) {
+            this.error = 'Uzupełnij wymagane pola.';
+            this.msgs.push({ severity: 'error', summary: this.error, detail: '' });
+            return;
+        }
+        // Reset status
+        this.error = '';
+        this.isBusy = true;
+        var formModel = this.editUserForm.value;
+        // Grab values from form
+        var name = formModel.name;
+        var surename = formModel.surename;
+        var email = formModel.email;
+        var age = formModel.age;
+        var height = formModel.height;
+        this.user.weight[0].value = formModel.weight || '60';
+        var weightPurpose = formModel.weightPurpose;
+        var lifestyle = formModel.lifestyle;
+        var unlike = this.user.unlike || [];
+        var alergies = this.user.alergies || [];
+        var restricted = this.user.restricted || [];
+        var dietId = this.diet.key || 0;
+        var dietStart = moment__WEBPACK_IMPORTED_MODULE_6__(this.date).format('DD.MM.YYYY');
+        var editedUser = {
+            name: name,
+            surename: surename,
+            email: email,
+            age: age,
+            height: height,
+            weight: this.user.weight,
+            weightPurpose: weightPurpose,
+            lifestyle: lifestyle,
+            unlike: unlike,
+            alergies: alergies,
+            restricted: restricted,
+            dietId: dietId,
+            dietStart: dietStart,
+            id: ''
+        };
+        this.data.updateUser(editedUser, this.userId).then(function (res) {
+            if (res === true) {
+                _this.isBusy = false;
+                _this.updateForm();
+                _this.msgs.push({ severity: 'info', summary: 'Użytkownik edytowany', detail: '' });
+            }
+            else {
+                _this.isBusy = false;
+                _this.error = 'Nieoczekiwany błąd';
+                _this.msgs.push({ severity: 'error', summary: _this.error, detail: '' });
+            }
+        });
+    };
+    UserDetailComponent.prototype.ngOnDestroy = function () {
+        if (this.subscriptionUser) {
+            this.subscriptionUser.unsubscribe();
+        }
+        if (this.subscriptionDiets) {
+            this.subscriptionDiets.unsubscribe();
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('chart'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], UserDetailComponent.prototype, "chart", void 0);
+    UserDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-user-detail',
+            template: __webpack_require__(/*! ./user-detail.component.html */ "./src/app/admin/user-detail/user-detail.component.html"),
+            styles: [__webpack_require__(/*! ./user-detail.component.scss */ "./src/app/admin/user-detail/user-detail.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_1__["DataServiceProvider"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], UserDetailComponent);
+    return UserDetailComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/users/users.component.html":
 /*!**************************************************!*\
   !*** ./src/app/admin/users/users.component.html ***!
@@ -1502,7 +2417,7 @@ var ProductsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addUser=true\">Dodaj pacjenta</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedUsers.length>0? 'Usuń ( ' + selectedUsers.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"users\" [columns]=\"cols\" [paginator]=\"true\" [rows]=\"8\" [(selection)]=\"selectedUsers\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{rowData['name']}} {{rowData['surename']}}</span>\n        <span *ngSwitchCase=\"'dietTime'\">{{rowData['dietStart'] | daysBetween: rowData['dietTime'] }}</span>\n        <span *ngSwitchCase=\"'diet'\">{{diets[rowData['dietId']]?.label}}</span>\n        <span *ngSwitchCase=\"'consultation'\">{{rowData['calendar'] | consultation}}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['edit/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addUser\" class=\"addDialog\" header=\"Dodaj pacjenta\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addUserForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Imię\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"surename\" placeholder=\"Nazwisko\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"email\" formControlName=\"email\" placeholder=\"Email\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"age\" placeholder=\"Wiek\" pInputText>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"height\" placeholder=\"Wzrost\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weight\" placeholder=\"Waga\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weightPurpose\" placeholder=\"Waga docelowa\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <p-dropdown [options]=\"lifestyle\" placeholder=\"Styl życia\" formControlName=\"lifestyle\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n\n  <div class=\"container-fluid chipsContainer\">\n    <div class=\"row\">\n      <div class=\"col-4\">\n        <h3>Nie lubi</h3>\n        <input type=\"text\" #unl (keydown)=\"addItem($event, 'unlike', unl)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of unlike; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'unlike')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Alergie</h3>\n        <input type=\"text\" #al (keydown)=\"addItem($event, 'alergies', al)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of alergies; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'alergies')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Przeciwskazania</h3>\n        <input type=\"text\" #re (keydown)=\"addItem($event, 'restricted', re)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of restricted; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'restricted')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n    </div>\n  </div>\n\n  <p-footer>\n    <p-dropdown [options]=\"diets\" [(ngModel)]=\"diet\" filter=\"true\" placeholder=\"Szukaj diety...\">\n      <ng-template let-item pTemplate=\"selectedItem\">\n        <span style=\"vertical-align:middle\">{{item.label}}</span>\n      </ng-template>\n      <ng-template let-dietChosse pTemplate=\"item\">\n        <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n          <div style=\"font-size:14px;float:right;margin-top:4px\">{{dietChosse.label}}</div>\n        </div>\n      </ng-template>\n    </p-dropdown>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj pacjenta</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>"
+module.exports = "<div class=\"container toolbar\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <button class=\"btn\" (click)=\"addUser=true\">Dodaj pacjenta</button>\n      <button class=\"btn btn-danger\" (click)=\"remove()\">{{selectedUsers.length>0? 'Usuń ( ' + selectedUsers.length + ' )': 'Usuń'}}</button>\n      <input type=\"text\" pInputText size=\"50\" placeholder=\"SZUKAJ\" (input)=\"dt.filterGlobal($event.target.value, 'contains')\">\n      <i class=\"fa fa-search\"></i>\n    </div>\n  </div>\n</div>\n\n<p-table #dt [value]=\"users\" [columns]=\"cols\" [paginator]=\"true\" [rows]=\"8\" [(selection)]=\"selectedUsers\">\n  <ng-template pTemplate=\"header\" let-columns>\n    <tr>\n      <th style=\"width: 2.25em\">\n        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n      </th>\n      <th *ngFor=\"let col of columns\">\n        {{col.header}}\n      </th>\n    </tr>\n\n  </ng-template>\n  <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n    <tr [pSelectableRow]=\"rowData\">\n      <td>\n        <p-tableCheckbox [value]=\"rowData\"></p-tableCheckbox>\n      </td>\n      <td *ngFor=\"let col of columns\" [ngSwitch]=\"col.field\">\n        <span *ngSwitchCase=\"'name'\">{{rowData['name']}} {{rowData['surename']}}</span>\n        <span *ngSwitchCase=\"'dietTime'\">{{rowData['dietStart'] | daysBetween: (diets | diet: rowData['dietId'] : false) }}</span>\n        <span *ngSwitchCase=\"'diet'\">{{ diets | diet: rowData['dietId'] : true }}</span>\n        <span *ngSwitchCase=\"'consultation'\">{{rowData['calendar'] | consultation}}</span>\n        <button class=\"btn\" *ngSwitchCase=\"'button'\" [routerLink]=\"['../user/', rowData['key']]\">Zarządzaj</button>\n      </td>\n    </tr>\n  </ng-template>\n</p-table>\n\n<p-dialog [(visible)]=\"addUser\" class=\"addDialog\" header=\"Dodaj pacjenta\" [responsive]=\"true\" [width]=\"700\" [minWidth]=\"320\"\n  [minY]=\"70\" [baseZIndex]=\"100\">\n  <form [formGroup]=\"addUserForm\">\n\n    <!-- name input -->\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"name\" placeholder=\"Imię\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"surename\" placeholder=\"Nazwisko\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"email\" formControlName=\"email\" placeholder=\"Email\" pTooltip=\"Wymagane\" tooltipPosition=\"top\" tooltipZIndex=\"10000\"\n            pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"age\" placeholder=\"Wiek\" pInputText>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"height\" placeholder=\"Wzrost\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weight\" placeholder=\"Waga\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <input type=\"text\" formControlName=\"weightPurpose\" placeholder=\"Waga docelowa\" pInputText>\n        </div>\n        <div class=\"col-3\">\n          <p-dropdown [options]=\"lifestyle\" placeholder=\"Styl życia\" formControlName=\"lifestyle\"></p-dropdown>\n        </div>\n      </div>\n    </div>\n\n  </form>\n\n  <div class=\"container-fluid chipsContainer\">\n    <div class=\"row\">\n      <div class=\"col-4\">\n        <h3>Nie lubi</h3>\n        <input type=\"text\" #unl (keydown)=\"addItem($event, 'unlike', unl)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of unlike; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'unlike')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Alergie</h3>\n        <input type=\"text\" #al (keydown)=\"addItem($event, 'alergies', al)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of alergies; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'alergies')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n      <div class=\"col-4\">\n        <h3>Przeciwskazania</h3>\n        <input type=\"text\" #re (keydown)=\"addItem($event, 'restricted', re)\" placeholder=\"Pisz...\" pInputText>\n        <p-scrollPanel [style]=\"{width: '100%', height: '90px'}\">\n          <ul>\n            <li *ngFor=\"let el of restricted; let i = index\">{{el}}\n              <i (click)=\"removeItem(i, 'restricted')\" class=\"pi pi-close\"></i>\n            </li>\n          </ul>\n        </p-scrollPanel>\n      </div>\n    </div>\n  </div>\n\n  <p-footer>\n    <p-dropdown [options]=\"diets\" [(ngModel)]=\"diet\" filter=\"true\" placeholder=\"Szukaj diety...\">\n      <ng-template let-item pTemplate=\"selectedItem\">\n        <span style=\"vertical-align:middle\">{{item.label}}</span>\n      </ng-template>\n      <ng-template let-dietChosse pTemplate=\"item\">\n        <div class=\"ui-helper-clearfix\" style=\"position: relative;height: 25px;\">\n          <div style=\"font-size:14px;float:right;margin-top:4px\">{{dietChosse.label}}</div>\n        </div>\n      </ng-template>\n    </p-dropdown>\n    <button class=\"btn\" (click)=\"doSignUp()\" [disabled]=\"isBusy\">\n      <ng-template [ngIf]=\"!isBusy\">Dodaj pacjenta</ng-template>\n      <ng-template [ngIf]=\"isBusy\">Czekaj...</ng-template>\n    </button>\n  </p-footer>\n\n</p-dialog>\n\n<p-growl [(value)]=\"msgs\" [immutable]=\"false\" life=\"3000\"></p-growl>\n<p-confirmDialog></p-confirmDialog>"
 
 /***/ }),
 
@@ -1532,6 +2447,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(primeng_api__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _providers_data_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/data-service/data-service */ "./src/providers/data-service/data-service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var moment_locale_pl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment/locale/pl */ "./node_modules/moment/locale/pl.js");
+/* harmony import */ var moment_locale_pl__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment_locale_pl__WEBPACK_IMPORTED_MODULE_5__);
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1549,6 +2468,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -1603,7 +2524,8 @@ var UsersComponent = /** @class */ (function () {
         this.subscriptionDiets = this.data.getDiets().subscribe(function (data) {
             _this.diets = [];
             data.forEach(function (el) {
-                _this.diets.push({ label: el.payload.val().name, value: el.payload.key });
+                var diet = __assign({ key: el.payload.key }, el.payload.val());
+                _this.diets.push({ label: el.payload.val().name, value: diet });
             });
         });
     };
@@ -1633,13 +2555,14 @@ var UsersComponent = /** @class */ (function () {
         var email = formModel.email;
         var age = formModel.age;
         var height = formModel.height;
-        var weight = formModel.weight;
+        var weight = [{ value: formModel.weight || '60', date: moment__WEBPACK_IMPORTED_MODULE_4__().format('DD.MM.YYYY') }];
         var weightPurpose = formModel.weightPurpose;
         var lifestyle = formModel.lifestyle;
         var unlike = this.unlike;
         var alergies = this.alergies;
         var restricted = this.restricted;
-        var dietId = this.diet || 0;
+        var dietId = this.diet.key || 0;
+        var dietStart = moment__WEBPACK_IMPORTED_MODULE_4__().format('DD.MM.YYYY');
         this.newUser = {
             name: name,
             surename: surename,
@@ -1653,6 +2576,7 @@ var UsersComponent = /** @class */ (function () {
             alergies: alergies,
             restricted: restricted,
             dietId: dietId,
+            dietStart: dietStart,
             id: ''
         };
         this.data.addUser(this.newUser).then(function (res) {
@@ -1778,7 +2702,7 @@ var AdministrationGuard = /** @class */ (function () {
         this.router = router;
     }
     AdministrationGuard.prototype.canActivate = function (route, state) {
-        if (!this.auth.isSignedIn()) {
+        if (this.auth.isSignedIn()) {
             this.router.navigate(['/login']);
             return false;
         }
@@ -2328,6 +3252,53 @@ var DaysBetweenPipe = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pipes/diet/diet.pipe.ts":
+/*!*****************************************!*\
+  !*** ./src/app/pipes/diet/diet.pipe.ts ***!
+  \*****************************************/
+/*! exports provided: DietPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DietPipe", function() { return DietPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var DietPipe = /** @class */ (function () {
+    function DietPipe() {
+    }
+    DietPipe.prototype.transform = function (diets, key, label) {
+        if (label === void 0) { label = true; }
+        if (diets.length > 0) {
+            var diet = diets.find(function (el) {
+                return el.value.key === key;
+            });
+            if (label === true) {
+                return diet.label;
+            }
+            else {
+                return diet.value.long;
+            }
+        }
+    };
+    DietPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'diet'
+        })
+    ], DietPipe);
+    return DietPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pipes/pipes.module.ts":
 /*!***************************************!*\
   !*** ./src/app/pipes/pipes.module.ts ***!
@@ -2342,12 +3313,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./days-between/days-between.pipe */ "./src/app/pipes/days-between/days-between.pipe.ts");
 /* harmony import */ var _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consultation/consultation.pipe */ "./src/app/pipes/consultation/consultation.pipe.ts");
 /* harmony import */ var _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./values/values.pipe */ "./src/app/pipes/values/values.pipe.ts");
+/* harmony import */ var _diet_diet_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./diet/diet.pipe */ "./src/app/pipes/diet/diet.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -2359,14 +3332,14 @@ var PipesModule = /** @class */ (function () {
     PipesModule.forRoot = function () {
         return {
             ngModule: PipesModule_1,
-            providers: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]],
+            providers: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"], _diet_diet_pipe__WEBPACK_IMPORTED_MODULE_4__["DietPipe"]],
         };
     };
     PipesModule = PipesModule_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]],
+            declarations: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"], _diet_diet_pipe__WEBPACK_IMPORTED_MODULE_4__["DietPipe"]],
             imports: [],
-            exports: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"]]
+            exports: [_days_between_days_between_pipe__WEBPACK_IMPORTED_MODULE_1__["DaysBetweenPipe"], _consultation_consultation_pipe__WEBPACK_IMPORTED_MODULE_2__["ConsultationPipe"], _values_values_pipe__WEBPACK_IMPORTED_MODULE_3__["ValuesPipe"], _diet_diet_pipe__WEBPACK_IMPORTED_MODULE_4__["DietPipe"]]
         })
     ], PipesModule);
     return PipesModule;
@@ -2547,6 +3520,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var firebase_functions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! firebase/functions */ "./node_modules/firebase/functions/dist/index.esm.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2582,6 +3563,9 @@ var DataServiceProvider = /** @class */ (function () {
     // getDiet(dietId): Observable<any> {
     // return  this.afDB.list('diets', ref => ref.orderByChild('id').equalTo(dietId)).valueChanges();
     // }
+    DataServiceProvider.prototype.getDietByKey = function (key) {
+        return this.afDB.object('diets/' + key).valueChanges();
+    };
     DataServiceProvider.prototype.addDiet = function (diet) {
         return this.afDB.list('diets').push(diet).then(function () {
             return true;
@@ -2612,6 +3596,9 @@ var DataServiceProvider = /** @class */ (function () {
     };
     DataServiceProvider.prototype.getUser = function (userId) {
         return this.afDB.list('users', function (ref) { return ref.orderByChild('id').equalTo(userId); }).valueChanges();
+    };
+    DataServiceProvider.prototype.getUserByKey = function (key) {
+        return this.afDB.object('users/' + key).valueChanges();
     };
     DataServiceProvider.prototype.addUser = function (user) {
         var _this = this;
@@ -2654,8 +3641,8 @@ var DataServiceProvider = /** @class */ (function () {
     // return  this.afDB.list('dishs', ref => ref.orderByChild('id').equalTo(dishId)).valueChanges();
     // }
     DataServiceProvider.prototype.addDish = function (dish) {
-        return this.afDB.list('dishs').push(dish).then(function () {
-            return true;
+        return this.afDB.list('dishs').push(dish).then(function (d) {
+            return d.key;
         }, function (e) {
             console.log(e);
             return false;
@@ -2670,7 +3657,10 @@ var DataServiceProvider = /** @class */ (function () {
         });
     };
     DataServiceProvider.prototype.deleteDish = function (key) {
-        return this.afDB.list('dishs').remove(key).then(function () {
+        var _this = this;
+        return this.afDB.list('dishs').remove(key)
+            .then(function () { return _this.deleteDishFromDiet(key); })
+            .then(function () {
             return true;
         }, function (e) {
             console.log(e);
@@ -2715,6 +3705,9 @@ var DataServiceProvider = /** @class */ (function () {
     DataServiceProvider.prototype.getUnit = function (unitID) {
         return this.afDB.object('units/' + unitID).valueChanges();
     };
+    DataServiceProvider.prototype.getUnits = function () {
+        return this.afDB.list('units').snapshotChanges();
+    };
     // Helper
     DataServiceProvider.prototype.sendEmail = function (email) {
         this.afAuth.auth.sendPasswordResetEmail(email);
@@ -2725,6 +3718,18 @@ var DataServiceProvider = /** @class */ (function () {
     };
     DataServiceProvider.prototype.deleteFromBase = function (key) {
         this.afDB.list('users').remove(key);
+    };
+    DataServiceProvider.prototype.deleteDishFromDiet = function (key) {
+        var _this = this;
+        this.getDiets().subscribe(function (diets) {
+            diets.forEach(function (dietEl) {
+                var diet = __assign({}, dietEl.payload.val());
+                diet.dishs = diet.dishs.filter(function (dish) {
+                    return dish.dishId !== key;
+                });
+                _this.updateDiet(diet, dietEl.payload.key);
+            });
+        });
     };
     DataServiceProvider = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -2772,6 +3777,31 @@ var SessionService = /** @class */ (function () {
     return SessionService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/shared/groups.ts":
+/*!******************************!*\
+  !*** ./src/shared/groups.ts ***!
+  \******************************/
+/*! exports provided: Groups */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Groups", function() { return Groups; });
+var Groups = [
+    { label: 'Produkty zbożowe', value: '0' },
+    { label: 'Warzywa', value: '1' },
+    { label: 'Owoce', value: '2' },
+    { label: 'Nabiał', value: '3' },
+    { label: 'Mięso i jaja', value: '4' },
+    { label: 'Tłuszcze', value: '5' },
+    { label: 'Nasiona i orzechy', value: '6' },
+    { label: 'Cukier i słodycze', value: '7' },
+    { label: 'Inne', value: '8' }
+];
 
 
 /***/ }),

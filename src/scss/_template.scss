@@ -12,6 +12,26 @@
         border: unset;
         color: #fff;
     }
+    &.ui-button{
+        background: #0ab6a2;
+        border-color: #0ab6a2;
+        &:enabled:hover{
+            background: #fff;
+            border-color: #0ab6a2;
+            color: #5c5c5c;
+        }
+    }
+    .ui-widget-content{
+        .ui-button{
+            background: #0ab6a2;
+            border-color: #0ab6a2;
+            &:enabled:hover{
+                background: #fff;
+                border-color: #0ab6a2;
+                color: #5c5c5c;
+            }
+        }
+    }
 }
 
 .ui-state-highlight{
@@ -246,6 +266,11 @@
             margin-top: 0px;
         }
     }
+    &:last-child{
+        .ui-accordion-header{
+            margin-bottom: 20px;
+        }
+    }
     .ui-accordion-header{
         background: #fff;
         border: none;
@@ -273,3 +298,83 @@
         padding: 0px;
     }
 }
+
+.ui-datepicker{
+    .ui-datepicker-title{
+        color: #5c5c5c;
+    }
+}
+
+.ui-inplace{
+    .ui-inplace-display{
+        &:hover{
+            border: none;
+            background: transparent;
+            color: #e67e22;
+        }
+    }
+}
+
+.ui-button{
+    background: #0ab6a2;
+    border-color: #0ab6a2;
+    &:enabled:hover{
+        background: #fff;
+        border-color: #0ab6a2;
+        color: #5c5c5c;
+    }
+}
+
+.ui-multiselect{
+    margin-top: 8px;
+    width: 100%;
+    border: 1px solid #0ab6a2;
+    .ui-multiselect-label{
+        margin: 0px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .ui-multiselect-trigger{
+        border: 0px solid transparent;
+        color: #0ab6a2;
+    }
+    .ui-multiselect-panel{
+        .ui-multiselect-header{
+            .ui-chkbox{
+                display: none;
+            }
+            .ui-multiselect-filter-container{
+                display: block;
+                width: 100%;
+                .ui-inputtext{
+                    padding-left: 20px;
+                }
+                .ui-multiselect-filter-icon{
+                    top: 6px;
+                    left: 2px;
+                    color: #000;
+                }
+            }
+            .ui-multiselect-close{
+                display: none;
+            }
+        }
+        .ui-multiselect-items-wrapper{
+            .ui-multiselect-items{
+                .ui-multiselect-item{
+                    .ui-chkbox{
+                        .ui-chkbox-box{
+                            &.ui-state-active{
+                                border: 1px solid #f26c4f;
+                                background: #f26c4f; 
+                            }
+                        }
+                    }
+                    label{
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+} 

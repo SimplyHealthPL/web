@@ -3,6 +3,7 @@ import {Message, ConfirmationService, SelectItem} from 'primeng/api';
 import { DataServiceProvider } from '../../../providers/data-service/data-service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Element } from '../../../shared/element';
+import { Groups } from '../../../shared/groups';
 
 
 @Component({
@@ -13,20 +14,19 @@ import { Element } from '../../../shared/element';
 export class ProductsComponent implements OnInit, OnDestroy {
 
   public addElement = false;
+  public editElement = false;
   public cols: any[];
   public msgs: Message[] = [];
   public elements = [];
-  public elementsChoose = [];
-  public diets = [];
   public addElementForm: FormGroup;
   public subscriptionElements;
   public isBusy = false;
   public newElement: Element;
   public error = '';
   public selectedElements = [];
-  public recipe;
   public types: SelectItem[];
-  public allergen;
+  public allergen = [];
+  public editElementId = '';
 
   constructor( private data: DataServiceProvider, private fb: FormBuilder, private confirmationService: ConfirmationService) {
     this.cols = [
@@ -37,17 +37,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
     ];
     this.addElementForm = fb.group({
       name: ['', Validators.required],
-      image: ['', Validators.required],
-      type: ['']
+      energy: ['', Validators.required],
+      sugar: ['', Validators.required],
+      protein: ['', Validators.required],
+      fat: ['', Validators.required],
+      type: ['', Validators.required]
     });
-    this.types = [
-      { label: '-', value: null },
-      { label: 'Śniadanie', value: '0' },
-      { label: 'Drugie śniadanie', value: '1' },
-      { label: 'Lunch', value: '2' },
-      { label: 'Obiad', value: '3' },
-      { label: 'Kolacja', value: '4' }
-    ];
+    this.types = [...Groups];
    }
 
   ngOnInit() {
@@ -80,10 +76,15 @@ export class ProductsComponent implements OnInit, OnDestroy {
     const formModel = this.addElementForm.value;
     // Grab values from form
     const name = formModel.name;
-    const group = formModel.group;
+    const group = formModel.type;
     const allergen = this.allergen;
-    const promotion =  formModel.promotion;
-    const values =  formModel.values;
+    const promotion =  formModel.promotion || 0;
+    const values =  {
+      calories: formModel.energy,
+      carb: formModel.sugar,
+      fat: formModel.fat,
+      protein: formModel.protein
+    };
 
     this.newElement = {
       allergen,
@@ -93,32 +94,57 @@ export class ProductsComponent implements OnInit, OnDestroy {
       values
     };
 
-    this.data.addElement(this.newElement).then(res => {
-      if (res === true) {
-        this.isBusy = false;
-        this.addElementForm.reset();
-        this.elementsChoose = [];
-        this.msgs.push({severity: 'info', summary: 'Składnik dodany', detail: ''});
-      } else {
-        this.isBusy = false;
-        this.error = 'Nieoczekiwany błąd.';
-        this.msgs.push({severity: 'error', summary: this.error, detail: ''});
-      }
-    });
-  }
-
-  public addItem(event, dd) {
-    const repeat = this.elementsChoose.find((el) => {
-      return el.name === event.value.name;
-    });
-    if (!repeat) {
-      this.elementsChoose.push(event.value);
+    if (!this.editElement) {
+      this.data.addElement(this.newElement).then(res => {
+        if (res === true) {
+          this.isBusy = false;
+          this.addElementForm.reset();
+          this.allergen = [];
+          this.msgs.push({severity: 'info', summary: 'Składnik dodany', detail: ''});
+        } else {
+          this.isBusy = false;
+          this.error = 'Nieoczekiwany błąd.';
+          this.msgs.push({severity: 'error', summary: this.error, detail: ''});
+        }
+      });
+    } else {
+      this.data.updateElement(this.newElement, this.editElementId).then(res => {
+        if (res === true) {
+          this.isBusy = false;
+          this.addElement = false;
+          this.editElement = false;
+          this.editElementId = '';
+          this.addElementForm.reset();
+          this.allergen = [];
+          this.msgs.push({severity: 'info', summary: 'Składnik zmieniony', detail: ''});
+        } else {
+          this.isBusy = false;
+          this.error = 'Nieoczekiwany błąd.';
+          this.msgs.push({severity: 'error', summary: this.error, detail: ''});
+        }
+      });
     }
-    dd.resetFilter();
   }
 
-  public removeItem(i) {
-    this.elementsChoose.splice(i, 1);
+  public addItem(event, list, input) {
+    if (event.keyCode === 13 && input.value !== '') {
+      switch (list) {
+        case 'allergen': {
+          this.allergen.push(input.value);
+          input.value = '';
+          break;
+        }
+      }
+    }
+  }
+
+  public removeItem(i, list) {
+    switch (list) {
+      case 'allergen': {
+        this.allergen.splice(i, 1);
+        break;
+      }
+    }
   }
 
   public remove() {
@@ -148,20 +174,45 @@ export class ProductsComponent implements OnInit, OnDestroy {
     }
   }
 
-  async getItem(el, key) {
-    const item = {element: {}, unit: {}, amount: 0};
-    try {
-     await this.data.getElement(el.elementId).subscribe(element => {
-        item.element = element;
+  public getType(types) {
+    let label = '';
+    if (Array.isArray(types)) {
+      types.forEach((el, index) => {
+        if (index + 1 === types.length) {
+          label += this.types[el].label;
+        } else {
+          label += this.types[el].label + ', ';
+        }
       });
-     await this.data.getUnit(el.unitId).subscribe(unit => {
-        item.unit = unit;
-      });
-      item.amount = el.amount;
-      this.elements[key].push(item);
-    } catch (e) {
-      console.error(e);
+    } else {
+      label = types;
     }
+    return label;
+  }
+
+  public getValues(values) {
+    const label = `Kalorie - ${values.calories} kcl
+      Węglowodany - ${values.carb} g
+      Tłuszcze - ${values.fat} g
+      Białko - ${values.protein} g
+    `;
+    return label;
+  }
+
+  public editElementInit(elementData) {
+    this.addElement = true;
+    this.allergen = elementData.allergen;
+    this.editElement = true;
+    this.editElementId = elementData.key;
+    const element = {
+      name: elementData.name,
+      type: elementData.group,
+      energy: elementData.values.calories,
+      sugar: elementData.values.carb,
+      protein: elementData.values.protein,
+      fat: elementData.values.fat
+    };
+    this.addElementForm.setValue(element);
   }
 
 }

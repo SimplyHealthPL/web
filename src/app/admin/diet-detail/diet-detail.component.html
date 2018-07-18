@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="container toolbar">
+        <div class="row">
+          <div class="col">
+            <h3>Dieta {{ diet?.name }}</h3>
+            <button class="btn" (click)="''">Dodaj danie</button>
+            <button class="btn btn-danger" (click)="remove()">{{selectedDishs.length>0? 'Usuń ( ' + selectedDishs.length + ' )': 'Usuń'}}</button>
+            <input type="text" pInputText size="50" placeholder="SZUKAJ" (input)="dt.filterGlobal($event.target.value, 'contains')">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <p-table #dt [value]="dishs" [columns]="cols" [paginator]="true" [(selection)]="selectedDishs" [rows]="8">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 2.25em">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th *ngFor="let col of columns">
+              {{col.header}}
+            </th>
+          </tr>
+
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td>
+              <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+            </td>
+            <td *ngFor="let col of columns" [ngSwitch]="col.field">
+              <span *ngSwitchCase="'name'">{{ rowData['name'] }}</span>
+              <span *ngSwitchCase="'type'">{{ types[rowData?.type[0]]?.label }}</span>
+              <span *ngSwitchCase="'shoplist'">
+                <i class="icon products list dark" [pTooltip]="getElements(rowData['key'])"></i>
+              </span>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="col-4">
+
+    </div>
+  </div>
+</div>
+
+<p-growl [(value)]="msgs" [immutable]="false" life="3000"></p-growl>
+<p-confirmDialog></p-confirmDialog>

@@ -35,6 +35,10 @@ export class DataServiceProvider {
     // return  this.afDB.list('diets', ref => ref.orderByChild('id').equalTo(dietId)).valueChanges();
   // }
 
+  getDietByKey(key: string): Observable<any> {
+    return this.afDB.object('diets/' + key).valueChanges();
+  }
+
   addDiet(diet: Diet): PromiseLike<any> {
     return this.afDB.list('diets').push(diet).then(() => {
       return true;
@@ -124,8 +128,8 @@ export class DataServiceProvider {
   // }
 
   addDish(dish: Dish): PromiseLike<any> {
-    return this.afDB.list('dishs').push(dish).then(() => {
-      return true;
+    return this.afDB.list('dishs').push(dish).then((d) => {
+      return d.key;
     }, (e) => {
       console.log(e);
       return false;
@@ -142,12 +146,14 @@ export class DataServiceProvider {
   }
 
   deleteDish(key: string): PromiseLike<any> {
-    return this.afDB.list('dishs').remove(key).then(() => {
-      return true;
-    }, (e) => {
-      console.log(e);
-      return false;
-    });
+    return this.afDB.list('dishs').remove(key)
+      .then(() => this.deleteDishFromDiet(key))
+      .then(() => {
+        return true;
+      }, (e) => {
+        console.log(e);
+        return false;
+      });
   }
 
   // Elements API
@@ -197,6 +203,10 @@ export class DataServiceProvider {
     return this.afDB.object('units/' + unitID).valueChanges();
   }
 
+  getUnits(): Observable<any> {
+    return this.afDB.list('units').snapshotChanges();
+  }
+
   // Helper
 
   sendEmail(email) {
@@ -210,6 +220,18 @@ export class DataServiceProvider {
 
   deleteFromBase(key) {
     this.afDB.list('users').remove(key);
+  }
+
+  deleteDishFromDiet(key) {
+    this.getDiets().subscribe(diets => {
+      diets.forEach(dietEl => {
+        const diet = { ...dietEl.payload.val() };
+        diet.dishs = diet.dishs.filter(dish => {
+          return dish.dishId !== key;
+        });
+        this.updateDiet(diet, dietEl.payload.key);
+      });
+    });
   }
 
 

@@ -22,6 +22,7 @@ import { DietsComponent } from './diets/diets.component';
 import { DishsComponent } from './dishs/dishs.component';
 import { ProductsComponent } from './products/products.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { DietDetailComponent } from './diet-detail/diet-detail.component';
 import {TableModule} from 'primeng/table';
 import {DropdownModule} from 'primeng/dropdown';
 import { PipesModule } from '../pipes/pipes.module';
@@ -36,6 +37,10 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import {AccordionModule} from 'primeng/accordion';
+import {InplaceModule} from 'primeng/inplace';
+import {KeyFilterModule} from 'primeng/keyfilter';
+import {InputSwitchModule} from 'primeng/inputswitch';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @NgModule({
   imports: [
@@ -65,9 +70,14 @@ import {AccordionModule} from 'primeng/accordion';
     ScrollPanelModule,
     InputTextareaModule,
     ConfirmDialogModule,
-    AccordionModule
+    AccordionModule,
+    InplaceModule,
+    KeyFilterModule,
+    InputSwitchModule,
+    MultiSelectModule
   ],
-  declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent, ProductsComponent, CalendarComponent, UserDetailComponent],
+  declarations: [AdminComponent, UsersComponent, DietsComponent, DishsComponent,
+    ProductsComponent, CalendarComponent, UserDetailComponent, DietDetailComponent],
   providers: [DataServiceProvider, AdministrationGuard, ConfirmationService]
 })
 export class AdminModule { }
